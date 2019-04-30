@@ -39,7 +39,8 @@
 			"list": []
 		},
 		"miniprogram": {
-			"current": 0,
+<<<<<<< HEAD
+			"current": -1,
 			"list": [
 				{
 					"id": -1,

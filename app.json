@@ -1,12 +1,16 @@
 {
   "pages": [
     "pages/index/index",
+<<<<<<< HEAD
     "pages/logs/logs",
 <<<<<<< HEAD
     "pages/creation/creation"
 =======
     "pages/create_game/create_game"
 >>>>>>> 1c7ff0006d2be0a48a93e9cecb10a56374b36b85
+=======
+    "pages/logs/logs"
+>>>>>>> 0a84e52d76d69de48293e7ae48713187a3acb83b
   ],
   "window": {
     "backgroundTextStyle": "light",
