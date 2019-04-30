@@ -2,7 +2,11 @@
   "pages": [
     "pages/index/index",
     "pages/logs/logs",
+<<<<<<< HEAD
     "pages/creation/creation"
+=======
+    "pages/create_game/create_game"
+>>>>>>> 1c7ff0006d2be0a48a93e9cecb10a56374b36b85
   ],
   "window": {
     "backgroundTextStyle": "light",
