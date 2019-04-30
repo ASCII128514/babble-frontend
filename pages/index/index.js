@@ -3,6 +3,13 @@
 const app = getApp()
 
 Page({
+
+  buttonClicked: function () {
+    wx.navigateTo({
+      url: '/pages/creation/creation'
+    })
+  },
+
   onLoad: function (options) {
     wx.setNavigationBarColor({
       frontColor: '#000000',
