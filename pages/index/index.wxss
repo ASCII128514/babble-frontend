@@ -1,21 +1,38 @@
 /**index.wxss**/
-.userinfo {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
+.background {
+    color: white;
+    text-align: center;
+    height: 101vh;
+    width: 100%;
+    /* if you have a 70px navbar => height: calc(100vh - 70px); */
+    background-size: cover !important;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+  }
 
-.userinfo-avatar {
-  width: 128rpx;
-  height: 128rpx;
-  margin: 20rpx;
-  border-radius: 50%;
-}
+  .title {
+    font-size: 30px;
+    font-weight: bold;
+    text-shadow: 0px 1px rgba(0, 0, 0, 0.2);
+    margin-bottom: 200rpx;
+  }
 
-.userinfo-nickname {
-  color: #aaa;
-}
+  .teaser {
+    font-size: 16px;
+    font-weight: bold;
+    color: ;
+    opacity: 0.9;
+    margin-bottom: 5px;
+  }
 
-.usermotto {
-  margin-top: 200px;
-}
+  .margin {
+    margin-top: 20px;
+  }
+
+  .button {
+    margin-top: 60px;
+    border-radius: 20px;
+    width: 60vw;
+    background-color: gainsboro;
+  }
