@@ -1,19 +1,21 @@
 <!--pages/creation/creation.wxml-->
 
+
 <view class="background" style="background-image: linear-gradient(-100deg, rgba(0,150,168,0.2) 80%, rgba(0,150,61,0.1) 80%), url('../../Img/creation_1.png');">
-  
+
   <!-- title -->
       <view class="title">
         BABBLE
       </view>
-  <!-- title -->  
-  
+  <!-- title -->
+
   <!-- container -->
   <view class="container">
 
       <!-- form section -->
 
     <form class="form" bindsubmit="crateGameSubmit" bindreset="formReset">
+
         <view class="section">
           <view class="section__title">Find your partner time</view>
           <input name="find_partner_timer" placeholder="in seconds" findtimer/>
@@ -33,7 +35,7 @@
           <view class="section__title">Rounds</view>
           <input name="rounds" placeholder="# of rounds" round/>
         </view>
- 
+
     </form>
     <!-- form ending -->
 
@@ -45,6 +47,6 @@
       Share
     </view>
   </view>
-  
+
 </view>
 

@@ -6,12 +6,56 @@ App({
     logs.unshift(Date.now())
     wx.setStorageSync('logs', logs)
 
-    // 登录
     wx.login({
       success: res => {
-        // 发送 res.code 到后台换取 openId, sessionKey, unionId
+        // check if user has logged-in before
+        var value = wx.getStorageSync('token');
+        console.log(value == false)
+        if (value) {
+          console.log("logged in as existing user")
+          wx.request({
+            url: 'http://localhost:3000/api/v1/login',
+            method: 'POST',
+            data: {
+              "tokens": {
+                "token": value
+              }
+            },
+            success: (res) => {
+              const token = res.data;
+              console.log(res)
+            }
+          });
+        } else {
+          //Initiate network request to backend
+          wx.request({
+            url: 'http://localhost:3000/api/v1/login',
+            method: 'POST',
+            header: {
+              'content-type': 'application/json' // 默认值
+            },
+            data: {
+              code: res.code
+            },
+            success: (token) => {
+              console.log(token.data.authen)
+              wx.setStorage({
+                key: 'token',
+                data: token.data.authen,
+                success: () => {
+                  console.log('new user success')
+                }
+              })
+            }
+          })
+        }
       }
     })
+    // wx.login({
+    //   success: res => {
+    //     // 发送 res.code 到后台换取 openId, sessionKey, unionId
+    //   }
+    // })
     // 获取用户信息
     wx.getSetting({
       success: res => {
