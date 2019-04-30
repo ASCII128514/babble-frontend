@@ -1,7 +1,8 @@
 {
   "pages": [
     "pages/index/index",
-    "pages/logs/logs"
+    "pages/logs/logs",
+    "pages/create_game/create_game"
   ],
   "window": {
     "backgroundTextStyle": "light",
