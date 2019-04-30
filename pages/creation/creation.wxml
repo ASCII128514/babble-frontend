@@ -1,21 +1,31 @@
 <!--pages/creation/creation.wxml-->
 
-<view class="background" style="background-image: linear-gradient(-200deg, rgba(0,90,168,0.2) 0%, rgba(0,76,61,0.1) 60%), url('../../Img/creation_1.png');">
-  <view>
-    <view class="title">BABBLE</view>
+<view class="background" style="background-image: linear-gradient(-100deg, rgba(0,150,168,0.2) 80%, rgba(0,150,61,0.1) 80%), url('../../Img/creation_1.png');">
+  
+  <!-- title -->
+      <view class="title">
+        BABBLE
+      </view>
+  <!-- title -->  
+  
+  <!-- container -->
+  <view class="container">
+
+      <!-- form section -->
+
     <form class="form" bindsubmit="crateGameSubmit" bindreset="formReset">
         <view class="section">
-          <view class="section__title">Find your partner - timer</view>
+          <view class="section__title">Find your partner time</view>
           <input name="find_partner_timer" placeholder="in seconds" findtimer/>
         </view>
 
         <view class="section">
-          <view class="section__title">Question - timer</view>
+          <view class="section__title">Question time</view>
           <input name="question_timer" placeholder="in seconds" questiontimer/>
         </view>
 
         <view class="section">
-          <view class="section__title">Selfie - timer</view>
+          <view class="section__title">Selfie time</view>
           <input name="selfie_timer" placeholder="in seconds" selfietimer/>
         </view>
 
@@ -23,13 +33,18 @@
           <view class="section__title">Rounds</view>
           <input name="rounds" placeholder="# of rounds" round/>
         </view>
-
-        <view class="btn-area">
-          <button formType="submit">Submit</button>
-        </view>
+ 
     </form>
-  
-  
-  </view>
+    <!-- form ending -->
 
+  </view>
+  <!-- container -->
+
+  <view class="btn-area">
+    <view class="text" formType="share">
+      Share
+    </view>
+  </view>
+  
 </view>
+

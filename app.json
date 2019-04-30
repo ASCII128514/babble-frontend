@@ -4,7 +4,8 @@
 
     "pages/logs/logs",
 
-    "pages/creation/creation"
+    "pages/creation/creation",
+    "pages/status_page/status_page"
   ],
 
   "window": {
