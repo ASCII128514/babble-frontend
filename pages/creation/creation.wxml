@@ -23,6 +23,10 @@
           <view class="section__title">Rounds</view>
           <input name="rounds" placeholder="# of rounds" round/>
         </view>
+
+        <view class="btn-area">
+          <button formType="submit">Submit</button>
+        </view>
     </form>
   
   
