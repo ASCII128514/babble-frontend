@@ -18,6 +18,12 @@
     font-weight: bolder;
   }
 
+  .title {
+    color: black;
+    font-weight: 700;
+    font-size: 40px;
+  }
+
   .container {
     padding: 30rpx;
     border-radius: 10px;
@@ -35,14 +41,19 @@
   .btn-area {
     width: 200px;
     height: 100px; /* as the half of the width */
-    background-color: #672ca1;
+    background-color: linear-gradient (-100deg, rgba(0,150,168,0.2) 80%, rgba(0,150,61,0.1) 80%);
     border-top-left-radius: 110px;  /* 100px of height + 10px of border */
     border-top-right-radius: 110px; /* 100px of height + 10px of border */
     border: 3px solid whitesmoke;
     border-bottom: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
 
   .text {
-    margin-top: 40px;
+    margin-top: 20px;
+    font-weight:500;
+    font-size: 40px;
   }
 

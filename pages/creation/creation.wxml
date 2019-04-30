@@ -17,7 +17,7 @@
     <form class="form" bindsubmit="crateGameSubmit" bindreset="formReset">
 
         <view class="section">
-          <view class="section__title">Find your partner time</view>
+          <view class="section__title">Find your match</view>
           <input name="find_partner_timer" placeholder="in seconds" findtimer/>
         </view>
 
