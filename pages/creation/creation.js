@@ -1,4 +1,6 @@
 // pages/creation/creation.js
+import { createGame } from '../../utils/game_api.js';
+
 Page({
 
   /**
@@ -6,6 +8,11 @@ Page({
    */
   data: {
 
+  },
+
+
+  createGameSubmit: (e) => {
+    createGame(e);
   },
 
   /**

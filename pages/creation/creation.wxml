@@ -3,7 +3,7 @@
 <view class="background" style="background-image: linear-gradient(-200deg, rgba(0,90,168,0.2) 0%, rgba(0,76,61,0.1) 60%), url('../../Img/creation_1.png');">
   <view>
     <view class="title">BABBLE</view>
-    <form class="form" bindsubmit="crateGameSubmit" bindreset="formReset">
+    <form class="form" bindsubmit="createGameSubmit" bindreset="formReset">
         <view class="section">
           <view class="section__title">Find your partner - timer</view>
           <input name="find_partner_timer" placeholder="in seconds" findtimer/>
