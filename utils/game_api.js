@@ -19,7 +19,7 @@ const createGame = function (page) {
       },
       success: res => {
         wx.redirectTo({
-          url: '../status/status',
+          url: '../index/index',
         })
       }
     })
