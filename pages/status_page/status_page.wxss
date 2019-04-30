@@ -1,1 +1,61 @@
-/* pages/status_page/status_page.wxss */
+/* pages/creation/creation.wxss */
+.background {
+    color: white;
+    text-align: center;
+    height: 101vh;
+    width: 100%;
+    /* if you have a 70px navbar => height: calc(100vh - 70px); */
+    background-size: cover !important;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    opacity: 0.8;
+    flex-direction: column;
+  }
+
+  .section__title {
+    color: black;
+    font-weight: bolder;
+  }
+
+  .title {
+    color: whitesmoke;
+    font-weight: 900;
+    font-size: 40px;
+  }
+
+  .container {
+    padding: 30rpx;
+    border-radius: 10px;
+    background-color: whitesmoke;
+    opacity: 0.8;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+  }
+
+  .section {
+    padding-bottom: 40rpx;
+    font-weight: bold;
+  }
+
+  .btn-area {
+    width: 200px;
+    height: 100px; /* as the half of the width */
+    background-color: linear-gradient (-100deg, rgba(100,150,168,0.3) 80%, rgba(0,150,61,0.5) 80%);
+    border-top-left-radius: 110px;  /* 100px of height + 10px of border */
+    border-top-right-radius: 110px; /* 100px of height + 10px of border */
+    border: 3px solid whitesmoke;
+    border-bottom: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .text {
+    margin-top: 20px;
+    font-weight:500;
+    font-size: 40px;
+    color: white;
+  }
+

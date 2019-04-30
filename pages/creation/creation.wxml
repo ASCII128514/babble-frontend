@@ -1,52 +1,48 @@
 <!--pages/creation/creation.wxml-->
-
-
 <view class="background" style="background-image: linear-gradient(-100deg, rgba(0,150,168,0.2) 80%, rgba(0,150,61,0.1) 80%), url('../../Img/creation_1.png');">
 
   <!-- title -->
       <view class="title">
-        BABBLE
+        Settings
       </view>
   <!-- title -->
 
   <!-- container -->
   <view class="container">
-
       <!-- form section -->
+        <form class="form" bindsubmit="crateGameSubmit" bindreset="formReset">
 
-    <form class="form" bindsubmit="crateGameSubmit" bindreset="formReset">
+            <view class="section">
+              <view class="section__title">Find your match</view>
+              <input name="find_partner_timer" placeholder="in seconds" findtimer/>
+            </view>
 
-        <view class="section">
-          <view class="section__title">Find your match</view>
-          <input name="find_partner_timer" placeholder="in seconds" findtimer/>
-        </view>
+            <view class="section">
+              <view class="section__title">Question time</view>
+              <input name="question_timer" placeholder="in seconds" questiontimer/>
+            </view>
 
-        <view class="section">
-          <view class="section__title">Question time</view>
-          <input name="question_timer" placeholder="in seconds" questiontimer/>
-        </view>
+            <view class="section">
+              <view class="section__title">Selfie time</view>
+              <input name="selfie_timer" placeholder="in seconds" selfietimer/>
+            </view>
 
-        <view class="section">
-          <view class="section__title">Selfie time</view>
-          <input name="selfie_timer" placeholder="in seconds" selfietimer/>
-        </view>
-
-        <view class="section">
-          <view class="section__title">Rounds</view>
-          <input name="rounds" placeholder="# of rounds" round/>
-        </view>
-
-    </form>
+            <view class="section">
+              <view class="section__title">Rounds</view>
+              <input name="rounds" placeholder="# of rounds" round/>
+            </view>
+        </form>
     <!-- form ending -->
-
   </view>
   <!-- container -->
 
+  <!-- SHARE button -->
   <view class="btn-area">
-    <view class="text" formType="share">
+    <view class="text" bindtap='buttonShare'>
       Share
     </view>
   </view>
+  <!-- SHARE button -->
 
 </view>
 

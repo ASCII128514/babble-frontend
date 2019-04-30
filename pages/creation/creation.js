@@ -3,6 +3,12 @@ import { createGame } from '../../utils/game_api.js';
 
 Page({
 
+  buttonShare: function () {
+    wx.navigateTo({
+      url: '/pages/status_page/status_page'
+    })
+  },
+
   /**
    * Page initial data
    */

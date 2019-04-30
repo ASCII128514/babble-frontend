@@ -19,8 +19,8 @@
   }
 
   .title {
-    color: black;
-    font-weight: 700;
+    color: whitesmoke;
+    font-weight: 900;
     font-size: 40px;
   }
 
@@ -36,12 +36,13 @@
 
   .section {
     padding-bottom: 40rpx;
+    font-weight: bold;
   }
 
   .btn-area {
     width: 200px;
     height: 100px; /* as the half of the width */
-    background-color: linear-gradient (-100deg, rgba(0,150,168,0.2) 80%, rgba(0,150,61,0.1) 80%);
+    background-color: linear-gradient (-100deg, rgba(100,150,168,0.3) 80%, rgba(0,150,61,0.5) 80%);
     border-top-left-radius: 110px;  /* 100px of height + 10px of border */
     border-top-right-radius: 110px; /* 100px of height + 10px of border */
     border: 3px solid whitesmoke;
