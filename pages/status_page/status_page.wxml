@@ -1,0 +1,38 @@
+<!--pages/status_page/status_page.wxml-->
+<view class="background" style="background-image: linear-gradient(-100deg, rgba(0,150,168,0.2) 80%, rgba(0,150,61,0.1) 80%), url('../../Img/creation_1.png');">
+
+  <!-- title -->
+      <view class="title">
+        Game Status
+      </view>
+  <!-- title -->
+
+  <!-- container -->
+  <view class="container">
+
+      <!-- info section -->
+        
+
+            <view class="section">
+              <text class="info_section">Participants</text>
+              <text>14/16</text>
+            </view>
+
+            <view class="section">
+              <text class="section__title">Round</text>
+              <text>1/3</text>
+            </view>
+        
+    <!-- info section -->
+  </view>
+  <!-- container -->
+
+  <!-- SHARE button -->
+  <view class="btn-area">
+    <view class="text" formType="share">
+      Pause
+    </view>
+  </view>
+  <!-- SHARE button -->
+
+</view>

@@ -1,26 +1,11 @@
-// pages/creation/creation.js
-import { createGame } from '../../utils/game_api.js';
-
+// pages/status_page/status_page.js
 Page({
-
-  buttonShare: function () {
-    wx.navigateTo({
-      url: '/pages/status_page/status_page'
-    })
-  },
 
   /**
    * Page initial data
    */
   data: {
 
-  },
-
-  verifyInteger() {
-  }
-
-  createGameSubmit: (e) => {
-    createGame(e);
   },
 
   /**
