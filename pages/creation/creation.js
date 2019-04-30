@@ -10,6 +10,9 @@ Page({
 
   },
 
+  verifyInteger() {
+  }
+
 
   createGameSubmit: (e) => {
     createGame(e);
