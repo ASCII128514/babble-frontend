@@ -30,7 +30,7 @@
 
   .teaser {
     font-size: 16px;
-    font-weight: bolder;
+    font-weight: 800;
     color: ;
     opacity: 0.9;
     margin-bottom: 5px;
@@ -43,4 +43,5 @@
     background: rgb(2,0,36);
     background: linear-gradient(301deg, rgba(2,0,36,1) 0%, rgba(0,81,149,0.6895133053221288) 0%, rgba(13,236,119,1) 100%);  
     padding: 10px;
+    font-weight: bolder;
   }

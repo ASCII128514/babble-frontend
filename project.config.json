@@ -40,7 +40,7 @@
 			"list": []
 		},
 		"miniprogram": {
-			"current": 2,
+			"current": 3,
 			"list": [
 				{
 					"id": -1,
@@ -61,6 +61,12 @@
 					"name": "Player_index",
 					"pathName": "pages/player_index/player_index",
 					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "Take_selfie",
+					"pathName": "pages/take_selfie/take_selfie",
 					"scene": null
 				}
 			]
