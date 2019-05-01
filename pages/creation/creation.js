@@ -39,11 +39,7 @@ Page({
       errorMessage = "Please enter a valid number";
       console.log(errorMessage);
     }
-    console.log(document.getElementById("demo"));
 
-    // wx.navigateTo({
-    //   url: '/pages/status_page/status_page'
-    // })
   },
 
   /**
