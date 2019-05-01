@@ -18,8 +18,15 @@
           </image>
         </view>
 
-        <view class="btn-area-2">
-          <button bindtap="startBabble">Let's BABBLE</button>
+
+        <view class="btn-footer">
+            <view class='timer'>
+              20s
+            </view>
+
+            <view class="startBabble" bindtap="startBabble">
+              Let's BABBLE
+            </view>
         </view>
 
     </view>

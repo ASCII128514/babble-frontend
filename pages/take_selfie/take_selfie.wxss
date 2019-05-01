@@ -11,16 +11,10 @@
   background: linear-gradient(301deg, rgba(2,0,36,1) 0%, rgba(0,81,149,0.6895133053221288) 0%, rgba(13,236,119,1) 100%);
 }
 
-.page-title {
-  font-weight: 900;
-  font-size: 20px;
-}
-
+/* section for selfie preview */
 .preview-picture {
-  /* background-color: yellow; */
   height: 50vh;
   width: 99%;
-  border: 4px, solid, black;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -31,17 +25,48 @@
   height: 50vh;
   width: 100%;
 }
+/* section for selfie preview ends*/
 
+/* selfie button */
 .btn-area-1 {
   width:50%;
   margin-top: 20px;
   padding: 2px;
   background-color: black;
 }
+/* selfie button ends */
 
-.btn-area-2 {
-  width:50%;
-  padding: 2px;
-  background-color: black;
+
+/* buttons at the bottom */
+.btn-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 80%;
+  height: 50px;
   margin-bottom: 20px;
+  padding-top: 2px;
+  padding-bottom: 2px;
+}
+
+.timer {
+  width:80px;
+  background-color:white;
+  height: 45px;
+  border: solid;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 5px;
+}
+
+.startBabble {
+  width:150px;
+  background-color:white;
+  height: 45px;
+  border: solid;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 5px;
 }
