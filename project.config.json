@@ -38,11 +38,12 @@
 			"list": []
 		},
 		"miniprogram": {
-			"current": 2,
+
+			"current": 1,
 			"list": [
 				{
 					"id": -1,
-					"name": "Creation page",
+					"name": "Creation Page",
 					"pathName": "pages/creation/creation",
 					"query": "",
 					"scene": null
@@ -57,6 +58,12 @@
 					"id": -1,
 					"name": "Player_index",
 					"pathName": "pages/player_index/player_index",
+        },
+        {
+					"id": 1,
+					"name": "Test",
+					"pathName": "test/test",
+					"query": "",
 					"scene": null
 				}
 			]

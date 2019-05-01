@@ -27,17 +27,19 @@ Page({
     // if successful, navigate to
     // if unsuccessful, show error message 
     // write verifyInteger in game_api. in this file call verifyInteger and if x, then y
+    
     var userInput;
     var errorMessage;
     
-    userInput = e;
-    console.log("User Input:", e);
+    
+    var partnerTimer = e.detail.value.find_partner_timer;
+    console.log("User Input:", partnerTimer);
 
-    if (isNaN(userInput) || userInput < 1) {
+    if (isNaN(partnerTimer) || userInput < 1) {
       errorMessage = "Please enter a valid number";
       console.log(errorMessage);
     }
-    // #.innerHTML = errorMessage;
+    console.log(document.getElementById("demo"));
 
     // wx.navigateTo({
     //   url: '/pages/status_page/status_page'

@@ -11,7 +11,6 @@
   <view class="container">
       <!-- form section -->
         <form class="form" bindsubmit="formSubmit" bindreset="formReset">
-
           <!-- info + button -->
             <view class="info_and_button">
                   <!-- upper section -->
