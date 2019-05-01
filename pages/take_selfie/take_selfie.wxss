@@ -70,3 +70,5 @@
   align-items: center;
   border-radius: 5px;
 }
+
+/* buttons at the bottom ends*/

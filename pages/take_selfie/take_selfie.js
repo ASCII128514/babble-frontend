@@ -12,6 +12,12 @@ Page({
     })
   },
 
+  startBabble: function () {
+    wx.navigateTo({
+      url: '/pages/find_partner/find_partner'
+    })
+  },
+
   takePhoto() {
     this.ctx.takePhoto({
       quality: 'high',
