@@ -38,7 +38,7 @@
             
                     <!-- SHARE button -->
                     <view class="btn-area">
-                      <button class="text" formType="submit">
+                      <button class="text" formType="submit" bindtap='toStatus'>
                         Share
                       </button>
                     </view>

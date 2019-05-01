@@ -54,8 +54,8 @@
   /* section diplaying all setting info */
 
   .btn-area {
-    width: 200px;
-    height: 100px; /* as the half of the width */
+    width: 250px;
+    height: 125px; /* as the half of the width */
     border-top-left-radius: 110px;  /* 100px of height + 10px of border */
     border-top-right-radius: 110px; /* 100px of height + 10px of border */
     border: 3px solid whitesmoke;
