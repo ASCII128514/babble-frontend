@@ -54,8 +54,8 @@
   /* section diplaying all setting info */
 
   .btn-area {
-    width: 250px;
-    height: 125px; /* as the half of the width */
+    width: 220px;
+    height: 110px; /* as the half of the width */
     border-top-left-radius: 110px;  /* 100px of height + 10px of border */
     border-top-right-radius: 110px; /* 100px of height + 10px of border */
     border: 3px solid whitesmoke;
@@ -68,7 +68,7 @@
   .text {
     margin-top: 20px;
     font-weight:500;
-    font-size: 40px;
+    font-size: 30px;
    
   }
 

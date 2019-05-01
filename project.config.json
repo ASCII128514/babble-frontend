@@ -1,26 +1,26 @@
 {
-	"description": "项目配置文件",
+	"description": "Project configuration file",
 	"packOptions": {
 		"ignore": []
 	},
 	"setting": {
-		"urlCheck": false,
+		"urlCheck": true,
 		"es6": true,
 		"postcss": true,
 		"minified": true,
 		"newFeature": true,
-		"autoAudits": false
+		"autoAudits": false,
+		"checkInvalidKey": true
 	},
 	"compileType": "miniprogram",
 	"libVersion": "2.6.6",
 	"appid": "wxfe50be7b8c73314d",
 	"projectname": "babble-frontend",
+	"cloudfunctionTemplateRoot": "",
 	"debugOptions": {
 		"hidedInDevtools": []
 	},
-	"isGameTourist": false,
-	"simulatorType": "wechat",
-	"simulatorPluginLibVersion": {},
+	"scripts": {},
 	"condition": {
 		"search": {
 			"current": -1,
@@ -35,22 +35,28 @@
 			"list": []
 		},
 		"game": {
-			"currentL": -1,
 			"list": []
 		},
 		"miniprogram": {
-<<<<<<< HEAD
-			"current": -1,
+			"current": 2,
 			"list": [
 				{
 					"id": -1,
-<<<<<<< HEAD
 					"name": "Creation page",
 					"pathName": "pages/creation/creation",
-=======
-					"name": "Create Game",
-					"pathName": "pages/create_game/create_game",
->>>>>>> 1c7ff0006d2be0a48a93e9cecb10a56374b36b85
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "Game Status",
+					"pathName": "pages/status_page/status_page",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "Player_index",
+					"pathName": "pages/player_index/player_index",
 					"scene": null
 				}
 			]
