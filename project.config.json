@@ -9,16 +9,18 @@
 		"postcss": true,
 		"minified": true,
 		"newFeature": true,
-		"autoAudits": false
+		"autoAudits": false,
+		"checkInvalidKey": true
 	},
 	"compileType": "miniprogram",
 	"libVersion": "2.6.6",
 	"appid": "wxfe50be7b8c73314d",
 	"projectname": "babble-frontend",
+	"cloudfunctionTemplateRoot": "",
 	"debugOptions": {
 		"hidedInDevtools": []
 	},
-	"isGameTourist": false,
+	"scripts": {},
 	"simulatorType": "wechat",
 	"simulatorPluginLibVersion": {},
 	"condition": {
@@ -35,22 +37,15 @@
 			"list": []
 		},
 		"game": {
-			"currentL": -1,
 			"list": []
 		},
 		"miniprogram": {
-<<<<<<< HEAD
-			"current": -1,
+			"current": 0,
 			"list": [
 				{
 					"id": -1,
-<<<<<<< HEAD
-					"name": "Creation page",
+					"name": "game",
 					"pathName": "pages/creation/creation",
-=======
-					"name": "Create Game",
-					"pathName": "pages/create_game/create_game",
->>>>>>> 1c7ff0006d2be0a48a93e9cecb10a56374b36b85
 					"scene": null
 				}
 			]
