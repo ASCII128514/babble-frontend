@@ -30,8 +30,8 @@
 
   <!-- SHARE button -->
   <view class="btn-area">
-    <view class="text" formType="share" bindtap='toPause'>
-      Start
+    <view class="text" formType="share" bindtap='toStart'>
+      Pause
     </view>
   </view>
   <!-- SHARE button -->
