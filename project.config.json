@@ -38,8 +38,7 @@
 			"list": []
 		},
 		"miniprogram": {
-
-			"current": 1,
+			"current": 2,
 			"list": [
 				{
 					"id": -1,
@@ -49,20 +48,16 @@
 					"scene": null
 				},
 				{
-					"id": -1,
+					"id": 1,
 					"name": "Game Status",
 					"pathName": "pages/status_page/status_page",
+					"query": "",
 					"scene": null
 				},
 				{
 					"id": -1,
 					"name": "Player_index",
 					"pathName": "pages/player_index/player_index",
-        },
-        {
-					"id": 1,
-					"name": "Test",
-					"pathName": "test/test",
 					"query": "",
 					"scene": null
 				}
