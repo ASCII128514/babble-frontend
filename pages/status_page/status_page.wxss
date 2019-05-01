@@ -13,49 +13,60 @@
     flex-direction: column;
   }
 
-  .section__title {
-    color: black;
-    font-weight: bolder;
-  }
+.section__title {
+  color: black;
+  font-weight: bolder;
+}
 
-  .title {
-    color: whitesmoke;
-    font-weight: 900;
-    font-size: 40px;
-  }
+.title {
+  color: whitesmoke;
+  font-weight: 900;
+  font-size: 40px;
+}
 
-  .container {
+.container {
     padding: 30rpx;
     border-radius: 10px;
-    background-color: whitesmoke;
     opacity: 0.8;
     display: flex;
     flex-direction: column;
-    justify-content: space-around;
+    justify-content: space-around; 
+    background: rgb(93,205,185);
+    background: linear-gradient(87deg, rgba(93,205,185,1) 7%, rgba(231,253,45,0.958420868347339) 100%);
   }
 
-  .section {
-    padding-bottom: 40rpx;
-    font-weight: bold;
+.section {
+  display: flex;
+  justify-content: space-around;
+  width: 75vw;
+  padding: 25rpx;
+  font-weight: bold;
+  /* border-top-left-radius: 5px;
+  border-top-right-radius: 5px; */
+}
+
+.info_section {
+  color: black;
+}
+
+
+.btn-area {
+  width: 200px;
+  height: 100px; /* as the half of the width */
+  background-color: linear-gradient (-100deg, rgba(100,150,168,0.3) 80%, rgba(0,150,61,0.5) 80%);
+  border-top-left-radius: 110px;  /* 100px of height + 10px of border */
+  border-top-right-radius: 110px; /* 100px of height + 10px of border */
+  border: 3px solid whitesmoke;
+  border-bottom: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   }
 
-  .btn-area {
-    width: 200px;
-    height: 100px; /* as the half of the width */
-    background-color: linear-gradient (-100deg, rgba(100,150,168,0.3) 80%, rgba(0,150,61,0.5) 80%);
-    border-top-left-radius: 110px;  /* 100px of height + 10px of border */
-    border-top-right-radius: 110px; /* 100px of height + 10px of border */
-    border: 3px solid whitesmoke;
-    border-bottom: 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-
-  .text {
-    margin-top: 20px;
-    font-weight:500;
-    font-size: 40px;
-    color: white;
-  }
+.text {
+  margin-top: 20px;
+  font-weight:500;
+  font-size: 40px;
+  color: white;
+}
 

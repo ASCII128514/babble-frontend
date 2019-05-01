@@ -3,6 +3,25 @@ import { createGame } from '../../utils/game_api.js';
 
 Page({
 
+  // styling for top bar
+  onLoad: function (options) {
+    wx.setNavigationBarColor({
+      frontColor: '#000000',
+      backgroundColor: '#aec6d9',
+    })
+
+    wx.setNavigationBarTitle({
+      title: 'BABBLE',
+    })
+  },
+  // styling for top bar ends
+
+  toStatus: function () {
+    wx.navigateTo({
+      url: '/pages/status_page/status_page'
+    })
+  },
+
   formSubmit: function (e) {
     // verifyInteger
     // if successful, navigate to
