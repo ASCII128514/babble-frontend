@@ -3,10 +3,26 @@ import { createGame } from '../../utils/game_api.js';
 
 Page({
 
-  buttonShare: function () {
-    wx.navigateTo({
-      url: '/pages/status_page/status_page'
-    })
+  buttonShare: function (e) {
+    // verifyInteger
+    // if successful, navigate to
+    // if unsuccessful, show error message 
+    // write verifyInteger in game_api. in this file call verifyInteger and if x, then y
+    var userInput;
+    var errorMessage;
+    
+    userInput = e;
+    console.log("User Input:", e);
+
+    if (isNaN(userInput) || userInput < 1) {
+      errorMessage = "Please enter a valid number";
+      console.log(errorMessage);
+    }
+    // #.innerHTML = errorMessage;
+
+    // wx.navigateTo({
+    //   url: '/pages/status_page/status_page'
+    // })
   },
 
   /**
@@ -15,9 +31,6 @@ Page({
   data: {
 
   },
-
-  verifyInteger() {
-  }
 
   createGameSubmit: (e) => {
     createGame(e);

@@ -44,8 +44,9 @@
 
             <view class="section">
               <view class="section__title">Find your match</view>
-              <input name="find_partner_timer" placeholder="in seconds" findtimer/>
+              <input name="find_partner_timer" id="numb" placeholder="in seconds" findtimer/>
             </view>
+            <view id="demo"></view>
 
             <view class="section">
               <view class="section__title">Question time</view>
@@ -68,7 +69,7 @@
 
   <!-- SHARE button -->
   <view class="btn-area">
-    <view class="text" bindtap='buttonShare' onclick='verifyInteger()'>
+    <view class="text" bindtap='buttonShare'>
       Share
     </view>
   </view>
