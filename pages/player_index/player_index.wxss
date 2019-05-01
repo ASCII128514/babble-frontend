@@ -22,8 +22,8 @@
   }
 
   .content {
-    background: rgb(160, 158, 158);
-    padding: 20px;
+    background: #62a7c2;
+    padding: 15px;
     border-radius: 15px;
   }
 
