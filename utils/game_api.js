@@ -17,13 +17,28 @@ const createGame = function (page) {
           "question_timer": page.detail.value.question_timer
         },
       },
-      success: res => {
-        wx.redirectTo({
-          url: '../index/index',
-        })
-      }
+      // success: res => {
+      //   wx.redirectTo({
+      //     url: '../index/index',
+      //   })
+      // }
     })
   }
+}
+
+const verifyInteger = function () {
+  var userInput;
+  var errorMessage;
+
+  userInput = document.getElementById("numb").value;
+  console.log("starting to verify");
+  console.log("User Input", userInput);
+
+  if (isNaN(userInput) || userInput < 1) {
+    errorMessage = "Please enter a valid number";
+    console.log(errorMessage);
+  }
+  document.getElementById("demo").innerHTML = errorMessage;
 }
 
 export { createGame };

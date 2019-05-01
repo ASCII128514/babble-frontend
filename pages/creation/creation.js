@@ -3,6 +3,49 @@ import { createGame } from '../../utils/game_api.js';
 
 Page({
 
+  // styling for top bar
+  onLoad: function (options) {
+    wx.setNavigationBarColor({
+      frontColor: '#000000',
+      backgroundColor: '#aec6d9',
+    })
+
+    wx.setNavigationBarTitle({
+      title: 'BABBLE',
+    })
+  },
+  // styling for top bar ends
+
+  toStatus: function () {
+    wx.navigateTo({
+      url: '/pages/status_page/status_page'
+    })
+  },
+
+  formSubmit: function (e) {
+    // verifyInteger
+    // if successful, navigate to
+    // if unsuccessful, show error message 
+    // write verifyInteger in game_api. in this file call verifyInteger and if x, then y
+    
+    var userInput;
+    var errorMessage;
+    
+    
+    var partnerTimer = e.detail.value.find_partner_timer;
+    console.log("User Input:", partnerTimer);
+
+    if (isNaN(partnerTimer) || userInput < 1) {
+      errorMessage = "Please enter a valid number";
+      console.log(errorMessage);
+    }
+    console.log(document.getElementById("demo"));
+
+    // wx.navigateTo({
+    //   url: '/pages/status_page/status_page'
+    // })
+  },
+
   /**
    * Page initial data
    */
@@ -10,10 +53,9 @@ Page({
 
   },
 
-
-  createGameSubmit: (e) => {
-    createGame(e);
-  },
+  // createGameSubmit: (e) => {
+  //   createGame(e);
+  // },
 
   /**
    * Lifecycle function--Called when page load

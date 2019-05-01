@@ -1,0 +1,15 @@
+<!--pages/player_index/player_index.wxml-->
+<!-- Background -->
+  <view class="background" style="background-image: linear-gradient(-200deg, rgba(0,90,168,0.2) 0%, rgba(0,76,61,0.2) 60%), url('../../Img/background 1.png');">
+        <!-- Main text -->
+        <view class='title'>BABBLE</view>
+          <view class="content">
+                <view class='teaser'>1. Take a selfie</view>
+                <view class='teaser'>2. Find your partner</view>
+                <view class='teaser'>3. Start the conversation</view>
+            <view class='button' bindtap="buttonClicked">Get started</view>
+          </view>
+          <!-- Main text -->
+  </view>
+<!-- backgroud -->
+
