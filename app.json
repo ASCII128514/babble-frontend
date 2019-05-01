@@ -1,13 +1,11 @@
 {
   "pages": [
     "pages/index/index",
-
     "pages/logs/logs",
-
     "pages/creation/creation",
-    "pages/status_page/status_page"
+    "pages/status_page/status_page",
+    "test/test"
   ],
-
   "window": {
     "backgroundTextStyle": "light",
     "navigationBarBackgroundColor": "#fff",

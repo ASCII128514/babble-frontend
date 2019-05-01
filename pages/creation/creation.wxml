@@ -46,7 +46,7 @@
               <view class="section__title">Find your match</view>
               <input name="find_partner_timer" id="numb" placeholder="in seconds" findtimer/>
             </view>
-            <view id="demo"></view>
+            <view id="demo">test</view>
 
             <view class="section">
               <view class="section__title">Question time</view>
