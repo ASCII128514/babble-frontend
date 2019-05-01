@@ -1,7 +1,17 @@
 Page({
   onLoad() {
     this.ctx = wx.createCameraContext()
+
+    wx.setNavigationBarColor({
+      frontColor: '#000000',
+      backgroundColor: '#aec6d9',
+    })
+
+    wx.setNavigationBarTitle({
+      title: 'Selfie time',
+    })
   },
+
   takePhoto() {
     this.ctx.takePhoto({
       quality: 'high',
@@ -12,6 +22,7 @@ Page({
       }
     })
   },
+
   error(e) {
     console.log(e.detail)
   }

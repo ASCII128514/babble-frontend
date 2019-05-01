@@ -1,12 +1,47 @@
 /* pages/take_selfie/take_selfie.wxss */
-
-
-.preview-tips {
-  margin: 20rpx 0;  
+.page-body-wrapper {
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  /* align-content: center; */
+  align-items: center;
+  background: rgb(2,0,36);
+  background: linear-gradient(301deg, rgba(2,0,36,1) 0%, rgba(0,81,149,0.6895133053221288) 0%, rgba(13,236,119,1) 100%);
 }
 
-.video {
-  margin: 50px auto;
+.page-title {
+  font-weight: 900;
+  font-size: 20px;
+}
+
+.preview-picture {
+  /* background-color: yellow; */
+  height: 50vh;
+  width: 99%;
+  border: 4px, solid, black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+}
+
+.selfie {
+  height: 50vh;
   width: 100%;
-  height: 300px;
+}
+
+.btn-area-1 {
+  width:50%;
+  margin-top: 20px;
+  padding: 2px;
+  background-color: black;
+}
+
+.btn-area-2 {
+  width:50%;
+  padding: 2px;
+  background-color: black;
+  margin-bottom: 20px;
 }
