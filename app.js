@@ -78,6 +78,13 @@ App({
     })
   },
   globalData: {
-    userInfo: null
+    userInfo: null,
+    gameTime: [[0, 1, 2, 3], [0, 15, 30, 45]],
+    gameTimeIndices: {
+      partnerTime: [0, 0],
+      questionTime: [0, 0], 
+      selfieTime: [0, 0]
+      }
+    // globalData: { user: "salmon", token: "879RTf324f" }
   }
 })

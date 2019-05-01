@@ -1,7 +1,19 @@
 // pages/creation/creation.js
-import { createGame } from '../../utils/game_api.js';
+import { createGame, setTime } from '../../utils/game_api.js';
+
+let app = getApp()
+let globalData = app.globalData || {}
 
 Page({
+  /**
+   * Page initial data
+   */
+  data: {
+    gameTime: [],
+    gameTimeIndices: [],
+    minute: "",
+    second: ""
+  },
 
   // styling for top bar
   onLoad: function (options) {
@@ -13,6 +25,13 @@ Page({
     wx.setNavigationBarTitle({
       title: 'BABBLE',
     })
+
+    // Copy arrays from globalData to data
+    const gameTime = globalData.gameTime
+    this.setData({ gameTime })
+
+    const gameIndex = globalData.gameIndex
+    this.setData({ gameIndex })
   },
   // styling for top bar ends
 
@@ -22,47 +41,17 @@ Page({
     })
   },
 
-  formSubmit: function (e) {
-    // verifyInteger
-    // if successful, navigate to
-    // if unsuccessful, show error message 
-    // write verifyInteger in game_api. in this file call verifyInteger and if x, then y
-    
-    var userInput;
-    var errorMessage;
-    
-    
-    var partnerTimer = e.detail.value.find_partner_timer;
-    console.log("User Input:", partnerTimer);
-
-    if (isNaN(partnerTimer) || userInput < 1) {
-      errorMessage = "Please enter a valid number";
-      console.log(errorMessage);
-    }
-    console.log(document.getElementById("demo"));
-
-    // wx.navigateTo({
-    //   url: '/pages/status_page/status_page'
-    // })
+  partnerMatchTimeAmount: function (e) {
+    setTime(e, this, "partner");
   },
 
-  /**
-   * Page initial data
-   */
-  data: {
-
+  questionTimeAmount: function (e) {
+    setTime(e, this, "question");
   },
 
   // createGameSubmit: (e) => {
   //   createGame(e);
   // },
-
-  /**
-   * Lifecycle function--Called when page load
-   */
-  onLoad: function (options) {
-
-  },
 
   /**
    * Lifecycle function--Called when page is initially rendered

@@ -17,12 +17,23 @@
                     <view class="upper_form">
                         <view class="section">
                           <view class="section__title">Find your match</view>
-                          <input name="find_partner_timer" id="numb" placeholder="in seconds" findtimer/>
+                          <!-- <input name="find_partner_timer" id="numb" placeholder="in seconds" findtimer/> -->
+                          <picker mode="multiSelector" bindchange="partnerMatchTimeAmount" value="{{gameTimeIndices}}" range="{{gameTime}}">
+                            <view class="picker">
+                              <!-- Current selection: {{gameTime[0][time[0]]}}, {{gameTime[1][time[1]]}} -->
+                                Time: {{gameTime[0][gameTimeIndices[0]]}}:{{gameTime[1][gameTimeIndices[01]]}}
+                            </view>
+                        </picker>
                         </view>
-                        <view id="demo"></view>
                         <view class="section">
                           <view class="section__title">Question time</view>
-                          <input name="question_timer" placeholder="in seconds" questiontimer/>
+                          <!-- <input name="question_timer" placeholder="in seconds" questiontimer/> -->
+                          <picker mode="multiSelector" bindchange="questionTimeAmount" value="{{gameTimeIndices}}" range="{{gameTime}}">
+                            <view class="picker">
+                              <!-- Current selection: {{gameTime[0][time[0]]}}, {{gameTime[1][time[1]]}} -->
+                                Time: {{gameTime[0][gameTimeIndices[0]]}}:{{gameTime[1][gameTimeIndices[01]]}}
+                            </view>
+                        </picker>
                         </view>
                         <view class="section">
                           <view class="section__title">Selfie time</view>
