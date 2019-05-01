@@ -10,7 +10,6 @@ App({
       success: res => {
         // check if user has logged-in before
         var value = wx.getStorageSync('token');
-        console.log(value == false)
         if (value) {
           console.log("logged in as existing user")
           wx.request({
@@ -23,7 +22,6 @@ App({
             },
             success: (res) => {
               const token = res.data;
-              console.log(res)
             }
           });
         } else {
@@ -79,12 +77,23 @@ App({
   },
   globalData: {
     userInfo: null,
-    gameTime: [[0, 1, 2, 3], [0, 15, 30, 45]],
+    gameTime: {
+      minute_possibilities: ["0", "1", "2", "3"],
+      second_possibilities: ["00", "15", "30", "45"]
+    },
     gameTimeIndices: {
-      partnerTime: [0, 0],
-      questionTime: [0, 0], 
-      selfieTime: [0, 0]
+      partnerTime: {
+        minutes: "1",
+        seconds: "00"
+      },
+      questionTime: {
+        minutes: "2",
+        seconds: "00"
+      }, 
+      selfieTime: {
+        minutes: "0",
+        seconds: "45"
       }
-    // globalData: { user: "salmon", token: "879RTf324f" }
+    }
   }
 })

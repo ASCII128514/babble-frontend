@@ -9,10 +9,8 @@ Page({
    * Page initial data
    */
   data: {
-    gameTime: [],
-    gameTimeIndices: [],
-    minute: "",
-    second: ""
+    gameTime: {},
+    gameTimeIndices: {},
   },
 
   // styling for top bar
@@ -30,15 +28,16 @@ Page({
     const gameTime = globalData.gameTime
     this.setData({ gameTime })
 
-    const gameIndex = globalData.gameIndex
-    this.setData({ gameIndex })
+    let gameTimeIndices = globalData.gameTimeIndices
+    this.setData({ gameTimeIndices })
   },
   // styling for top bar ends
 
-  toStatus: function () {
-    wx.navigateTo({
-      url: '/pages/status_page/status_page'
-    })
+  toStatus: function (e) {
+    createGame(e);
+    // wx.navigateTo({
+    //   url: '/pages/status_page/status_page'
+    // })
   },
 
   partnerMatchTimeAmount: function (e) {
@@ -49,9 +48,13 @@ Page({
     setTime(e, this, "question");
   },
 
-  // createGameSubmit: (e) => {
-  //   createGame(e);
-  // },
+  selfieTimeAmount: function (e) {
+    setTime(e, this, "selfie");
+  },
+
+  roundsSlider: function (e) {
+    console.log("slider:", e.detail.value);
+  },
 
   /**
    * Lifecycle function--Called when page is initially rendered
