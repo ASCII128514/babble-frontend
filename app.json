@@ -4,6 +4,7 @@
     "pages/logs/logs",
     "pages/creation/creation",
     "pages/status_page/status_page",
+    "pages/status_page_2/status_page_2",
     "pages/player_index/player_index",
     "pages/take_selfie/take_selfie",
     "pages/find_partner/find_partner"
