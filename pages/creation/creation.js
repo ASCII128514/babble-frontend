@@ -3,7 +3,7 @@ import { createGame } from '../../utils/game_api.js';
 
 Page({
 
-  buttonShare: function (e) {
+  formSubmit: function (e) {
     // verifyInteger
     // if successful, navigate to
     // if unsuccessful, show error message 
@@ -32,9 +32,9 @@ Page({
 
   },
 
-  createGameSubmit: (e) => {
-    createGame(e);
-  },
+  // createGameSubmit: (e) => {
+  //   createGame(e);
+  // },
 
   /**
    * Lifecycle function--Called when page load

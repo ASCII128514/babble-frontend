@@ -40,7 +40,7 @@
   <!-- container -->
   <view class="container">
       <!-- form section -->
-        <form class="form" bindsubmit="createGameSubmit" bindreset="formReset">
+        <form class="form" bindsubmit="formSubmit" bindreset="formReset">
 
             <view class="section">
               <view class="section__title">Find your match</view>
@@ -62,18 +62,20 @@
               <view class="section__title">Rounds</view>
               <input name="rounds" placeholder="# of rounds" round/>
             </view>
+            
+            <!-- SHARE button -->
+            <view class="btn-area">
+              <button class="text" formType="submit">
+                Share
+              </button>
+            </view>
+            
+            <!-- SHARE button -->
         </form>
     <!-- form ending -->
   </view>
   <!-- container -->
 
-  <!-- SHARE button -->
-  <view class="btn-area">
-    <view class="text" bindtap='buttonShare'>
-      Share
-    </view>
-  </view>
-  <!-- SHARE button -->
 
 </view>
 
