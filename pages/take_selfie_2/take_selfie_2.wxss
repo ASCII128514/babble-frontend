@@ -1,0 +1,14 @@
+/* section for selfie preview */
+.preview-picture {
+  height: 50vh;
+  width: 99%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+}
+
+.selfie {
+  height: 50vh;
+  width: 100%;
+}

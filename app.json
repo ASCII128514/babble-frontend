@@ -7,12 +7,13 @@
     "pages/status_page_2/status_page_2",
     "pages/player_index/player_index",
     "pages/take_selfie/take_selfie",
+    "pages/take_selfie_2/take_selfie_2",
     "pages/find_partner/find_partner",
     "pages/question/question",
     "pages/room/room",
     "pages/QR_code/QR_code"
   ],
-  
+
   "window": {
     "backgroundTextStyle": "light",
     "navigationBarBackgroundColor": "#fff",
