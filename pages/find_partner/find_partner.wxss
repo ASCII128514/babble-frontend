@@ -1,9 +1,66 @@
 /* pages/find_partner/find_partner.wxss */
-.background {
+.container {
+    text-align: center;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    align-items: center;
+    height: 100vh;
+    width: 100vw;
+    background-color: rgba(6,64,143,0.5);
+}
+
+
+  /* .background {
     text-align: center;
     height: 101vh;
     width: 100%;
-    /* if you have a 70px navbar => height: calc(100vh - 70px); */
     background-size: cover !important;
-    opacity: 0.8;
+    opacity: 0.5;
+  } */
+
+/* Top AREA */
+  .top-area {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 65%;
+    width: 90%;
+    justify-content: space-around;
+  }
+
+  .title {
+    margin: 15px;
+    width: 70%;
+    font-weight: bolder;
+    font-size: 22px;
+  }
+
+  .avatar {
+    border-radius: 50%;
+    height: 300px;
+    background-size: cover !important;
+  }
+
+  /* Top AREA ends */
+
+  .bottom-area {
+    background: rgb(2,0,36);
+    background: linear-gradient(301deg, rgba(2,0,36,1) 0%, rgba(180,11,11,0.8641738034366222) 0%, rgba(6,64,143,1) 73%);
+    width: 100%;
+    height: 25%;
+    margin-bottom: 3px;
+    margin-left: 8px;
+    padding-right: 8px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: space-between;
+    font-weight: bolder;
+  }
+
+  .info {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
   }

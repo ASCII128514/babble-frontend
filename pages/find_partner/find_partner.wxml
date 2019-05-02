@@ -1,18 +1,50 @@
 <!--pages/find_partner/find_partner.wxml-->
-<view class="background" style="background-image: linear-gradient(-100deg, rgba(0,150,168,0.2) 80%, rgba(0,150,61,0.1) 80%), url('http://lc-qaxMtbr0.cn-n1.lcfile.com/ddf3f50a60d4832b5d78/gamebackground.png');">
+<view class="container">
 
-  <!-- title -->
-    <view>Find your partner</view>
-  <!-- title -->
+  <!-- background -->
+  
+       <!-- Top area  -->
+      <view class="top-area">
+
+        <!-- title -->
+          <view class="title">Find your partner</view>
+        <!-- title ends -->
+
+        <!-- avatar -->
+          <view>
+            <image class="avatar" src="http://lc-qaxMtbr0.cn-n1.lcfile.com/31cf09e7f686ddea8e2e/selfie_1.jpg">
+            IMG </image>
+          </view>
+        <!-- avatar ends -->
+     
+      </view>
+      <!-- Top area ends -->
+
+      <!-- bottom area -->
+
+        <!-- info: round and seconds -->
+          <view class="bottom-area">
+                    <!-- button: found partner -->
+                        <view class="btn-area">
+                          <button class="button" formType="submit" bindtap='toStatus'>
+                            Found my partner
+                          </button>
+                        </view>
+                    <!-- button: found partner ends -->
+
+                    <!-- info area -->
+                      <view class="info">
+                            <view> Round 1/3 </view>
+                            <view> 20 sec </view>
+                      </view> 
+                    <!-- info area ends -->
+          </view>
+        <!-- info: round and seconds ends -->
+
+       
+
+      <!-- bottom area ends -->
 
 
-
-
-
-
-
-
-
-
-
+  <!-- background ends -->
 </view>
