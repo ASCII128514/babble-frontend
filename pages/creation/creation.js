@@ -1,7 +1,18 @@
 // pages/creation/creation.js
-import { createGame } from '../../utils/game_api.js';
+import { createGame, setTime } from '../../utils/game_api.js';
+
+let app = getApp()
+let globalData = app.globalData || {}
 
 Page({
+  /**
+   * Page initial data
+   */
+  data: {
+    gameTime: {},
+    gameTimeIndices: {},
+    numberOfRounds: 5
+  },
 
   // styling for top bar
   onLoad: function (options) {
@@ -13,55 +24,43 @@ Page({
     wx.setNavigationBarTitle({
       title: 'BABBLE',
     })
+
+    // Copy arrays from globalData to data
+    const gameTime = globalData.gameTime
+    this.setData({ gameTime })
+
+    let gameTimeIndices = globalData.gameTimeIndices
+    this.setData({ gameTimeIndices })
+
+    let numberOfRounds = globalData.numberOfRounds
+    this.setData({ numberOfRounds })
   },
   // styling for top bar ends
 
-  toStatus: function () {
+  toStatus: function (e) {
+    createGame(e);
     wx.navigateTo({
       url: '/pages/status_page/status_page'
     })
   },
 
-  formSubmit: function (e) {
-    // verifyInteger
-    // if successful, navigate to
-    // if unsuccessful, show error message 
-    // write verifyInteger in game_api. in this file call verifyInteger and if x, then y
-    
-    var userInput;
-    var errorMessage;
-    
-    
-    var partnerTimer = e.detail.value.find_partner_timer;
-    console.log("User Input:", partnerTimer);
-
-    if (isNaN(partnerTimer) || userInput < 1) {
-      errorMessage = "Please enter a valid number";
-      console.log(errorMessage);
-    }
-    console.log(document.getElementById("demo"));
-
-    // wx.navigateTo({
-    //   url: '/pages/status_page/status_page'
-    // })
+  partnerMatchTimeAmount: function (e) {
+    setTime(e, this, "partner");
   },
 
-  /**
-   * Page initial data
-   */
-  data: {
-
+  questionTimeAmount: function (e) {
+    setTime(e, this, "question");
   },
 
-  // createGameSubmit: (e) => {
-  //   createGame(e);
-  // },
+  selfieTimeAmount: function (e) {
+    setTime(e, this, "selfie");
+  },
 
-  /**
-   * Lifecycle function--Called when page load
-   */
-  onLoad: function (options) {
-
+  roundsSlider: function (e) {
+    let numberOfRounds = e.detail.value
+    this.setData({
+      numberOfRounds
+    })
   },
 
   /**
