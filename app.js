@@ -94,6 +94,7 @@ App({
         minutes: "0",
         seconds: "45"
       }
-    }
+    },
+    numberOfRounds: 5,
   }
 })

@@ -3,11 +3,16 @@ let globalData = app.globalData;
 let g = globalData || {};
 let gameTime = g.gameTime || [];
 let gameTimeIndices = g.gameTimeIndices || [];
+let numberOfRounds = g.numberOfRounds;
 
 const createGame = function (page) {
   var value = wx.getStorageSync('token')
   if (value) {
-    console.log("create game check data", page);
+    console.log("start creating data with:");
+    console.log("1:", gameTimeIndices.partnerTime);
+    console.log("2:", gameTimeIndices.questionTime);
+    console.log("3:", gameTimeIndices.selfieTime);
+    console.log("4:", numberOfRounds);
     wx.request({
       url: `http://localhost:3000/api/v1/game`,
       method: 'POST',
@@ -16,17 +21,15 @@ const createGame = function (page) {
           "token": value
         },
         "game": {
-          "rounds": page.detail.value.round_number,
-          "find_partner_timer": page.detail.value.find_partner_timer,
-          "selfie_timer": page.detail.value.selfie_timer,
-          "question_timer": page.detail.value.question_timer
+          "rounds": numberOfRounds,
+          "find_partner_timer": gameTimeIndices.partnerTime,
+          "selfie_timer": gameTimeIndices.selfieTime,
+          "question_timer": gameTimeIndices.questionTime
         },
       },
-      // success: res => {
-      //   wx.redirectTo({
-      //     url: '../index/index',
-      //   })
-      // }
+      success: res => {
+        console.log("sent game data");
+      }
     })
   }
 }

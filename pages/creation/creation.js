@@ -11,6 +11,7 @@ Page({
   data: {
     gameTime: {},
     gameTimeIndices: {},
+    numberOfRounds: 5
   },
 
   // styling for top bar
@@ -30,14 +31,17 @@ Page({
 
     let gameTimeIndices = globalData.gameTimeIndices
     this.setData({ gameTimeIndices })
+
+    let numberOfRounds = globalData.numberOfRounds
+    this.setData({ numberOfRounds })
   },
   // styling for top bar ends
 
   toStatus: function (e) {
     createGame(e);
-    // wx.navigateTo({
-    //   url: '/pages/status_page/status_page'
-    // })
+    wx.navigateTo({
+      url: '/pages/status_page/status_page'
+    })
   },
 
   partnerMatchTimeAmount: function (e) {
@@ -53,7 +57,10 @@ Page({
   },
 
   roundsSlider: function (e) {
-    console.log("slider:", e.detail.value);
+    let numberOfRounds = e.detail.value
+    this.setData({
+      numberOfRounds
+    })
   },
 
   /**
