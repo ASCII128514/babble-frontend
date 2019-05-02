@@ -11,7 +11,7 @@ Page({
   data: {
     gameTime: {},
     gameTimeIndices: {},
-    numberOfRounds: 5
+    numberOfRounds: 5,
   },
 
   // styling for top bar
@@ -39,10 +39,7 @@ Page({
 
   toStatus: function () {
     let objectOfSeconds = convertArrayToSeconds();
-    createGame(objectOfSeconds);
-    wx.navigateTo({
-      url: '/pages/status_page/status_page'
-    })
+    createGame(objectOfSeconds, this);
   },
 
   formSubmit: function () {

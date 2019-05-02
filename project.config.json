@@ -85,7 +85,13 @@
 					"scene": null
 				},
 				{
-					"id": -1,
+					"id": 6,
+					"name": "QR",
+					"pathName": "pages/QR_code/QR_code",
+					"query": "",
+        },
+        {
+					"id": 7,
 					"name": "Question page",
 					"pathName": "pages/question/question",
 					"query": "",

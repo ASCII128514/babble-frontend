@@ -4,8 +4,9 @@ let g = globalData || {};
 let gameTime = g.gameTime || [];
 let gameTimeIndices = g.gameTimeIndices || [];
 let numberOfRounds = g.numberOfRounds;
+let qrCodeUrl = g.qrCodeUrl;
 
-const createGame = function (objectOfSeconds) {
+const createGame = function (objectOfSeconds, page) {
   var value = wx.getStorageSync('token')
   if (value) {
     wx.request({
@@ -23,9 +24,15 @@ const createGame = function (objectOfSeconds) {
         },
       },
       success: res => {
-        console.log("sent game data");
-        console.log("results:", res);
-        // const products = res.data["user"];
+        let qrCodeUrl = res.data.url
+        console.log(getApp())
+        getApp().globalData.qrCodeUrl = qrCodeUrl
+        // getApp().setGlobalData({
+        //   qrCodeUrl
+        // })
+        wx.navigateTo({
+          url: '/pages/QR_code/QR_code'
+        })
       }
     })
   }
@@ -53,7 +60,7 @@ const convertArrayToSeconds = function () {
   return settingsTotalSeconds
 }
 
-const setTime = function (e, f, gameTimeIndex) {
+const setTime = function (e, page, gameTimeIndex) {
   let defineTimeIndex = gameTimeIndex + "Time"
   
   let arrayOfMinutes = gameTime.minute_possibilities
@@ -67,7 +74,7 @@ const setTime = function (e, f, gameTimeIndex) {
 
   const gameTimeIndices = app.globalData.gameTimeIndices
 
-  f.setData({
+  page.setData({
     gameTimeIndices
   })
 }
