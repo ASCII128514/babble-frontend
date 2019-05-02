@@ -1,2 +1,46 @@
 <!--pages/question/question.wxml-->
-<text>pages/question/question.wxml</text>
+<view class="container">
+
+  <!-- background -->
+  
+       <!-- Top area  -->
+      <view class="top-area">
+
+        <!-- title -->
+          <view class="title">
+            <view class="round">Round 1/3</view>
+            <view class="timer">00:20</view>
+          </view>
+        <!-- title ends -->
+
+        <!-- avatar -->
+          <view>
+            Describe your best day?
+          </view>
+        <!-- avatar ends -->
+     
+      </view>
+      <!-- Top area ends -->
+
+      <!-- bottom area -->
+
+        <!-- info: round and seconds -->
+          <view class="bottom-area">
+                    <!-- button: found partner -->
+                        <view class="btn-area" bindtap='goToQuestion'>
+                          <view class="button" formType="submit" bindtap='toStatus'>
+                            READY
+                          </view>
+                        </view>
+                    <!-- button: found partner ends -->
+          </view>
+        <!-- info: round and seconds ends -->
+
+       
+
+      <!-- bottom area ends -->
+
+
+  <!-- background ends -->
+</view>
+
