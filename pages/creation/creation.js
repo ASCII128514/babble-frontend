@@ -1,5 +1,5 @@
 // pages/creation/creation.js
-import { createGame, setTime } from '../../utils/game_api.js';
+import { createGame, setTime, convertArrayToSeconds } from '../../utils/game_api.js';
 
 let app = getApp()
 let globalData = app.globalData || {}
@@ -37,11 +37,16 @@ Page({
   },
   // styling for top bar ends
 
-  toStatus: function (e) {
-    createGame(e);
+  toStatus: function () {
+    let objectOfSeconds = convertArrayToSeconds();
+    createGame(objectOfSeconds);
     wx.navigateTo({
       url: '/pages/status_page/status_page'
     })
+  },
+
+  formSubmit: function () {
+
   },
 
   partnerMatchTimeAmount: function (e) {

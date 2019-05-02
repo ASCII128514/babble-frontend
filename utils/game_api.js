@@ -5,16 +5,11 @@ let gameTime = g.gameTime || [];
 let gameTimeIndices = g.gameTimeIndices || [];
 let numberOfRounds = g.numberOfRounds;
 
-const createGame = function (page) {
+const createGame = function (objectOfSeconds) {
   var value = wx.getStorageSync('token')
   if (value) {
-    console.log("start creating data with:");
-    console.log("1:", gameTimeIndices.partnerTime);
-    console.log("2:", gameTimeIndices.questionTime);
-    console.log("3:", gameTimeIndices.selfieTime);
-    console.log("4:", numberOfRounds);
     wx.request({
-      url: `http://babble.wogengapp.cn/api/v1/game`,
+      url: `https://babble.wogengapp.cn/api/v1/game`,
       method: 'POST',
       data: {
         "tokens": {
@@ -22,18 +17,40 @@ const createGame = function (page) {
         },
         "game": {
           "round_number": numberOfRounds,
-          "find_partner_timer": gameTimeIndices.partnerTime,
-          "selfie_timer": gameTimeIndices.selfieTime,
-          "question_timer": gameTimeIndices.questionTime
+          "find_partner_timer": objectOfSeconds.find_partner_timer,
+          "selfie_timer": objectOfSeconds.selfie_timer,
+          "question_timer": objectOfSeconds.question_timer
         },
       },
       success: res => {
         console.log("sent game data");
-        console.log("results:", res.data);
+        console.log("results:", res);
         // const products = res.data["user"];
       }
     })
   }
+}
+
+const convertArrayToSeconds = function () {
+  let partnerTimeMinutes = gameTimeIndices.partnerTime.minutes
+  let partnerTimeUserInputSeconds = gameTimeIndices.partnerTime.seconds
+  let partnerTimeTotalSeconds = (partnerTimeMinutes * 60 + parseInt(partnerTimeUserInputSeconds, 10))
+
+  let questionTimeMinutes = gameTimeIndices.questionTime.minutes
+  let questionTimeUserInputSeconds = gameTimeIndices.questionTime.seconds
+  let questionTimeTotalSeconds = (questionTimeMinutes * 60 + parseInt(questionTimeUserInputSeconds, 10))
+
+  let selfieTimeMinutes = gameTimeIndices.selfieTime.minutes
+  let selfieTimeUserInputSeconds = gameTimeIndices.selfieTime.seconds
+  let selfieTimeTotalSeconds = (selfieTimeMinutes * 60 + parseInt(selfieTimeUserInputSeconds, 10))
+  
+  const settingsTotalSeconds = {
+      "find_partner_timer": partnerTimeTotalSeconds,
+      "selfie_timer": selfieTimeTotalSeconds,
+      "question_timer": questionTimeTotalSeconds
+    }
+
+  return settingsTotalSeconds
 }
 
 const setTime = function (e, f, gameTimeIndex) {
@@ -55,4 +72,4 @@ const setTime = function (e, f, gameTimeIndex) {
   })
 }
 
-export { createGame, setTime };
+export { createGame, setTime, convertArrayToSeconds };
