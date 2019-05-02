@@ -3,11 +3,11 @@ const app = getApp()
 
 Page({
 
-  // buttonClicked: function () {
-  //   wx.navigateTo({
-  //     url: '/pages/creation/creation'
-  //   })
-  // },
+  buttonClicked: function () {
+    wx.navigateTo({
+      url: '/pages/take_selfie/take_selfie'
+    })
+  },
 
   onLoad: function (options) {
     wx.setNavigationBarColor({

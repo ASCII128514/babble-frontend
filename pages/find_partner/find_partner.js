@@ -1,11 +1,5 @@
-// pages/status_page/status_page.js
+// pages/find_partner/find_partner.js
 Page({
-
-  toPause: function () {
-    wx.navigateTo({
-      url: '/pages/status_page_2/status_page_2'
-    })
-  },
 
   /**
    * Page initial data

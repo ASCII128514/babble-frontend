@@ -1,0 +1,9 @@
+/* pages/find_partner/find_partner.wxss */
+.background {
+    text-align: center;
+    height: 101vh;
+    width: 100%;
+    /* if you have a 70px navbar => height: calc(100vh - 70px); */
+    background-size: cover !important;
+    opacity: 0.8;
+  }

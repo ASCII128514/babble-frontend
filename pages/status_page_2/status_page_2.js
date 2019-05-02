@@ -1,9 +1,8 @@
-// pages/status_page/status_page.js
+// pages/status_page_2/status_page_2.js
 Page({
-
-  toPause: function () {
+  toStart: function () {
     wx.navigateTo({
-      url: '/pages/status_page_2/status_page_2'
+      url: '/pages/status_page/status_page'
     })
   },
 

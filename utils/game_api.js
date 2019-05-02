@@ -1,44 +1,58 @@
+const app = getApp();
+let globalData = app.globalData;
+let g = globalData || {};
+let gameTime = g.gameTime || [];
+let gameTimeIndices = g.gameTimeIndices || [];
+let numberOfRounds = g.numberOfRounds;
+
 const createGame = function (page) {
   var value = wx.getStorageSync('token')
-  console.log("create game test", value)
   if (value) {
-    console.log("create game check data", page);
+    console.log("start creating data with:");
+    console.log("1:", gameTimeIndices.partnerTime);
+    console.log("2:", gameTimeIndices.questionTime);
+    console.log("3:", gameTimeIndices.selfieTime);
+    console.log("4:", numberOfRounds);
     wx.request({
-      url: `https://babble.wogengapp.cn/api/v1/game`,
+      url: `http://babble.wogengapp.cn/api/v1/game`,
       method: 'POST',
       data: {
         "tokens": {
           "token": value
         },
         "game": {
-          "rounds": page.detail.value.rounds,
-          "find_partner_timer": page.detail.value.find_partner_timer,
-          "selfie_timer": page.detail.value.selfie_timer,
-          "question_timer": page.detail.value.question_timer
+          "round_number": numberOfRounds,
+          "find_partner_timer": gameTimeIndices.partnerTime,
+          "selfie_timer": gameTimeIndices.selfieTime,
+          "question_timer": gameTimeIndices.questionTime
         },
       },
-      // success: res => {
-      //   wx.redirectTo({
-      //     url: '../index/index',
-      //   })
-      // }
+      success: res => {
+        console.log("sent game data");
+        console.log("results:", res.data);
+        // const products = res.data["user"];
+      }
     })
   }
 }
 
-const verifyInteger = function () {
-  var userInput;
-  var errorMessage;
+const setTime = function (e, f, gameTimeIndex) {
+  let defineTimeIndex = gameTimeIndex + "Time"
+  
+  let arrayOfMinutes = gameTime.minute_possibilities
+  let minute = Number.parseInt(arrayOfMinutes[e.detail.value[0]], 10);
 
-  userInput = document.getElementById("numb").value;
-  console.log("starting to verify");
-  console.log("User Input", userInput);
+  let arrayOfSeconds = gameTime.second_possibilities
+  let second = Number.parseInt(arrayOfSeconds[e.detail.value[1]], 10);
 
-  if (isNaN(userInput) || userInput < 1) {
-    errorMessage = "Please enter a valid number";
-    console.log(errorMessage);
-  }
-  document.getElementById("demo").innerHTML = errorMessage;
+  app.globalData.gameTimeIndices[defineTimeIndex].minutes = minute
+  app.globalData.gameTimeIndices[defineTimeIndex].seconds = second
+
+  const gameTimeIndices = app.globalData.gameTimeIndices
+
+  f.setData({
+    gameTimeIndices
+  })
 }
 
-export { createGame };
+export { createGame, setTime };

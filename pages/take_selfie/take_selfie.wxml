@@ -1,0 +1,34 @@
+<!--pages/take_selfie/take_selfie.wxml-->
+
+ <view class="page-body">
+
+    <view class="page-body-wrapper">
+
+        <camera device-position="back" flash="off" binderror="error" style="width: 100%; height: 300px;">
+        </camera>
+
+        <view class="btn-area-1">
+          <button bindtap="takePhoto">Click!</button>
+        </view>
+      
+
+       <view class="preview-picture"> 
+          <image class="selfie" wx:if="{{src}}" mode="widthFix" src="{{src}}">
+              Preview
+          </image>
+        </view>
+
+
+        <view class="btn-footer">
+            <view class='timer'>
+              20s
+            </view>
+
+            <view class="startBabble" bindtap="startBabble">
+              Let's BABBLE
+            </view>
+        </view>
+
+    </view>
+
+ </view>

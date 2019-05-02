@@ -17,20 +17,42 @@
                     <view class="upper_form">
                         <view class="section">
                           <view class="section__title">Find your match</view>
-                          <input name="find_partner_timer" id="numb" placeholder="in seconds" findtimer/>
+                          <!-- <input name="find_partner_timer" id="numb" placeholder="in seconds" findtimer/> -->
+                          <picker mode="multiSelector" bindchange="partnerMatchTimeAmount" value="{{gameTimeIndices}}" range="{{[gameTime.minute_possibilities, gameTime.second_possibilities]}}">
+                            <view class="picker">
+                              <!-- Current selection: {{gameTime[0][time[0]]}}, {{gameTime[1][time[1]]}} -->
+                                Time: {{gameTimeIndices.partnerTime.minutes}}:{{gameTimeIndices.partnerTime.seconds}}
+                            </view>
+                        </picker>
                         </view>
-                        <view id="demo"></view>
                         <view class="section">
                           <view class="section__title">Question time</view>
-                          <input name="question_timer" placeholder="in seconds" questiontimer/>
+                          <!-- <input name="question_timer" placeholder="in seconds" questiontimer/> -->
+                            <picker mode="multiSelector" bindchange="questionTimeAmount" value="{{gameTimeIndices}}" range="{{[gameTime.minute_possibilities, gameTime.second_possibilities]}}">
+                              <view class="picker">
+                                <!-- Current selection: {{gameTime[0][time[0]]}}, {{gameTime[1][time[1]]}} -->
+                                Time: {{gameTimeIndices.questionTime.minutes}}:{{gameTimeIndices.questionTime.seconds}}
+                              </view>
+                            </picker>
                         </view>
                         <view class="section">
                           <view class="section__title">Selfie time</view>
-                          <input name="selfie_timer" placeholder="in seconds" selfietimer/>
+                          <!-- <input name="selfie_timer" placeholder="in seconds" selfietimer/> -->
+                            <picker mode="multiSelector" bindchange="selfieTimeAmount" value="{{gameTimeIndices}}" range="{{[gameTime.minute_possibilities, gameTime.second_possibilities]}}">
+                              <view class="picker">
+                              <!-- Current selection: {{gameTime[0][time[0]]}}, {{gameTime[1][time[1]]}} -->
+                                Time: {{gameTimeIndices.selfieTime.minutes}}:{{gameTimeIndices.selfieTime.seconds}}
+                              </view>
+                            </picker>
                         </view>
                         <view class="section">
                           <view class="section__title">Rounds</view>
-                          <input name="rounds" placeholder="# of rounds" round/>
+                          <!-- <input name="rounds" placeholder="# of rounds" round/> -->
+                            <view class="section section_gap">
+                              <view class="body-view">
+                                <slider bindchange="roundsSlider" min="0" max="10" show-value value="5"/>
+                              </view>
+                            </view>
                         </view>
                     </view>
                     <!-- upper section -->
