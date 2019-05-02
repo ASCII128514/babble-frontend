@@ -12,6 +12,7 @@
     "pages/room/room",
     "pages/QR_code/QR_code"
   ],
+  
   "window": {
     "backgroundTextStyle": "light",
     "navigationBarBackgroundColor": "#fff",
