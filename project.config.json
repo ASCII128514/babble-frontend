@@ -40,7 +40,7 @@
 			"list": []
 		},
 		"miniprogram": {
-			"current": 5,
+			"current": 6,
 			"list": [
 				{
 					"id": -1,
@@ -81,6 +81,13 @@
 					"id": 5,
 					"name": "Test",
 					"pathName": "test/test",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": 6,
+					"name": "QR",
+					"pathName": "pages/QR_code/QR_code",
 					"query": "",
 					"scene": null
 				}

@@ -1,2 +1,6 @@
 <!--pages/QR_code/QR_code.wxml-->
 <text>pages/QR_code/QR_code.wxml</text>
+
+<view>URL: {{qrCodeUrl}} </view>
+
+<image class="QR" src="http://lc-qaxmtbr0.cn-n1.lcfile.com/l1cq2vhfpsPmIeqPreQHmQveMX5E8Kq7Lvipz4Dd.png"></image>
