@@ -9,7 +9,7 @@
         <!-- title -->
           <view class="title">
             <view class="round">Round 1/3</view>
-            <view class="timer">00:20</view>
+            <view class="timer">00:45</view>
           </view>
         <!-- title ends -->
 
@@ -29,7 +29,7 @@
                     <!-- button: found partner -->
                         <view class="btn-area" bindtap='goToQuestion'>
                           <view class="button" formType="submit" bindtap='toStatus'>
-                            READY
+                            Ready
                           </view>
                         </view>
                     <!-- button: found partner ends -->
