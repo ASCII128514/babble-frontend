@@ -15,7 +15,7 @@ wx.onSocketOpen(function (res) {
   })
   wx.sendSocketMessage({
     data: JSON.stringify({
-      command: 'subscribe', identifier: id
+      command: 'subscribe', identifier: id, room: room_id
     })
   })
   for (let i = 0; i < socketMsgQueue.length; i++) {
