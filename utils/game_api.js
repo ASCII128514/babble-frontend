@@ -4,7 +4,7 @@ const createGame = function (page) {
   if (value) {
     console.log("create game check data", page);
     wx.request({
-      url: `http://localhost:3000/api/v1/game`,
+      url: `https://babble.wogengapp.cn/api/v1/game`,
       method: 'POST',
       data: {
         "tokens": {

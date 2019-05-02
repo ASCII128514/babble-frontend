@@ -14,7 +14,7 @@ App({
         if (value) {
           console.log("logged in as existing user")
           wx.request({
-            url: 'http://localhost:3000/api/v1/login',
+            url: 'https://babble.wogengapp.cn/api/v1/login',
             method: 'POST',
             data: {
               "tokens": {
@@ -29,7 +29,7 @@ App({
         } else {
           //Initiate network request to backend
           wx.request({
-            url: 'http://localhost:3000/api/v1/login',
+            url: 'https://babble.wogengapp.cn/api/v1/login',
             method: 'POST',
             header: {
               'content-type': 'application/json' // 默认值

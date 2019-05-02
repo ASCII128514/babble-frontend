@@ -14,7 +14,7 @@
 	},
 	"compileType": "miniprogram",
 	"libVersion": "2.6.6",
-	"appid": "wxfe50be7b8c73314d",
+	"appid": "wx1b886557aa172784",
 	"projectname": "babble-frontend",
 	"cloudfunctionTemplateRoot": "",
 	"debugOptions": {
@@ -23,7 +23,6 @@
 	"scripts": {},
 	"simulatorType": "wechat",
 	"simulatorPluginLibVersion": {},
-
 	"condition": {
 		"search": {
 			"current": -1,
@@ -41,16 +40,15 @@
 			"list": []
 		},
 		"miniprogram": {
-			<<
-			<< << < HEAD "current": 0,
-			"list": [{
+			"current": 0,
+			"list": [
+				{
 					"id": -1,
 					"name": "game",
 					"pathName": "pages/creation/creation",
-					===
-					=== =
 					"current": 2,
-					"list": [{
+					"list": [
+						{
 							"id": -1,
 							"name": "Creation Page",
 							"pathName": "pages/creation/creation",
@@ -69,10 +67,11 @@
 							"name": "Player_index",
 							"pathName": "pages/player_index/player_index",
 							"query": "",
-							>>>
-							>>> > eccfc35462ac9da20be155f1e1dc513cde28529e "scene": null
+							"scene": null
 						}
 					]
 				}
-			}
+			]
 		}
+	}
+}
