@@ -1,4 +1,6 @@
 // pages/take_selfie_2/take_selfie_2.js
+let app = getApp()
+
 Page({
 
   /**
@@ -12,7 +14,9 @@ Page({
    * Lifecycle function--Called when page load
    */
   onLoad: function (options) {
-
+    this.setData({
+      previewSelfie: app.globalData.previewSelfie
+    })
   },
 
   /**
