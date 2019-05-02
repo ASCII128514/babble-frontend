@@ -21,7 +21,7 @@ const createGame = function (page) {
           "token": value
         },
         "game": {
-          "rounds": numberOfRounds,
+          "round_number": numberOfRounds,
           "find_partner_timer": gameTimeIndices.partnerTime,
           "selfie_timer": gameTimeIndices.selfieTime,
           "question_timer": gameTimeIndices.questionTime
