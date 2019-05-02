@@ -26,9 +26,9 @@
           <view class="bottom-area">
                     <!-- button: found partner -->
                         <view class="btn-area">
-                          <button class="button" formType="submit" bindtap='toStatus'>
-                            Found my partner
-                          </button>
+                          <view class="button" formType="submit" bindtap='toStatus'>
+                            READY
+                          </view>
                         </view>
                     <!-- button: found partner ends -->
 

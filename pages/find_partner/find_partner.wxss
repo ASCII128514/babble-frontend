@@ -7,7 +7,7 @@
     align-items: center;
     height: 100vh;
     width: 100vw;
-    background-color: rgba(6,64,143,0.5);
+    /* background-color: rgba(6,64,143,0.5); */
 }
 
 
@@ -59,7 +59,22 @@
     font-weight: bolder;
   }
 
+  .button {
+    background-color: whitesmoke;
+    margin-top: 5px;
+    width: 210px;
+    height: 105px; /* as the half of the width */
+    border-bottom-left-radius: 110px;  /* 100px of height + 10px of border */
+    border-bottom-right-radius: 110px; /* 100px of height + 10px of border */
+    border: 3px solid whitesmoke;
+    border-bottom: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
   .info {
+    width: 96%;
     display: flex;
     align-items: flex-end;
     justify-content: space-between;
