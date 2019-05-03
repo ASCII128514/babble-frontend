@@ -1,0 +1,26 @@
+/* pages/instruction/instruction.wxss */
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.background {
+    color: white;
+    text-align: center;
+    height: 107vh;
+    width: 100%;
+    background-size: cover !important;
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-around;
+
+  }
+
+  .text {
+    background-color: green;
+    margin-bottom: 50px;
+    width: 60%;
+    height: 30px;
+    border-radius: 10px;
+  }

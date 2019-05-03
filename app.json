@@ -11,7 +11,8 @@
     "pages/find_partner/find_partner",
     "pages/question/question",
     "pages/room/room",
-    "pages/QR_code/QR_code"
+    "pages/QR_code/QR_code",
+    "pages/instruction/instruction"
   ],
 
   "window": {

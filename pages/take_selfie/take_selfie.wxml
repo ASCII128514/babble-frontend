@@ -2,6 +2,9 @@
 
  <view class="page-body">
     <view class="page-body-wrapper">
+        <view class="text">
+          Take a selfie, so others can find you!
+        </view>
         <camera class="camera" device-position="back" flash="off" binderror="error" style="width: 95%; height: 400px;">
         </camera>
 
