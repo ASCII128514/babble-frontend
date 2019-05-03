@@ -7,7 +7,9 @@
             <view class='teaser'>Anytime</view>
             <view class='teaser'>Anywhere</view>
             <button class='button' bindtap="buttonClicked">View instruction</button>
+            <view class="A-button" bindtap='toPlayer'>A</view>
           </view>
           <!-- Main text -->
+          
   </view>
 <!-- backgroud -->

@@ -1,6 +1,6 @@
 <!--pages/instruction/instruction.wxml-->
 <view class="container">
-        <view class="background" style="background-image: url('http://lc-qaxMtbr0.cn-n1.lcfile.com/7eff18a661cde5916827/instruction_1.png');">
+        <view class="background" style="background-image: url('http://lc-qaxMtbr0.cn-n1.lcfile.com/9c76fe9ef71ce18292d6/instruction.png');">
             <view class="text" bindtap='buttonClicked'>
                 Let's start!
             </view>

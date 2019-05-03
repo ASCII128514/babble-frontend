@@ -6,10 +6,9 @@
 }
 
 .background {
-    color: white;
     text-align: center;
-    height: 107vh;
-    width: 100%;
+    height: 100vh;
+    width: 95%;
     background-size: cover !important;
     display: flex;
     align-items: flex-end;
@@ -18,9 +17,15 @@
   }
 
   .text {
-    background-color: green;
-    margin-bottom: 50px;
-    width: 60%;
+    background-color: #43e92d;
+    margin-bottom: 80px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    width: 40%;
     height: 30px;
-    border-radius: 10px;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+    border-top-right-radius: 40px;
+    border-bottom-right-radius: 40px;
+    font-weight: 900;
   }

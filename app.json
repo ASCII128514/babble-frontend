@@ -12,7 +12,8 @@
     "pages/question/question",
     "pages/room/room",
     "pages/QR_code/QR_code",
-    "pages/instruction/instruction"
+    "pages/instruction/instruction",
+    "pages/instruction_creator/instruction_creator"
   ],
 
   "window": {

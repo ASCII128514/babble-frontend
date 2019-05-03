@@ -1,13 +1,5 @@
-// pages/instruction/instruction.js
+// pages/instruction_creator/instruction_creator.js
 Page({
-
-  buttonClicked: function () {
-    wx.navigateTo({
-      url: '/pages/take_selfie/take_selfie'
-    })
-  },
-
- 
 
   /**
    * Page initial data
@@ -20,15 +12,6 @@ Page({
    * Lifecycle function--Called when page load
    */
   onLoad: function (options) {
-    
-      wx.setNavigationBarColor({
-        frontColor: '#000000',
-        backgroundColor: '#ffffff',
-      })
-
-      wx.setNavigationBarTitle({
-        title: 'How to play',
-      })
 
   },
 
