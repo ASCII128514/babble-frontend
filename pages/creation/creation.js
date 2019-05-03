@@ -1,5 +1,5 @@
 // pages/creation/creation.js
-import { createGame, setTime, convertArrayToSeconds } from '../../utils/game_api.js';
+import { createGame, setTime, convertArrayToSeconds } from '../../utils/create_game_api.js';
 
 let app = getApp()
 let globalData = app.globalData || {}

@@ -83,7 +83,7 @@ App({
 
     if (scene !== null ) {
       wx.request({
-        url: `https://babble.wogengapp.cn/api/v1/game/${scene}`,
+        url: `https://babble.wogengapp.cn/api/v1/game/show/${scene}`,
         success: res => {
           if (res.game.status !== 'end') {
             getApp().globalData.players = res.players
@@ -102,7 +102,10 @@ App({
               })
               wx.sendSocketMessage({
                 data: JSON.stringify({
-                  command: 'subscribe', identifier: id, room: res.game.id
+                  command: 'subscribe',
+                  identifier: id,
+                  room: res.game.id,
+                  token: wx.getStorageSync('token')
                 })
               })
               for (let i = 0; i < socketMsgQueue.length; i++) {
@@ -152,9 +155,17 @@ App({
               const value = JSON.parse(res.data)
               console.log(res)
               if (value.type != 'ping' && value.type != 'welcome') {
-                console.log('hahaha', value)
-              }
+                console.log('hahaha', value);
 
+                switch(value.type) {
+                  case "players":
+                    this.globalData.playerList = value.players
+                    break;
+                  case "pairs":
+                    this.globalData.playerPairs = value.pairs
+                    break;
+                }
+              }
             })
 
 
