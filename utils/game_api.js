@@ -82,4 +82,8 @@ const setTime = function (e, page, gameTimeIndex) {
   })
 }
 
-export { createGame, setTime, convertArrayToSeconds }
+export {
+  createGame,
+  setTime,
+  convertArrayToSeconds
+}

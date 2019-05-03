@@ -2,7 +2,7 @@ let socketOpen = false
 let socketMsgQueue = []
 
 wx.connectSocket({
-  url: 'ws://babble.wogengapp.cn/cable',
+  url: 'wss://babble.wogengapp.cn/cable',
   header: {
     'content-type': 'application/json'
   }
@@ -15,7 +15,9 @@ wx.onSocketOpen(function (res) {
   })
   wx.sendSocketMessage({
     data: JSON.stringify({
-      command: 'subscribe', identifier: id, room: room_id
+      command: 'subscribe',
+      identifier: id,
+      room: room_id
     })
   })
   for (let i = 0; i < socketMsgQueue.length; i++) {
@@ -46,7 +48,7 @@ wx.onSocketMessage(function (res) {
 //   var value = wx.getStorageSync('token')
 //   if (value) {
 //     wx.request({
-//       url: `http://babble.wogengapp.cn/websocket`,
+//       url: `https://babble.wogengapp.cn/websocket`,
 //       method: 'GET|POST',
 //       data: {
 //         "tokens": {
@@ -60,4 +62,6 @@ wx.onSocketMessage(function (res) {
 //   }
 // }
 
-export { openRoom };
+export {
+  openRoom
+};
