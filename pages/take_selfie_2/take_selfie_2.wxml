@@ -1,6 +1,25 @@
 <!--pages/take_selfie_2/take_selfie_2.wxml-->
-<view class="preview-picture"> 
-  <image src="{{previewSelfie}}">
-      Preview
-  </image>
-</view>
+    
+  <view class="container">
+
+    <!-- picture section -->
+    <view class="frame">
+      <view class="preview-picture"> 
+        <image src="{{previewSelfie}}" class="picture" style="height:50vh"></image> 
+      </view>
+    </view>
+    <!-- picture section ends -->
+
+
+    <!-- Buttons -->
+    <view class="buttons">
+      <view class="go-back-button">
+        Go Back 
+      </view>
+      <view class="go-button">
+        Let's Go!
+      </view>
+    </view>
+    <!-- Buttons ends -->
+
+  </view> 
