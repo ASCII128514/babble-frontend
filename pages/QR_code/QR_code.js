@@ -14,8 +14,6 @@ Page({
    * Lifecycle function--Called when page load
    */
   onLoad: function (options) {
-    console.log(app.globalData.qrCodeUrl);
-    console.log("this data", this.data);
     this.setData({
       qrCodeUrl: app.globalData.qrCodeUrl
     })
