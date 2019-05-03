@@ -1,5 +1,5 @@
 // pages/creation/creation.js
-import { createGame, setTime } from '../../utils/game_api.js';
+import { createGame, setTime, convertArrayToSeconds } from '../../utils/game_api.js';
 
 let app = getApp()
 let globalData = app.globalData || {}
@@ -11,7 +11,7 @@ Page({
   data: {
     gameTime: {},
     gameTimeIndices: {},
-    numberOfRounds: 5
+    numberOfRounds: 5,
   },
 
   // styling for top bar
@@ -37,11 +37,13 @@ Page({
   },
   // styling for top bar ends
 
-  toStatus: function (e) {
-    createGame(e);
-    wx.navigateTo({
-      url: '/pages/status_page/status_page'
-    })
+  toStatus: function () {
+    let objectOfSeconds = convertArrayToSeconds();
+    createGame(objectOfSeconds, this);
+  },
+
+  formSubmit: function () {
+
   },
 
   partnerMatchTimeAmount: function (e) {

@@ -1,23 +1,7 @@
-// pages/find_partner/find_partner.js
+// pages/take_selfie_2/take_selfie_2.js
+let app = getApp()
+
 Page({
-  // button to next page
-  goToQuestion: function () {
-    wx.navigateTo({
-      url: '/pages/question/question'
-    })
-  },
-
-  // top bar styling
-  onLoad: function (options) {
-    wx.setNavigationBarColor({
-      frontColor: '#000000',
-      backgroundColor: '#DFFBFE',
-    })
-
-    wx.setNavigationBarTitle({
-      title: 'Find your partner',
-    })
-  },
 
   /**
    * Page initial data
@@ -26,7 +10,14 @@ Page({
 
   },
 
-  
+  /**
+   * Lifecycle function--Called when page load
+   */
+  onLoad: function (options) {
+    this.setData({
+      previewSelfie: app.globalData.previewSelfie
+    })
+  },
 
   /**
    * Lifecycle function--Called when page is initially rendered

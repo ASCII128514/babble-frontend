@@ -1,0 +1,6 @@
+<!--pages/take_selfie_2/take_selfie_2.wxml-->
+<view class="preview-picture"> 
+  <image src="{{previewSelfie}}">
+      Preview
+  </image>
+</view>

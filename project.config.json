@@ -21,8 +21,6 @@
 		"hidedInDevtools": []
 	},
 	"scripts": {},
-	"simulatorType": "wechat",
-	"simulatorPluginLibVersion": {},
 	"condition": {
 		"search": {
 			"current": -1,
@@ -40,37 +38,62 @@
 			"list": []
 		},
 		"miniprogram": {
-			"current": 5,
-			"list": [
-				{
+			"current": 7,
+			"list": [{
 					"id": -1,
 					"name": "game",
 					"pathName": "pages/creation/creation",
-					"current": 2,
-					"list": [
-						{
-							"id": -1,
-							"name": "Creation Page",
-							"pathName": "pages/creation/creation",
-							"query": "",
-							"scene": null
-						},
-						{
-							"id": 1,
-							"name": "Game Status",
-							"pathName": "pages/status_page/status_page",
-							"query": "",
-							"scene": null
-						},
-						{
-							"id": -1,
-							"name": "Player_index",
-							"pathName": "pages/player_index/player_index",
-							"query": "",
-							"scene": null
-						}
-					]
-
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": 1,
+					"name": "Game Status",
+					"pathName": "pages/status_page/status_page",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "Player_index",
+					"pathName": "pages/player_index/player_index",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "Take_selfie",
+					"pathName": "pages/take_selfie/take_selfie",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "Find_partner",
+					"pathName": "pages/find_partner/find_partner",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": 5,
+					"name": "Test",
+					"pathName": "test/test",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": 6,
+					"name": "QR",
+					"pathName": "pages/QR_code/QR_code",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "Waiting Room",
+					"pathName": "pages/room/room",
+					"query": "",
+					"scene": null
 				}
 			]
 		}

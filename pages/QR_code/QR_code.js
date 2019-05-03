@@ -1,32 +1,24 @@
-// pages/find_partner/find_partner.js
+// pages/QR_code/QR_code.js
+let app = getApp()
+
 Page({
-  // button to next page
-  goToQuestion: function () {
-    wx.navigateTo({
-      url: '/pages/question/question'
-    })
-  },
-
-  // top bar styling
-  onLoad: function (options) {
-    wx.setNavigationBarColor({
-      frontColor: '#000000',
-      backgroundColor: '#DFFBFE',
-    })
-
-    wx.setNavigationBarTitle({
-      title: 'Find your partner',
-    })
-  },
 
   /**
    * Page initial data
    */
   data: {
-
+    
   },
 
-  
+  /**
+   * Lifecycle function--Called when page load
+   */
+  onLoad: function (options) {
+    this.setData({
+      qrCodeUrl: app.globalData.qrCodeUrl
+    })
+
+  },
 
   /**
    * Lifecycle function--Called when page is initially rendered

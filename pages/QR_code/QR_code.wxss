@@ -1,0 +1,5 @@
+/* pages/QR_code/QR_code.wxss */
+
+.QR {
+  background-color: yellow;
+}

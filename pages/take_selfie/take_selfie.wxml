@@ -11,13 +11,11 @@
           <button bindtap="takePhoto">Click!</button>
         </view>
       
-
        <view class="preview-picture"> 
           <image class="selfie" wx:if="{{src}}" mode="widthFix" src="{{src}}">
               Preview
           </image>
         </view>
-
 
         <view class="btn-footer">
             <view class='timer'>
