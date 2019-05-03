@@ -6,7 +6,7 @@ Page({
 
   buttonClicked: function () {
     wx.navigateTo({
-      url: '/pages/instruction/instruction'
+      url: '/pages/instruction_creator/instruction_creator'
     })
   },
 

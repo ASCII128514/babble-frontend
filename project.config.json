@@ -38,7 +38,7 @@
 			"list": []
 		},
 		"miniprogram": {
-			"current": 9,
+			"current": 10,
 			"list": [
 				{
 					"id": -1,
@@ -107,6 +107,13 @@
 					"id": -1,
 					"name": "Instruction",
 					"pathName": "pages/instruction/instruction",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "Creator Instruction",
+					"pathName": "pages/instruction_creator/instruction_creator",
 					"scene": null
 				}
 			]
