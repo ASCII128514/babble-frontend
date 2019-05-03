@@ -38,8 +38,9 @@
 			"list": []
 		},
 		"miniprogram": {
-			"current": 7,
-			"list": [{
+			"current": 9,
+			"list": [
+				{
 					"id": -1,
 					"name": "game",
 					"pathName": "pages/creation/creation",
@@ -93,6 +94,20 @@
 					"name": "Waiting Room",
 					"pathName": "pages/room/room",
 					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "room1",
+					"pathName": "pages/index/index",
+					"query": "room=1",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "room1",
+					"pathName": "pages/index/index",
+					"query": "scene=1",
 					"scene": null
 				}
 			]

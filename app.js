@@ -76,50 +76,51 @@ App({
       }
     })
   },
-  onLoad(query) {
-    // scene 需要使用 decodeURIComponent 才能获取到生成二维码时传入的 scene
-    const scene = decodeURIComponent(query.scene)
-    console.log(scene);
-    this.globalData.qrCodeData = scene
 
-    if (scene !== null ) {
-      wx.request({
-        url: `https://babble.wogengapp.cn/api/v1/game/${scene}`,
-        success: res => {
-          if (res.game.status !== 'end') {
-            getApp().globalData.players = res.players
 
-            wx.connectSocket({
-              url: 'ws://babble.wogengapp.cn/cable',
-              header: {
-                'content-type': 'application/json'
-              }
-            })
 
-            wx.onSocketOpen(function (res) {
-              socketOpen = true
-              const id = JSON.stringify({
-                channel: "GameChannel"
-              })
-              wx.sendSocketMessage({
-                data: JSON.stringify({
-                  command: 'subscribe', identifier: id, room: res.game.id
-                })
-              })
-              for (let i = 0; i < socketMsgQueue.length; i++) {
-                sendSocketMessage(socketMsgQueue[i])
-              }
-              socketMsgQueue = []
-            })
 
 
 
 
 
 
+  // onLoad(query) {
+  //   console.log('in Onload')
+  //   // scene 需要使用 decodeURIComponent 才能获取到生成二维码时传入的 scene
+  //   const scene = decodeURIComponent(query.scene)
+  //   console.log(scene);
+  //   this.globalData.qrCodeData = scene
 
+  //   if (scene !== null ) {
+  //     wx.request({
+  //       url: `https://babble.wogengapp.cn/api/v1/game/${scene}`,
+  //       success: res => {
+  //         if (res.game.status !== 'end') {
+  //           getApp().globalData.players = res.players
 
+  //           wx.connectSocket({
+  //             url: 'ws://babble.wogengapp.cn/cable',
+  //             header: {
+  //               'content-type': 'application/json'
+  //             }
+  //           })
 
+  //           wx.onSocketOpen(function (res) {
+  //             socketOpen = true
+  //             const id = JSON.stringify({
+  //               channel: "GameChannel"
+  //             })
+  //             wx.sendSocketMessage({
+  //               data: JSON.stringify({
+  //                 command: 'subscribe', identifier: id, room: res.game.id
+  //               })
+  //             })
+  //             for (let i = 0; i < socketMsgQueue.length; i++) {
+  //               sendSocketMessage(socketMsgQueue[i])
+  //             }
+  //             socketMsgQueue = []
+  //           })
 
 
 
@@ -137,35 +138,35 @@ App({
 
 
 
-            function sendSocketMessage(msg) {
-              if (socketOpen) {
-                wx.sendSocketMessage({
-                  data: msg
-                })
-              } else {
-                socketMsgQueue.push(msg)
-              }
-            }
 
 
 
-            wx.onSocketMessage(function (res) {
-              const value = JSON.parse(res.data)
-              console.log(res)
-              if (value.type != 'ping' && value.type != 'welcome') {
-                console.log('hahaha', value)
-              }
 
-            })
 
 
 
 
 
+  //           function sendSocketMessage(msg) {
+  //             if (socketOpen) {
+  //               wx.sendSocketMessage({
+  //                 data: msg
+  //               })
+  //             } else {
+  //               socketMsgQueue.push(msg)
+  //             }
+  //           }
 
 
 
+  //           wx.onSocketMessage(function (res) {
+  //             const value = JSON.parse(res.data)
+  //             console.log(res)
+  //             if (value.type != 'ping' && value.type != 'welcome') {
+  //               console.log('hahaha', value)
+  //             }
 
+  //           })
 
 
 
@@ -198,14 +199,23 @@ App({
 
 
 
-            wx.navigateTo({
-              url: '/pages/room/room',
-            })
-          }
-        }
-      })
-    }
-  },
+
+
+
+
+
+
+
+
+
+  //           wx.navigateTo({
+  //             url: '/pages/room/room',
+  //           })
+  //         }
+  //       }
+  //     })
+  //   }
+  // },
   globalData: {
     userInfo: null,
     gameTime: {
