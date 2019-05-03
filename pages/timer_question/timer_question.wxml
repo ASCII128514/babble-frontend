@@ -1,0 +1,17 @@
+<!--pages/timer_question/timer_question.wxml-->
+<view>
+  <!-- title -->
+    <view>
+        Set the time for each question
+    </view>
+  <!-- title ends -->
+
+  <!-- Timer -->
+    <view>
+      Placeholder for timer
+    </view>
+  <!-- Timer ends -->
+
+
+
+</view>

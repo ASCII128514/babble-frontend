@@ -1,0 +1,17 @@
+<!--pages/set_rounds/set_rounds.wxml-->
+<view>
+  <!-- title -->
+    <view>
+        Set the number of rounds
+    </view>
+  <!-- title ends -->
+
+  <!-- Timer -->
+    <view>
+      Placeholder for picker
+    </view>
+  <!-- Timer ends -->
+
+
+
+</view>

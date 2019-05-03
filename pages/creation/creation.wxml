@@ -17,6 +17,7 @@
                     <view class="upper_form">
                         <view class="section">
                           <view class="section__title">Find your match</view>
+                          
                           <!-- <input name="find_partner_timer" id="numb" placeholder="in seconds" findtimer/> -->
                           <picker mode="multiSelector" bindchange="partnerMatchTimeAmount" value="{{gameTimeIndices}}" range="{{[gameTime.minute_possibilities, gameTime.second_possibilities]}}">
                             <view class="picker">

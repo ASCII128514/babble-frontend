@@ -1,13 +1,5 @@
-// pages/instruction/instruction.js
+// pages/set_rounds/set_rounds.js
 Page({
-
-  buttonClicked: function () {
-    wx.navigateTo({
-      url: '/pages/timer_find_partner/timer_find_partner'
-    })
-  },
-
-
 
   /**
    * Page initial data
@@ -20,15 +12,6 @@ Page({
    * Lifecycle function--Called when page load
    */
   onLoad: function (options) {
-
-    wx.setNavigationBarColor({
-      frontColor: '#000000',
-      backgroundColor: '#ffffff',
-    })
-
-    wx.setNavigationBarTitle({
-      title: 'How to play',
-    })
 
   },
 
