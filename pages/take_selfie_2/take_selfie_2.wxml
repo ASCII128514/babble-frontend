@@ -3,20 +3,22 @@
   <view class="container">
 
     <!-- picture section -->
-    <view class="frame">
-      <view class="preview-picture"> 
-        <image src="{{previewSelfie}}" class="picture" style="height:50vh"></image> 
+      <view class="wrapper">
+        <view class="frame">
+          <view class="preview-picture"> 
+            <image src="{{previewSelfie}}" class="picture" style="height:50vh"></image> 
+          </view>
+        </view>
       </view>
-    </view>
     <!-- picture section ends -->
 
 
     <!-- Buttons -->
     <view class="buttons">
-      <view class="go-back-button">
+      <view class="go-back-button" bindtap='goBack'>
         Go Back 
       </view>
-      <view class="go-button">
+      <view class="go-button" bindtap='continue'>
         Let's Go!
       </view>
     </view>

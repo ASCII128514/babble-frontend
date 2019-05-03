@@ -17,6 +17,27 @@ Page({
     this.setData({
       previewSelfie: app.globalData.previewSelfie
     })
+
+    wx.setNavigationBarColor({
+      frontColor: '#000000',
+      backgroundColor: '#f5f5f5',
+    })
+
+    wx.setNavigationBarTitle({
+      title: 'Review your picture',
+    })
+  },
+
+  goBack: function () {
+    wx.navigateTo({
+      url: '/pages/take_selfie/take_selfie'
+    })
+  },
+
+  continue: function () {
+    wx.navigateTo({
+      url: '/pages/find_partner/find_partner'
+    })
   },
 
   /**
