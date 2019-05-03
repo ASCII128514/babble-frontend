@@ -40,11 +40,7 @@
 			"list": []
 		},
 		"miniprogram": {
-<<<<<<< HEAD
-			"current": 11,
-=======
-			"current": 8,
->>>>>>> d914b7dd0591ec23700870bc47cf0a6402eb945a
+			"current": 12,
 			"list": [
 				{
 					"id": -1,
@@ -103,7 +99,6 @@
 					"scene": null
 				},
 				{
-<<<<<<< HEAD
 					"id": -1,
 					"name": "Selfie_preview",
 					"pathName": "pages/take_selfie_2/take_selfie_2",
@@ -122,24 +117,20 @@
 					"name": "Creator Instruction",
 					"pathName": "pages/instruction_creator/instruction_creator",
 					"query": "",
-=======
-					"id": 8,
-					"name": "room1",
-					"pathName": "pages/index/index",
-					"query": "scene=1",
->>>>>>> d914b7dd0591ec23700870bc47cf0a6402eb945a
 					"scene": null
 				},
 				{
 					"id": -1,
-<<<<<<< HEAD
-					"name": "Timer find partner",
-					"pathName": "pages/timer_find_partner/timer_find_partner",
-=======
 					"name": "room1",
 					"pathName": "pages/index/index",
 					"query": "scene=1",
->>>>>>> d914b7dd0591ec23700870bc47cf0a6402eb945a
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "room",
+					"pathName": "pages/index/index",
+					"query": "scene=1",
 					"scene": null
 				}
 			]
