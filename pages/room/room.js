@@ -12,9 +12,22 @@ Page({
    * Lifecycle function--Called when page load
    */
   onLoad: function (options) {
-    console.log("playerList:", getApp().globalData.playerList);
     const playerList = getApp().globalData.playerList
-    this.setData({ playerList })
+    const page = this
+    page.setData({ playerList })
+    wx.onSocketMessage(function (res) {
+      const value = JSON.parse(res.data)
+      console.log('in room')
+      if (value.type != 'ping' && value.type != 'welcome' && value.type != 'confirm_subscription') {
+        if (value.message.type == "users") {
+          console.log("players:", value.message.players);
+          page.setData({playerList: value.message.players})
+
+        } else if (value.message.type == "pairs") {
+          console.log("save that pair shit");
+        }
+      }
+    })
 
   },
 

@@ -92,6 +92,7 @@ Page({
                   if (value.message.type == "users") {              
                     console.log("players:", value.message.players);
                     getApp().globalData.playerList = value.message.players
+
                   } else if (value.message.type == "pairs") {
                     console.log("save that pair shit");
                   } 
