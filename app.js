@@ -237,5 +237,6 @@ App({
       }
     },
     numberOfRounds: 5,
+    playerList: []
   }
 })

@@ -12,6 +12,9 @@ Page({
    * Lifecycle function--Called when page load
    */
   onLoad: function (options) {
+    console.log("playerList:", getApp().globalData.playerList);
+    const playerList = getApp().globalData.playerList
+    this.setData({ playerList })
 
   },
 
