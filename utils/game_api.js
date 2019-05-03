@@ -14,7 +14,7 @@ const createGame = function (page) {
     console.log("3:", gameTimeIndices.selfieTime);
     console.log("4:", numberOfRounds);
     wx.request({
-      url: `http://babble.wogengapp.cn/api/v1/game`,
+      url: `https://babble.wogengapp.cn/api/v1/game`,
       method: 'POST',
       data: {
         "tokens": {
