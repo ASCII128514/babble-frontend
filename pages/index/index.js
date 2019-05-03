@@ -22,6 +22,7 @@ Page({
     // scene 需要使用 decodeURIComponent 才能获取到生成二维码时传入的 scene
     let scene = null
     console.log(typeof (query.scene))
+<<<<<<< HEAD
     if (typeof (query.scene) !== 'string' || typeof (query.sence) !== 'undefined') {
       console.log(query)
       scene = decodeURIComponent(query.scene)
@@ -53,6 +54,32 @@ Page({
                 channel: "GameChannel",
                 room: response.data.game.id,
                 token: wx.getStorageSync('token')
+=======
+      if (typeof(query.scene) !== 'string' || typeof(query.sence) !== 'undefined'){
+        console.log("query:", query)
+        scene = decodeURIComponent(query.scene)
+      } else {
+        scene = query.scene
+      }
+      console.log("scene", scene);
+      getApp().globalData.qrCodeData = scene
+      console.log(scene !== 'undefined')
+      console.log(scene !== null)
+      if (scene !== null && scene !== 'undefined') {
+        wx.request({
+          url: `https://babble.wogengapp.cn/api/v1/game/${scene}`,
+          method: 'get',
+          success: res => {
+            console.log("res data:", res.data)
+            if (res.data.game.status !== 'end') {
+              getApp().globalData.players = res.players
+              const response = res
+              wx.connectSocket({
+                url: 'wss://babble.wogengapp.cn/cable',
+                header: {
+                  'content-type': 'application/json'
+                }
+>>>>>>> 25825eb50b47115c7ae6c40ee859acdcdc0bc21b
               })
               // const data = JSON.stringify({
 
@@ -85,6 +112,7 @@ Page({
 
 
 
+<<<<<<< HEAD
             wx.onSocketMessage(function (res) {
               const value = JSON.parse(res.data)
               // console.log(res)
@@ -102,6 +130,21 @@ Page({
               }
 
             })
+=======
+              wx.onSocketMessage(function (res) {
+                const value = JSON.parse(res.data)
+                                
+                if (value.type != 'ping' && value.type != 'welcome' && value.type != 'confirm_subscription') {
+                  if (value.message.type == "users") {              
+                    console.log("players:", value.message.players);
+                    getApp().globalData.playerList = value.message.players
+
+                  } else if (value.message.type == "pairs") {
+                    console.log("save that pair shit");
+                  } 
+                }
+              })
+>>>>>>> 25825eb50b47115c7ae6c40ee859acdcdc0bc21b
 
 
 

@@ -162,9 +162,7 @@ App({
       },
     },
     numberOfRounds: 5,
-  },
 
-  onUnload: () => {
-    console.log('unload')
+    playerList: []
   }
 });
