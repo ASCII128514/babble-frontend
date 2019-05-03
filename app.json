@@ -11,7 +11,12 @@
     "pages/find_partner/find_partner",
     "pages/question/question",
     "pages/room/room",
-    "pages/QR_code/QR_code"
+    "pages/QR_code/QR_code",
+    "pages/instruction/instruction",
+    "pages/instruction_creator/instruction_creator",
+    "pages/timer_find_partner/timer_find_partner",
+    "pages/timer_question/timer_question",
+    "pages/set_rounds/set_rounds"
   ],
 
   "window": {

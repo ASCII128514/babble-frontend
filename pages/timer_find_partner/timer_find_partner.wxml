@@ -1,0 +1,17 @@
+<!--pages/timer_find_partner/timer_find_partner.wxml-->
+<view>
+  <!-- title -->
+    <view>
+        Set the time for participants to find his/her partner
+    </view>
+  <!-- title ends -->
+
+  <!-- Timer -->
+    <view>
+      Placeholder for timer
+    </view>
+  <!-- Timer ends -->
+
+
+
+</view>

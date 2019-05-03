@@ -3,7 +3,7 @@ Page({
 
   goToQuestion: function () {
     wx.navigateTo({
-      url: '/pages/question/question'
+      url: '/pages/find_partner/find_partner'
     })
   },
 

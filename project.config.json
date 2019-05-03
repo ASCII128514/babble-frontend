@@ -40,7 +40,7 @@
 			"list": []
 		},
 		"miniprogram": {
-			"current": 8,
+			"current": 11,
 			"list": [
 				{
 					"id": -1,
@@ -102,6 +102,27 @@
 					"id": -1,
 					"name": "Selfie_preview",
 					"pathName": "pages/take_selfie_2/take_selfie_2",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "Instruction",
+					"pathName": "pages/instruction/instruction",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "Creator Instruction",
+					"pathName": "pages/instruction_creator/instruction_creator",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "Timer find partner",
+					"pathName": "pages/timer_find_partner/timer_find_partner",
 					"scene": null
 				}
 			]

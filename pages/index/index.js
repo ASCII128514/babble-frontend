@@ -6,7 +6,13 @@ Page({
 
   buttonClicked: function () {
     wx.navigateTo({
-      url: '/pages/creation/creation'
+      url: '/pages/instruction_creator/instruction_creator'
+    })
+  },
+
+  toPlayer: function () {
+    wx.navigateTo({
+      url: '/pages/player_index/player_index'
     })
   },
 

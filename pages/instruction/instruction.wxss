@@ -1,0 +1,31 @@
+/* pages/instruction/instruction.wxss */
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.background {
+    text-align: center;
+    height: 100vh;
+    width: 95%;
+    background-size: cover !important;
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-around;
+
+  }
+
+  .text {
+    background-color: #43e92d;
+    margin-bottom: 80px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    width: 40%;
+    height: 30px;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+    border-top-right-radius: 40px;
+    border-bottom-right-radius: 40px;
+    font-weight: 900;
+  }
