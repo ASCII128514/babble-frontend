@@ -21,7 +21,8 @@ Page({
       console.log('in Onload')
       // scene 需要使用 decodeURIComponent 才能获取到生成二维码时传入的 scene
       let scene = null
-      if (query.scene != '1'){
+    console.log(typeof (query.scene))
+      if (typeof(query.scene) !== 'string' || typeof(query.sence) !== 'undefined'){
         console.log(query)
         scene = decodeURIComponent(query.scene)
       } else {
@@ -29,10 +30,11 @@ Page({
       }
       console.log(scene);
       getApp().globalData.qrCodeData = scene
-
-      if (scene !== null) {
+      console.log(scene !== 'undefined')
+      console.log(scene !== null)
+      if (scene !== null && scene !== 'undefined') {
         wx.request({
-          url: `http://localhost:3000/api/v1/game/${scene}`,
+          url: `https://babble.wogengapp.cn/api/v1/game/${scene}`,
           method: 'get',
           success: res => {
             console.log(res.data)
@@ -40,7 +42,7 @@ Page({
               getApp().globalData.players = res.players
               const response = res
               wx.connectSocket({
-                url: 'ws://localhost:3000/cable',
+                url: 'wss://babble.wogengapp.cn/cable',
                 header: {
                   'content-type': 'application/json'
                 }

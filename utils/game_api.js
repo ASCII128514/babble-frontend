@@ -10,7 +10,7 @@ const createGame = function (objectOfSeconds, page) {
   var value = wx.getStorageSync('token')
   if (value) {
     wx.request({
-      url: `http://localhost:3000/api/v1/game`,
+      url: `https://babble.wogengapp.cn/api/v1/game`,
       method: 'POST',
       data: {
         tokens: {
