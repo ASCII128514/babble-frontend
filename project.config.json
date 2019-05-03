@@ -21,6 +21,8 @@
 		"hidedInDevtools": []
 	},
 	"scripts": {},
+	"simulatorType": "wechat",
+	"simulatorPluginLibVersion": {},
 	"condition": {
 		"search": {
 			"current": -1,
@@ -38,7 +40,7 @@
 			"list": []
 		},
 		"miniprogram": {
-			"current": 9,
+			"current": 8,
 			"list": [
 				{
 					"id": -1,
@@ -97,10 +99,10 @@
 					"scene": null
 				},
 				{
-					"id": -1,
+					"id": 8,
 					"name": "room1",
 					"pathName": "pages/index/index",
-					"query": "room=1",
+					"query": "scene=1",
 					"scene": null
 				},
 				{
