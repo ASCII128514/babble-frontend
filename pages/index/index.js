@@ -28,7 +28,7 @@ Page({
       } else {
         scene = query.scene
       }
-      console.log(scene);
+      console.log("?", scene);
       getApp().globalData.qrCodeData = scene
       console.log(scene !== 'undefined')
       console.log(scene !== null)
@@ -90,6 +90,15 @@ Page({
                 // console.log(res)
                 if (value.type != 'ping' && value.type != 'welcome') {
                   console.log('hahaha', value)
+
+                  switch (value.message.type) {
+                    case "users":
+                      getApp().globalData.playerList = value.message.playerss
+                      break;
+                    case "pairs":
+                      getApp().globalData.playerPairs = value.message.pairs
+                      break;
+                  }
                 }
 
               })
