@@ -99,7 +99,7 @@ Page({
               }
             })
             wx.navigateTo({
-              url: '/pages/room/room',
+              url: '/pages/instruction/instruction',
             })
           }
         }
