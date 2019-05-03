@@ -157,12 +157,12 @@ App({
               if (value.type != 'ping' && value.type != 'welcome') {
                 console.log('hahaha', value);
 
-                switch(value.type) {
-                  case "players":
-                    this.globalData.playerList = value.players
+                switch(value.message.type) {
+                  case "users":
+                    getApp().globalData.playerList = value.message.playerss
                     break;
                   case "pairs":
-                    this.globalData.playerPairs = value.pairs
+                    getApp().globalData.playerPairs = value.message.pairs
                     break;
                 }
               }
