@@ -3,3 +3,15 @@
 <!-- List of Names with avatars -->
 
 <view>Players in the Waiting Room:</view>
+
+<view class="players">
+  <block wx:for="{{playerList}}" 
+  wx:for-item="player">
+    <view class="card">
+        <!-- <image class="picture" src="{{product.picture_url}}"></image> -->
+        <view class="product-info">
+          <view class="product-name">{{player.id}}</view>
+        </view>
+    </view>  
+  </block> 
+</view>
