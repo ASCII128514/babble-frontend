@@ -21,8 +21,6 @@
 		"hidedInDevtools": []
 	},
 	"scripts": {},
-	"simulatorType": "wechat",
-	"simulatorPluginLibVersion": {},
 	"condition": {
 		"search": {
 			"current": -1,
@@ -89,18 +87,13 @@
 					"name": "QR",
 					"pathName": "pages/QR_code/QR_code",
 					"query": "",
-        },
-        {
-					"id": 7,
-					"name": "Question page",
-					"pathName": "pages/question/question",
-					"query": "",
 					"scene": null
 				},
 				{
 					"id": -1,
-					"name": "Selfie_preview",
-					"pathName": "pages/take_selfie_2/take_selfie_2",
+					"name": "Waiting Room",
+					"pathName": "pages/room/room",
+					"query": "",
 					"scene": null
 				}
 			]

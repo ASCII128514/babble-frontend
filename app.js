@@ -110,6 +110,93 @@ App({
               }
               socketMsgQueue = []
             })
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+            function sendSocketMessage(msg) {
+              if (socketOpen) {
+                wx.sendSocketMessage({
+                  data: msg
+                })
+              } else {
+                socketMsgQueue.push(msg)
+              }
+            }
+
+
+
+            wx.onSocketMessage(function (res) {
+              const value = JSON.parse(res.data)
+              console.log(res)
+              if (value.type != 'ping' && value.type != 'welcome') {
+                console.log('hahaha', value)
+              }
+
+            })
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
             wx.navigateTo({
               url: '/pages/room/room',
             })

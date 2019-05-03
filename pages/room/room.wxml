@@ -1,2 +1,5 @@
 <!--pages/room/room.wxml-->
-<text>pages/room/room.wxml</text>
+<text>Waiting Room</text>
+<!-- List of Names with avatars -->
+
+<view>Players in the Waiting Room:</view>
