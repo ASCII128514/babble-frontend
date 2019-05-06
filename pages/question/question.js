@@ -8,7 +8,6 @@ let currentGameRound = g.currentGameRound
 Page({
 
   goToQuestion: function () {
-    console.log("goToQuestion function");
     wx.redirectTo({
       url: '/pages/find_partner/find_partner'
     })
@@ -30,6 +29,17 @@ Page({
 
     const numberOfRounds = getApp().globalData.numberOfRounds
     this.setData({ numberOfRounds })
+
+    wx.onSocketMessage(function (res) {
+      const value = JSON.parse(res.data)
+      console.log('check value for question:', value);
+      if (value.type != 'ping' && value.type != 'welcome' && value.type != 'confirm_subscription') {
+        if (value.message.type == "question") {
+          console.log("question:", value.message.pairs);
+          this.setData({ pairs: value.message.pairs })
+        }
+      }
+    })
   },
 
 })

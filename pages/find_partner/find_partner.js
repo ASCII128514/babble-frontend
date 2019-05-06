@@ -21,13 +21,23 @@ Page({
       title: 'Find your partner',
     })
 
-    console.log("find_partner onLoad");
     increaseGameRound();
     const currentGameRound = getApp().globalData.currentGameRound
     this.setData({ currentGameRound })
 
     const numberOfRounds = getApp().globalData.numberOfRounds
     this.setData({ numberOfRounds })
+
+    wx.onSocketMessage(function (res) {
+      const value = JSON.parse(res.data)
+      console.log('check value for pairs:', value);
+      if (value.type != 'ping' && value.type != 'welcome' && value.type != 'confirm_subscription') {
+        if (value.message.type == "pairs") {
+          console.log("pairs:", value.message.pairs);
+          this.setData({ pairs: value.message.pairs })
+        }
+      }
+    })
   },
 
   /**
