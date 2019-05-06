@@ -5,6 +5,9 @@ let g = globalData || {}
 let numberOfRounds = g.numberOfRounds
 let currentGameRound = g.currentGameRound
 
+import { increaseGameRound, gameTimer } from '../../utils/play_game_api.js';
+import { convertArrayToSeconds } from '../../utils/create_game_api.js';
+
 Page({
 
   goToQuestion: function () {
@@ -40,6 +43,9 @@ Page({
         }
       }
     })
+
+    let objectOfSeconds = convertArrayToSeconds();
+    gameTimer(objectOfSeconds, 'question_timer', '/pages/find_partner/find_partner', this);
   },
 
 })

@@ -37,7 +37,6 @@ const gameTimer = function (totalSeconds, whichTimer, targetPage, page) {
     // If the count down is finished, write some text 
     if (distance <= 0) {
       clearInterval(x);
-      console.log("timer over");
     }
 
     // Display the result in the element with id="demo"
