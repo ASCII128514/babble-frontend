@@ -1,14 +1,21 @@
 /* pages/take_selfie/take_selfie.wxss */
+.page-body {
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  background-size: cover !important;
+}
+
 .page-body-wrapper {
   height: 100vh;
   width: 100%;
   display: flex;
   flex-direction: column;
   justify-content: space-around;
-  /* align-content: center; */
   align-items: center;
-  background: rgb(2,0,36);
-  background: linear-gradient(301deg, rgba(2,0,36,1) 0%, rgba(0,81,149,0.6895133053221288) 0%, rgba(13,236,119,1) 100%);
 }
 
 .camera {
