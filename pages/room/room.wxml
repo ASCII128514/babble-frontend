@@ -17,5 +17,5 @@
 </view>
 
 <view class="btn-area">
-  <button class="button" formType="submit" bindtap='shittyButton'>Play!</button>
+  <button class="button" bindtap='getPair'>Play!</button>
 </view>

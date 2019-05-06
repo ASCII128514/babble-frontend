@@ -25,8 +25,9 @@ Page({
           console.log("players:", value.message.players);
           page.setData({playerList: value.message.players})
 
-        } else if (value.message.type == "pairs") {
-          console.log("save that pair shit");
+        } else if (value.message.type == "pair") {
+          getApp().globalData.pair = value.message.pairs[wx.getStorageSync('token')]
+          console.log(getApp().globalData.pair)
         }
       }
     })
@@ -40,6 +41,28 @@ Page({
       url: '/pages/find_partner/find_partner'
     })
   },
+
+
+
+
+
+  getPair: function() {
+    wx.request({
+      url: `https://babble.wogengapp.cn/api/v1/game/${getApp().globalData.qrCodeData}/pair?round=${getApp().globalData.currentGameRound + 1}&token=${wx.getStorageSync('token')}`
+    })
+  },
+  
+
+
+
+
+
+
+
+
+
+
+
   /**
    * Lifecycle function--Called when page is initially rendered
    */
