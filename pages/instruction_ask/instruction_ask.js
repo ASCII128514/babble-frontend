@@ -1,13 +1,5 @@
-// pages/instruction/instruction.js
+// pages/instruction_ask/instruction_ask.js
 Page({
-
-  buttonClicked: function () {
-    wx.navigateTo({
-      url: '/pages/creation/creation'
-    })
-  },
-
-
 
   /**
    * Page initial data
@@ -20,15 +12,6 @@ Page({
    * Lifecycle function--Called when page load
    */
   onLoad: function (options) {
-
-    wx.setNavigationBarColor({
-      frontColor: '#000000',
-      backgroundColor: '#ffffff',
-    })
-
-    wx.setNavigationBarTitle({
-      title: 'How to play',
-    })
 
   },
 

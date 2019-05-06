@@ -1,0 +1,47 @@
+<view class="container">
+
+    <!-- imagine -->
+        <view class="background" style="background-image: url('http://lc-qaxMtbr0.cn-n1.lcfile.com/d843db55801eba37df82/player_find_partner.png');">
+        </view>
+    <!-- imagine -->
+
+    <!-- content -->
+      <view class="content">
+          <!-- title -->
+            <view class="title">
+              Find your partner
+            </view>
+          <!-- title -->
+
+          <!-- text -->
+            <view class="text">
+              You have 30 sec to find your speaking partner, so hurry up and find that person!
+            </view>
+          <!-- text -->
+      </view>
+     <!-- content -->
+
+    <!-- buttons -->
+
+    <view class="buttons-section">
+        <!-- dots -->
+          <view class="dots">
+            <view class="circle"></view>
+            <view class="circle-1"></view>
+            <view class="circle"></view>
+            <view class="circle"></view>
+          </view>
+        <!-- dots ends -->
+
+        <!-- navigation button -->
+          <view class="button" bindtap='buttonClicked'>
+                  Next
+          </view>
+        <!-- navigation button -->
+    </view>
+    <!-- buttons -->
+
+</view>
+
+
+

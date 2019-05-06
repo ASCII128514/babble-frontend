@@ -40,7 +40,7 @@
 			"list": []
 		},
 		"miniprogram": {
-			"current": -1,
+			"current": 16,
 			"list": [
 				{
 					"id": -1,
@@ -144,6 +144,20 @@
 					"id": -1,
 					"name": "Set find partner timer",
 					"pathName": "pages/timer_find_partner/timer_find_partner",
+					"query": "scene=1",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "Instruction Player",
+					"pathName": "pages/instruction_p/instruction_p",
+					"query": "scene=1",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "Instruction find partner",
+					"pathName": "pages/instruction_find/instruction_find",
 					"query": "scene=1",
 					"scene": null
 				}
