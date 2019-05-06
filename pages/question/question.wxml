@@ -15,7 +15,7 @@
 
         <!-- question -->
           <view>
-            {{getApp().globalData.gameQuestion.question}}
+            {{question}}
           </view>
         <!-- question ends -->
      

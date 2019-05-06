@@ -28,6 +28,10 @@ Page({
         } else if (value.message.type == "pair") {
           getApp().globalData.pair = value.message.pairs[wx.getStorageSync('token')]
           console.log(getApp().globalData.pair)
+          console.log("question", getApp().globalData.pair.question)
+          wx.redirectTo({
+            url: '/pages/find_partner/find_partner'
+          })
         }
       }
     })

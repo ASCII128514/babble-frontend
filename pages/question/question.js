@@ -24,6 +24,10 @@ Page({
       title: 'Question time!',
     })
 
+    this.setData({
+      question: getApp().globalData.pair.question
+    })
+
     const currentGameRound = getApp().globalData.currentGameRound
     this.setData({ currentGameRound })
 
