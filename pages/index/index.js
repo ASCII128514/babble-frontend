@@ -17,10 +17,10 @@ Page({
 
     wx.setNavigationBarColor({
       frontColor: '#000000',
-      backgroundColor: '#aec6d9',
+      backgroundColor: '#F9FCFC',
     })
     wx.setNavigationBarTitle({
-      title: 'The best ice-breaker!',
+      title: 'The Icebreaker',
     })
     console.log('in Onload')
     // scene 需要使用 decodeURIComponent 才能获取到生成二维码时传入的 scene

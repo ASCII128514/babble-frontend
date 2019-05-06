@@ -1,6 +1,11 @@
 // pages/timer_question/timer_question.js
 Page({
 
+  buttonClicked: function () {
+    wx.navigateTo({
+      url: '/pages/QR_code/QR_code'
+    })
+  },
   /**
    * Page initial data
    */

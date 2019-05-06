@@ -18,6 +18,15 @@ Page({
       qrCodeUrl: app.globalData.qrCodeUrl
     })
 
+    wx.setNavigationBarColor({
+      frontColor: '#000000',
+      backgroundColor: '#F9FCFC',
+    })
+
+    wx.setNavigationBarTitle({
+      title: 'QR code',
+    })
+
   },
 
   /**

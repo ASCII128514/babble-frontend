@@ -1,7 +1,7 @@
 <view class="container">
 
     <!-- imagine -->
-        <view class="background" style="background-image: url('http://lc-qaxMtbr0.cn-n1.lcfile.com/e10ba4cb13f86d27f879/find_partner.png');">
+        <view class="background" style="background-image: url('http://lc-qaxMtbr0.cn-n1.lcfile.com/140b42661e563bb90ce1/question_time.png');">
         </view>
     <!-- imagine -->
 
@@ -9,23 +9,29 @@
       <view class="content">
           <!-- title -->
             <view class="title">
-              Find partner
+              Question time
             </view>
           <!-- title -->
 
           <!-- text -->
             <view class="text">
-              Provide time for participants to find his/her partner
+              Participants start their conversation with question card. 
+            </view>
+            <view class="text">
+              Set timer for their conversation.
             </view>
           <!-- text -->
 
-          <!-- rounds picker -->
-            <view class="section section_gap">
+          <!-- timer -->
+            <!-- <input name="question_timer" placeholder="in seconds" questiontimer/> -->
+            <picker mode="multiSelector" bindchange="questionTimeAmount" value="{{gameTimeIndices}}" range="{{[gameTime.minute_possibilities, gameTime.second_possibilities]}}">
               <view class="picker">
-                <slider class="slider-bar" bindchange="roundsSlider" min="0" max="10" show-value value="5" />
+                <!-- Current selection: {{gameTime[0][time[0]]}}, {{gameTime[1][time[1]]}} -->
+                Time: {{gameTimeIndices.questionTime.minutes}}:{{gameTimeIndices.questionTime.seconds}}
               </view>
-            </view>
-          <!-- rounds picker -->
+            </picker>
+          <!-- timer -->
+
       </view>
      <!-- content -->
 
@@ -36,14 +42,14 @@
           <view class="dots">
             <view class="circle"></view>
             <view class="circle"></view>
-            <view class="circle-1"></view>
             <view class="circle"></view>
+            <view class="circle-1"></view>
           </view>
         <!-- dots ends -->
 
         <!-- navigation button -->
           <view class="button" bindtap='buttonClicked'>
-                  Next
+                  Create invitation
           </view>
         <!-- navigation button -->
     </view>

@@ -40,7 +40,7 @@
 			"list": []
 		},
 		"miniprogram": {
-			"current": 14,
+			"current": 15,
 			"list": [
 				{
 					"id": -1,
@@ -144,6 +144,13 @@
 					"id": -1,
 					"name": "Set question timer",
 					"pathName": "pages/timer_question/timer_question",
+					"query": "scene=1",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "Set find partner timer",
+					"pathName": "pages/timer_find_partner/timer_find_partner",
 					"query": "scene=1",
 					"scene": null
 				}

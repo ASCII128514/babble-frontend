@@ -14,8 +14,9 @@
     width: 100%;
     /* if you have a 70px navbar => height: calc(100vh - 70px); */
     background-size: cover !important;
-    border-bottom-left-radius: 40px;
-    opacity: 0.8;
+    border-bottom-left-radius: 50px;
+    /* border-top-right-radius: 50px; */
+    opacity: 0.9;
   }
 
   .content {

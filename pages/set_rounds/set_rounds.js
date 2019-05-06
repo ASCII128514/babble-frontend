@@ -3,7 +3,7 @@ Page({
 
   buttonClicked: function () {
     wx.navigateTo({
-      url: '/pages/timer_question/timer_question'
+      url: '/pages/timer_find_partner/timer_find_partner'
     })
   },
 
