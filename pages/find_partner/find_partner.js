@@ -1,6 +1,7 @@
 // pages/find_partner/find_partner.js
 
-import { increaseGameRound } from '../../utils/play_game_api.js';
+import { increaseGameRound, gameTimer } from '../../utils/play_game_api.js';
+import { convertArrayToSeconds } from '../../utils/create_game_api.js';
 
 Page({
   // button to next page
@@ -38,6 +39,9 @@ Page({
         }
       }
     })
+
+    let objectOfSeconds = convertArrayToSeconds();
+    gameTimer(objectOfSeconds, 'find_partner_timer', '/pages/question/question');
   },
 
   /**

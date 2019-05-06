@@ -15,3 +15,7 @@
     </view>  
   </block> 
 </view>
+
+<view class="btn-area">
+  <button class="button" formType="submit" bindtap='shittyButton'>Play!</button>
+</view>

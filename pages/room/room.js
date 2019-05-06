@@ -1,4 +1,6 @@
 // pages/room/room.js
+import { gameTimer } from '../../utils/play_game_api.js';
+import { convertArrayToSeconds } from '../../utils/create_game_api.js';
 Page({
 
   /**
@@ -29,8 +31,15 @@ Page({
       }
     })
 
+    let objectOfSeconds = convertArrayToSeconds();
+    gameTimer(objectOfSeconds, 'find_partner_timer', '/pages/question/question', this);
   },
 
+  shittyButton: function () {
+    wx.redirectTo({
+      url: '/pages/find_partner/find_partner'
+    })
+  },
   /**
    * Lifecycle function--Called when page is initially rendered
    */

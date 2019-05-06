@@ -16,25 +16,7 @@ Page({
     })
   },
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
   onLoad: function (query) {
-
-
-
     wx.setNavigationBarColor({
       frontColor: '#000000',
       backgroundColor: '#aec6d9',
