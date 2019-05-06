@@ -11,7 +11,7 @@
 
 .background {
     text-align: center;
-    height: 50vh;
+    height: 55vh;
     width: 95%;
     background-size: cover !important;
     border-bottom-left-radius: 30px;

@@ -1,7 +1,7 @@
 <view class="container">
 
     <!-- imagine -->
-        <view class="background" style="background-image: url('http://lc-qaxMtbr0.cn-n1.lcfile.com/d843db55801eba37df82/player_find_partner.png');">
+        <view class="background" style="background-image: url('http://lc-qaxMtbr0.cn-n1.lcfile.com/b24a19b8f2e4d4092582/player_ask_instruction.png');">
         </view>
     <!-- imagine -->
 
@@ -9,13 +9,14 @@
       <view class="content">
           <!-- title -->
             <view class="title">
-              Find your partner
+              Ask & answer
             </view>
           <!-- title -->
 
           <!-- text -->
             <view class="text">
-              You have 30 sec to find your speaking partner, so hurry up and find that person!
+              You and your partner have 1 min to ask each other the question shown on the screen. 
+Let’s break the ice and get the conversation started!
             </view>
           <!-- text -->
       </view>
@@ -27,8 +28,8 @@
         <!-- dots -->
           <view class="dots">
             <view class="circle"></view>
-            <view class="circle-1"></view>
             <view class="circle"></view>
+            <view class="circle-1"></view>
             <view class="circle"></view>
           </view>
         <!-- dots ends -->
