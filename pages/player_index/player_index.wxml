@@ -8,8 +8,9 @@
 
   <!-- Main text -->
           <view class="content">
-            <view class='title'>BABBLERS</view>
-            <view class='teaser'>Welcome, let's get the conversation started</view>
+            <view class='title'>Welcome</view>
+            <input class='teaser' name="name" placeholder="please enter your name"/>
+            <view class='teaser'> Click on "Next" to take your selfie</view>
             <button class='button' bindtap="buttonClicked">Next</button>
           </view>
   <!-- Main text -->
