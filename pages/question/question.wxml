@@ -22,7 +22,7 @@
         <view class="buttons-section">
             <!-- navigation button -->
               <view class="button" bindtap='buttonClicked'>
-                      FOUND
+                      READY
               </view>
             <!-- navigation button -->
         </view>

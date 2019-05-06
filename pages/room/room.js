@@ -1,6 +1,11 @@
 // pages/room/room.js
 Page({
 
+  goToNext: function () {
+    wx.navigateTo({
+      url: '/pages/find_partner/find_partner'
+    })
+  },
   /**
    * Page initial data
    */

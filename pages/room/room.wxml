@@ -3,6 +3,7 @@
 <!-- List of Names with avatars -->
 
 <view>Players in the Waiting Room:</view>
+<view bindtap='goToNext'>go to next</view>
 
 <view class="players">
   <block wx:for="{{playerList}}" 
