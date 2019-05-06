@@ -1,10 +1,7 @@
-const app = getApp()
-let globalData = app.globalData
-let g = globalData || {}
-let numberOfRounds = g.numberOfRounds
-let currentGameRound = g.currentGameRound
-
 // pages/find_partner/find_partner.js
+
+import { increaseGameRound } from '../../utils/play_game_api.js';
+
 Page({
   // button to next page
   goToQuestion: function () {
@@ -23,6 +20,14 @@ Page({
     wx.setNavigationBarTitle({
       title: 'Find your partner',
     })
+
+    console.log("find_partner onLoad");
+    increaseGameRound();
+    const currentGameRound = getApp().globalData.currentGameRound
+    this.setData({ currentGameRound })
+
+    const numberOfRounds = getApp().globalData.numberOfRounds
+    this.setData({ numberOfRounds })
   },
 
   /**

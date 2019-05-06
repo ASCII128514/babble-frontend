@@ -101,6 +101,6 @@ App({
 
     playerList: [],
 
-    currentGameRound: 1
+    currentGameRound: 0
   }
 });

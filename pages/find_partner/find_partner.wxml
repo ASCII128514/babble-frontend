@@ -8,7 +8,7 @@
 
         <!-- title -->
           <view class="title">
-            <view class="round">Round {{numberOfRounds}}/{{currentGameRound}}</view>
+            <view class="round">Round {{currentGameRound}}/{{numberOfRounds}}</view>
             <view class="timer">00:20</view>
           </view>
         <!-- title ends -->
@@ -35,7 +35,7 @@
           <view class="bottom-area">
                     <!-- button: found partner -->
                         <view class="btn-area" bindtap='goToQuestion'>
-                          <view class="button" formType="submit" bindtap='toStatus'>
+                          <view class="button" formType="submit">
                             READY
                           </view>
                         </view>

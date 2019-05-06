@@ -8,7 +8,8 @@ let currentGameRound = g.currentGameRound
 Page({
 
   goToQuestion: function () {
-    wx.navigateTo({
+    console.log("goToQuestion function");
+    wx.redirectTo({
       url: '/pages/find_partner/find_partner'
     })
   },
@@ -23,6 +24,12 @@ Page({
     wx.setNavigationBarTitle({
       title: 'Question time!',
     })
+
+    const currentGameRound = getApp().globalData.currentGameRound
+    this.setData({ currentGameRound })
+
+    const numberOfRounds = getApp().globalData.numberOfRounds
+    this.setData({ numberOfRounds })
   },
 
 })
