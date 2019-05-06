@@ -6,29 +6,9 @@ Page({
 
   buttonClicked: function () {
     wx.navigateTo({
-      url: '/pages/instruction_creator/instruction_creator'
+      url: '/pages/instruction/instruction'
     })
   },
-
-  toPlayer: function () {
-    wx.navigateTo({
-      url: '/pages/player_index/player_index'
-    })
-  },
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
   onLoad: function (query) {

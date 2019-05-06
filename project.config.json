@@ -40,7 +40,7 @@
 			"list": []
 		},
 		"miniprogram": {
-			"current": 12,
+			"current": 13,
 			"list": [
 				{
 					"id": -1,
@@ -114,13 +114,6 @@
 				},
 				{
 					"id": -1,
-					"name": "Creator Instruction",
-					"pathName": "pages/instruction_creator/instruction_creator",
-					"query": "",
-					"scene": null
-				},
-				{
-					"id": -1,
 					"name": "room1",
 					"pathName": "pages/index/index",
 					"query": "scene=1",
@@ -130,6 +123,20 @@
 					"id": -1,
 					"name": "room",
 					"pathName": "pages/index/index",
+					"query": "scene=1",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "Set Rounds",
+					"pathName": "pages/set_rounds/set_rounds",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "creation_old",
+					"pathName": "pages/creation/creation",
 					"query": "scene=1",
 					"scene": null
 				}

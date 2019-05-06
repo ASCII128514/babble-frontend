@@ -16,7 +16,7 @@
 
           <!-- text -->
             <view class="text">
-              Babblers breaks the ice by matching people to engage in one to one conversation. 
+              Babblers break the ice by matching people to engage in one to one conversation. 
       To start, all participants take a selfie.
             </view>
           <!-- text -->
@@ -37,7 +37,7 @@
 
         <!-- navigation button -->
           <view class="button" bindtap='buttonClicked'>
-                  Start
+                  Next
           </view>
         <!-- navigation button -->
     </view>
