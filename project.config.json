@@ -41,7 +41,8 @@
 		},
 		"miniprogram": {
 			"current": 7,
-			"list": [{
+			"list": [
+				{
 					"id": -1,
 					"name": "game",
 					"pathName": "pages/creation/creation",
@@ -93,7 +94,7 @@
 				{
 					"id": 7,
 					"name": "Waiting Room",
-					"pathName": "pages/room/room",
+					"pathName": "pages/index/index",
 					"query": "scene=1",
 					"scene": null
 				},
