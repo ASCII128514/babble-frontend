@@ -1,8 +1,9 @@
-// pages/instruction_ask/instruction_ask.js
+// pages/instruction_find_next/instruction_find_next.js
 Page({
+
   buttonClicked: function () {
     wx.navigateTo({
-      url: '/pages/instruction_find_next/instruction_find_next'
+      url: '/pages/take_selfie/take_selfie'
     })
   },
 
@@ -17,15 +18,14 @@ Page({
    * Lifecycle function--Called when page load
    */
   onLoad: function (options) {
-   
-      wx.setNavigationBarColor({
-        frontColor: '#000000',
-        backgroundColor: '#F9FCFC',
-      })
+    wx.setNavigationBarColor({
+      frontColor: '#000000',
+      backgroundColor: '#F9FCFC',
+    })
 
-      wx.setNavigationBarTitle({
-        title: 'How to play',
-      })
+    wx.setNavigationBarTitle({
+      title: 'How to play',
+    })
 
   },
 

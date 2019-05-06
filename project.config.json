@@ -40,7 +40,7 @@
 			"list": []
 		},
 		"miniprogram": {
-			"current": 17,
+			"current": 18,
 			"list": [
 				{
 					"id": -1,
@@ -165,6 +165,13 @@
 					"id": -1,
 					"name": "Instruction ask question",
 					"pathName": "pages/instruction_ask/instruction_ask",
+					"query": "scene=1",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "Instruction find next partner",
+					"pathName": "pages/instruction_find_next/instruction_find_next",
 					"query": "scene=1",
 					"scene": null
 				}
