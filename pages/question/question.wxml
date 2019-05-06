@@ -8,16 +8,16 @@
 
         <!-- title -->
           <view class="title">
-            <view class="round">Round 1/3</view>
+            <view class="round">Round Round {{numberOfRounds}}/{{currentGameRound}}</view>
             <view class="timer">00:45</view>
           </view>
         <!-- title ends -->
 
-        <!-- avatar -->
+        <!-- question -->
           <view>
-            Describe your best day?
+            {{getApp().globalData.gameQuestion.question}}
           </view>
-        <!-- avatar ends -->
+        <!-- question ends -->
      
       </view>
       <!-- Top area ends -->

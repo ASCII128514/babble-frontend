@@ -1,3 +1,9 @@
+const app = getApp()
+let globalData = app.globalData
+let g = globalData || {}
+let numberOfRounds = g.numberOfRounds
+let currentGameRound = g.currentGameRound
+
 // pages/find_partner/find_partner.js
 Page({
   // button to next page

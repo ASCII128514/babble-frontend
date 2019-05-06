@@ -1,4 +1,10 @@
 // pages/question/question.js
+const app = getApp()
+let globalData = app.globalData
+let g = globalData || {}
+let numberOfRounds = g.numberOfRounds
+let currentGameRound = g.currentGameRound
+
 Page({
 
   goToQuestion: function () {

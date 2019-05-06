@@ -8,7 +8,7 @@
             <view class='teaser'>Connect</view>
             <view class='teaser'>Anytime</view>
             <view class='teaser'>Anywhere</view>
-            <button class='button' bindtap="buttonClicked">View instruction</button>
+            <button class='button' bindtap="buttonClicked">Configure Settings</button>
             <view class="A-button" bindtap='toPlayer'>A</view>
           </view>
           <!-- Main text -->
