@@ -1,14 +1,14 @@
 <!--pages/take_selfie_2/take_selfie_2.wxml-->
     
-  <view class="container">
+  <view class="container" style="background-image: url('http://lc-qaxMtbr0.cn-n1.lcfile.com/3fb6123bd6b4399f1679/blur_background.png');">
 
     <!-- picture section -->
       <view class="wrapper">
-        <view class="frame">
+       
           <view class="preview-picture"> 
             <image src="{{previewSelfie}}" class="picture" style="height:50vh"></image> 
           </view>
-        </view>
+        
       </view>
     <!-- picture section ends -->
 
@@ -19,7 +19,7 @@
         Go Back 
       </view>
       <view class="go-button" bindtap='continue'>
-        Let's Go!
+        Next
       </view>
     </view>
     <!-- Buttons ends -->

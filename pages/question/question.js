@@ -11,7 +11,7 @@ Page({
   onLoad: function (options) {
     wx.setNavigationBarColor({
       frontColor: '#000000',
-      backgroundColor: '#DFFBFE',
+      backgroundColor: '#FBFBFB',
     })
 
     wx.setNavigationBarTitle({

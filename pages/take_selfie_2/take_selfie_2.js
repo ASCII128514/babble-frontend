@@ -36,7 +36,7 @@ Page({
 
   continue: function () {
     wx.navigateTo({
-      url: '/pages/room/room'
+      url: '/pages/instruction_find/instruction_find'
     })
   },
 

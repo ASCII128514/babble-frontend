@@ -40,7 +40,7 @@
 			"list": []
 		},
 		"miniprogram": {
-			"current": 19,
+			"current": 20,
 			"list": [
 				{
 					"id": -1,
@@ -179,6 +179,13 @@
 					"id": -1,
 					"name": "Pre-selfie page",
 					"pathName": "pages/pre_selfie/pre_selfie",
+					"query": "scene=1",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "Question",
+					"pathName": "pages/question/question",
 					"query": "scene=1",
 					"scene": null
 				}

@@ -1,46 +1,35 @@
 <!--pages/question/question.wxml-->
 <view class="container">
 
-  <!-- background -->
-  
-       <!-- Top area  -->
-      <view class="top-area">
-
-        <!-- title -->
-          <view class="title">
-            <view class="round">Round 1/3</view>
-            <view class="timer">00:45</view>
-          </view>
-        <!-- title ends -->
-
-        <!-- avatar -->
-          <view>
-            Describe your best day?
-          </view>
-        <!-- avatar ends -->
-     
+    <!-- imagine -->
+      <view class="frame">
+        <view class="question">
+          Who is Arya going to kill the next?
+        </view>
       </view>
-      <!-- Top area ends -->
+    <!-- imagine -->
 
-      <!-- bottom area -->
-
-        <!-- info: round and seconds -->
-          <view class="bottom-area">
-                    <!-- button: found partner -->
-                        <view class="btn-area" bindtap='goToQuestion'>
-                          <view class="button" formType="submit" bindtap='toStatus'>
-                            Ready
-                          </view>
-                        </view>
-                    <!-- button: found partner ends -->
-          </view>
-        <!-- info: round and seconds ends -->
-
-       
-
-      <!-- bottom area ends -->
+    <!-- timer -->
+      <view class="timer">
+        00:20    
+      </view>
+    <!-- timer ends -->
 
 
-  <!-- background ends -->
+    <!-- bottom section -->
+      <view class="b_section">
+        <!-- buttons -->
+        <view class="buttons-section">
+            <!-- navigation button -->
+              <view class="button" bindtap='buttonClicked'>
+                      FOUND
+              </view>
+            <!-- navigation button -->
+        </view>
+        <!-- buttons -->
+        </view>
+      <!-- bottom section -->
 </view>
+
+
 
