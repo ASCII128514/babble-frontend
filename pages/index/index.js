@@ -10,6 +10,11 @@ Page({
     })
   },
 
+  toPlayer: function () {
+    wx.navigateTo({
+      url: '/pages/player_index/player_index'
+    })
+  },
 
   onLoad: function (query) {
 
