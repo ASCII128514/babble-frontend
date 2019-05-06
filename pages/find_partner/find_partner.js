@@ -1,4 +1,8 @@
 // pages/find_partner/find_partner.js
+
+import { increaseGameRound, gameTimer } from '../../utils/play_game_api.js';
+import { convertArrayToSeconds } from '../../utils/create_game_api.js';
+
 Page({
   // button to next page
   goToQuestion: function () {
@@ -17,6 +21,27 @@ Page({
     wx.setNavigationBarTitle({
       title: 'Find your partner',
     })
+
+    increaseGameRound();
+    const currentGameRound = getApp().globalData.currentGameRound
+    this.setData({ currentGameRound })
+
+    const numberOfRounds = getApp().globalData.numberOfRounds
+    this.setData({ numberOfRounds })
+
+    wx.onSocketMessage(function (res) {
+      const value = JSON.parse(res.data)
+      console.log('check value for pairs:', value);
+      if (value.type != 'ping' && value.type != 'welcome' && value.type != 'confirm_subscription') {
+        if (value.message.type == "pairs") {
+          console.log("pairs:", value.message.pairs);
+          this.setData({ pairs: value.message.pairs })
+        }
+      }
+    })
+
+    let objectOfSeconds = convertArrayToSeconds();
+    gameTimer(objectOfSeconds, 'find_partner_timer', '/pages/question/question');
   },
 
   /**

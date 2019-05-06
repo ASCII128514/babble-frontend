@@ -1,8 +1,14 @@
 // pages/question/question.js
+const app = getApp()
+let globalData = app.globalData
+let g = globalData || {}
+let numberOfRounds = g.numberOfRounds
+let currentGameRound = g.currentGameRound
+
 Page({
 
   goToQuestion: function () {
-    wx.navigateTo({
+    wx.redirectTo({
       url: '/pages/find_partner/find_partner'
     })
   },
@@ -16,6 +22,23 @@ Page({
 
     wx.setNavigationBarTitle({
       title: 'Question time!',
+    })
+
+    const currentGameRound = getApp().globalData.currentGameRound
+    this.setData({ currentGameRound })
+
+    const numberOfRounds = getApp().globalData.numberOfRounds
+    this.setData({ numberOfRounds })
+
+    wx.onSocketMessage(function (res) {
+      const value = JSON.parse(res.data)
+      console.log('check value for question:', value);
+      if (value.type != 'ping' && value.type != 'welcome' && value.type != 'confirm_subscription') {
+        if (value.message.type == "question") {
+          console.log("question:", value.message.pairs);
+          this.setData({ pairs: value.message.pairs })
+        }
+      }
     })
   },
 
