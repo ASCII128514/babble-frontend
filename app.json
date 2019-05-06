@@ -18,7 +18,8 @@
     "pages/instruction_p/instruction_p",
     "pages/instruction_find/instruction_find",
     "pages/instruction_ask/instruction_ask",
-    "pages/instruction_find_next/instruction_find_next"
+    "pages/instruction_find_next/instruction_find_next",
+    "pages/pre_selfie/pre_selfie"
   ],
 
   "window": {

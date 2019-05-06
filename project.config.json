@@ -40,7 +40,7 @@
 			"list": []
 		},
 		"miniprogram": {
-			"current": 18,
+			"current": 19,
 			"list": [
 				{
 					"id": -1,
@@ -172,6 +172,13 @@
 					"id": -1,
 					"name": "Instruction find next partner",
 					"pathName": "pages/instruction_find_next/instruction_find_next",
+					"query": "scene=1",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "Pre-selfie page",
+					"pathName": "pages/pre_selfie/pre_selfie",
 					"query": "scene=1",
 					"scene": null
 				}

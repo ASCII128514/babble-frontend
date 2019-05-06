@@ -1,12 +1,10 @@
-// pages/instruction_find_next/instruction_find_next.js
+// pages/pre_selfie/pre_selfie.js
 Page({
-
   buttonClicked: function () {
     wx.navigateTo({
-      url: '/pages/pre_selfie/pre_selfie'
+      url: '/pages/take_selfie/take_selfie'
     })
   },
-
   /**
    * Page initial data
    */
@@ -20,12 +18,13 @@ Page({
   onLoad: function (options) {
     wx.setNavigationBarColor({
       frontColor: '#000000',
-      backgroundColor: '#F9FCFC',
+      backgroundColor: '#bbc9c9',
     })
 
     wx.setNavigationBarTitle({
-      title: 'How to play',
+      title: 'Selfie',
     })
+    
 
   },
 
