@@ -33,13 +33,15 @@
     }
 
     .button {
-      background-color:rgb(90, 151, 241);
+      background-color:#d0b0e2;
       display: flex;
       justify-content: center;
       align-items: center;
       width: 170px;
       border-radius: 10px;
-      font-weight: 400;
+      margin: 3px;
+      color: white;
+      font-weight: bold;
     }
 
     .people {
@@ -47,7 +49,8 @@
       display: flex;
       justify-content: center;
       align-items: center;
-      font-weight: 400;
+      font-weight: bold;
+      font-size: 16px;
     }
 /* top section ends */
 
