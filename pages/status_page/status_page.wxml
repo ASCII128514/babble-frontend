@@ -1,29 +1,61 @@
 <!-- pages/status_page/status_page.wxml -->
-<view class="background" style="background-image: linear-gradient(-100deg, rgba(0,150,168,0.2) 80%, rgba(0,150,61,0.1) 80%), url('http://lc-qaxmtbr0.cn-n1.lcfile.com/560e6cf98709ff3348ee/creation_1.png');">
-  <!-- title -->
-  <view class="title">Game Status</view>
-  <!-- title -->
-  <!-- container -->
-  <view class="container">
-    <!-- info section -->
-    <view class="section">
-      <text class="info_section">Participants</text>
-      <text class="info_section">14/16</text>
+<view class="container">
+
+  <!-- top-section -->
+    <view class="top-section">
+      <!-- title -->
+        <view class="title">
+          Participants are joining...
+        </view>
+      <!-- title ends -->
+
+      <!-- status area -->
+        <view class="status">
+          <!-- start button -->
+            <view class="button">
+              Start the game!
+            </view>
+          <!-- start button -->
+
+          <!-- numer of people -->
+            <view class="people">
+              10 joiners
+            </view>
+          <!-- numer of people ends -->
+        </view>
+      <!-- status area ends -->
     </view>
-    <view class="section">
-      <text class="info_section">Round</text>
-      <text class="info_section">1/3</text>
+  <!-- top-section -->
+
+  <!-- avatar section -->
+    <view class="avatar-section">
+      <!-- card -->
+          <view class="card">
+            <image class="avatar" src='http://lc-qaxMtbr0.cn-n1.lcfile.com/261144fb0e3ec3fbbc33/avatar_1.png'></image>
+            <view class="name"> Jon </view>
+          </view>
+          <view class="card">
+            <image class= "avatar" src="http://lc-qaxMtbr0.cn-n1.lcfile.com/261144fb0e3ec3fbbc33/avatar_1.png"></image>
+            <view class="name"> Daenerys </view>
+          </view>
+          <view class="card">
+            <image class= "avatar" src="http://lc-qaxMtbr0.cn-n1.lcfile.com/261144fb0e3ec3fbbc33/avatar_1.png"></image>
+            <view class="name"> Tyrion </view>
+          </view>
+          <view class="card">
+            <image class= "avatar" src="http://lc-qaxMtbr0.cn-n1.lcfile.com/261144fb0e3ec3fbbc33/avatar_1.png"></image>
+            <view class="name"> Cersei </view>
+          </view>
+          <view class="card">
+            <image class= "avatar" src="http://lc-qaxMtbr0.cn-n1.lcfile.com/261144fb0e3ec3fbbc33/avatar_1.png"></image>
+            <view class="name"> Sansa </view>
+          </view>
+          <view class="card">
+            <image class= "avatar" src="http://lc-qaxMtbr0.cn-n1.lcfile.com/261144fb0e3ec3fbbc33/avatar_1.png"></image>
+            <view class="name"> Arya </view>
+          </view>
+      <!-- card -->
     </view>
-    <view class="section">
-      <text class="info_section">Find/Question/Selfie</text>
-      <text class="info_section">15 sec</text>
-    </view>
-    <!-- info section -->
-  </view>
-  <!-- container -->
-  <!-- SHARE button -->
-  <view class="btn-area">
-    <view class="text" formType="share" bindtap='toPause'>Start</view>
-  </view>
-  <!-- SHARE button -->
+  <!-- avatar section ends -->
+
 </view>

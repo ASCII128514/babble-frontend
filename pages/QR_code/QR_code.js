@@ -2,6 +2,11 @@
 let app = getApp()
 
 Page({
+  buttonClicked: function () {
+    wx.navigateTo({
+      url: '/pages/status_page/status_page'
+    })
+  },
 
   /**
    * Page initial data

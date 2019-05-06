@@ -4,11 +4,17 @@
 
   <!-- QR code -->
       <image class="QR" src="{{qrCodeUrl}}"></image>
-  <!-- QR code -->
+  <!-- QR code ends -->
+
+  <!-- text -->
+    <view class="text">
+      Invite people by share this QR code
+    </view>
+  <!-- text ends -->
 
   <!-- button -->
     <view class="button" bindtap='buttonClicked'>
-        Share
+        Next
     </view>
   <!-- button -->
 </view>
