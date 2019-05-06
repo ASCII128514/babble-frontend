@@ -1,17 +1,55 @@
-<!--pages/timer_question/timer_question.wxml-->
-<view>
-  <!-- title -->
-    <view>
-        Set the time for each question
+<view class="container">
+
+    <!-- imagine -->
+        <view class="background" style="background-image: url('http://lc-qaxMtbr0.cn-n1.lcfile.com/e10ba4cb13f86d27f879/find_partner.png');">
+        </view>
+    <!-- imagine -->
+
+    <!-- content -->
+      <view class="content">
+          <!-- title -->
+            <view class="title">
+              Find partner
+            </view>
+          <!-- title -->
+
+          <!-- text -->
+            <view class="text">
+              Provide time for participants to find his/her partner
+            </view>
+          <!-- text -->
+
+          <!-- rounds picker -->
+            <view class="section section_gap">
+              <view class="picker">
+                <slider class="slider-bar" bindchange="roundsSlider" min="0" max="10" show-value value="5" />
+              </view>
+            </view>
+          <!-- rounds picker -->
+      </view>
+     <!-- content -->
+
+    <!-- buttons -->
+
+    <view class="buttons-section">
+        <!-- dots -->
+          <view class="dots">
+            <view class="circle"></view>
+            <view class="circle"></view>
+            <view class="circle-1"></view>
+            <view class="circle"></view>
+          </view>
+        <!-- dots ends -->
+
+        <!-- navigation button -->
+          <view class="button" bindtap='buttonClicked'>
+                  Next
+          </view>
+        <!-- navigation button -->
     </view>
-  <!-- title ends -->
-
-  <!-- Timer -->
-    <view>
-      Placeholder for timer
-    </view>
-  <!-- Timer ends -->
-
-
+    <!-- buttons -->
 
 </view>
+
+
+
