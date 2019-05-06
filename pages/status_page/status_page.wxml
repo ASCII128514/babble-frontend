@@ -31,27 +31,27 @@
     <view class="avatar-section">
       <!-- card -->
           <view class="card">
-            <image class="avatar" src='http://lc-qaxMtbr0.cn-n1.lcfile.com/261144fb0e3ec3fbbc33/avatar_1.png'></image>
+            <image class="avatar" src='http://lc-qaxMtbr0.cn-n1.lcfile.com/54f2ad342a471562c1f6/th.jpeg'></image>
             <view class="name"> Jon </view>
           </view>
           <view class="card">
-            <image class= "avatar" src="http://lc-qaxMtbr0.cn-n1.lcfile.com/261144fb0e3ec3fbbc33/avatar_1.png"></image>
+            <image class= "avatar" src="http://lc-qaxMtbr0.cn-n1.lcfile.com/09c446f768bcdc197cd6/danny.jpeg"></image>
             <view class="name"> Daenerys </view>
           </view>
           <view class="card">
-            <image class= "avatar" src="http://lc-qaxMtbr0.cn-n1.lcfile.com/261144fb0e3ec3fbbc33/avatar_1.png"></image>
+            <image class= "avatar" src="http://lc-qaxMtbr0.cn-n1.lcfile.com/c37f9c2171c77c0c37e4/tyrion.jpeg"></image>
             <view class="name"> Tyrion </view>
           </view>
           <view class="card">
-            <image class= "avatar" src="http://lc-qaxMtbr0.cn-n1.lcfile.com/261144fb0e3ec3fbbc33/avatar_1.png"></image>
+            <image class= "avatar" src="http://lc-qaxMtbr0.cn-n1.lcfile.com/de3a36760029a231ffdd/Cersei.jpeg"></image>
             <view class="name"> Cersei </view>
           </view>
           <view class="card">
-            <image class= "avatar" src="http://lc-qaxMtbr0.cn-n1.lcfile.com/261144fb0e3ec3fbbc33/avatar_1.png"></image>
+            <image class= "avatar" src="http://lc-qaxMtbr0.cn-n1.lcfile.com/ef638c517658acd97298/Sansa.jpeg"></image>
             <view class="name"> Sansa </view>
           </view>
           <view class="card">
-            <image class= "avatar" src="http://lc-qaxMtbr0.cn-n1.lcfile.com/261144fb0e3ec3fbbc33/avatar_1.png"></image>
+            <image class= "avatar" src="http://lc-qaxMtbr0.cn-n1.lcfile.com/949ea3c54c9e576e0317/Arya.jpeg"></image>
             <view class="name"> Arya </view>
           </view>
       <!-- card -->
