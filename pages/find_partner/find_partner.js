@@ -41,7 +41,8 @@ Page({
     })
 
     let objectOfSeconds = convertArrayToSeconds();
-    gameTimer(objectOfSeconds, 'find_partner_timer', '/pages/question/question');
+    gameTimer(objectOfSeconds, 'find_partner_timer', '/pages/question/question', this);
+    console.log("test GD", getApp().globalData.countdown);
   },
 
   /**

@@ -15,7 +15,7 @@ const increaseGameRound = function () {
   }
 }
 
-const gameTimer = function (totalSeconds, whichTimer, targetPage) {
+const gameTimer = function (totalSeconds, whichTimer, targetPage, page) {
   // Set the date we're counting down to
   let timerEndTime = totalSeconds[whichTimer] * 1000
   
@@ -41,8 +41,10 @@ const gameTimer = function (totalSeconds, whichTimer, targetPage) {
     }
 
     // Display the result in the element with id="demo"
-    var countdown = minutes + "m " + seconds + "s ";
-    getApp().globalData.countdown = countdown
+    var countdown = minutes + ":" + seconds;
+    page.setData({
+      timerCountdown: countdown
+    })
   }, 1000);
 }
 
