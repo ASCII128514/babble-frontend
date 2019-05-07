@@ -1,6 +1,7 @@
 // pages/take_selfie_2/take_selfie_2.js
 let app = getApp()
 
+import { sendPictureToBackend } from '../../utils/create_game_api.js';
 const AV = require('../../utils/av-webapp-min.js');
 
 Page({
@@ -36,16 +37,20 @@ Page({
     })
   },
 
-  continue: function () {
+  savePic: function () {
     console.log("selfie", app.globalData.previewSelfie);
     new AV.File('file-name', {
       blob: {
         uri: app.globalData.previewSelfie,
       },
     }).save().then(
-      file => console.log("save pic", file.url())
+      file => {console.log("save pic", file.url())
+          sendPictureToBackend(file.url());}
     ).catch(console.error);
-   
+
+
+
+
     wx.navigateTo({
       url: '/pages/room/room'
     })
