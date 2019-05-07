@@ -1,20 +1,60 @@
-// const createGame = function (objectOfSeconds, page) {
-//   wx.request({
-//     url: ``,
-//     method: '',
-//     data: {
-//       "tokens": {
-//         "token": value
-//       },
-//       "game": {
-//         "round_number": numberOfRounds,
-//         "find_partner_timer": objectOfSeconds.find_partner_timer,
-//         "selfie_timer": objectOfSeconds.selfie_timer,
-//         "question_timer": objectOfSeconds.question_timer
-//       },
-//     },
-//   },
-//   success: res => {
-//     console.log(res.data);
-//   }
-// })
+const app = getApp()
+let globalData = app.globalData
+let g = globalData || {}
+let numberOfRounds = g.numberOfRounds
+let currentGameRound = g.currentGameRound
+
+const increaseGameRound = function () {
+  if (currentGameRound < numberOfRounds) {
+    currentGameRound = currentGameRound + 1 
+    getApp().globalData.currentGameRound = currentGameRound
+  } else {
+    wx.redirectTo({
+      url: '/pages/index/index'
+    })
+  }
+}
+
+const gameTimer = function (totalSeconds, whichTimer, targetPage, page) {
+  // Set the date we're counting down to
+  // let timerEndTime = totalSeconds[whichTimer] * 1000
+  let timerEndTime = 6 * 1000
+  var countDownTime = new Date().getTime() + timerEndTime;
+
+    // Update the count down every 1 second
+  var x = setInterval(function () {
+
+    // Get todays date and time
+    var now = new Date().getTime();
+
+    // Find the distance between now and the count down date
+    var distance = countDownTime - now;
+
+    // Time calculations for days, hours, minutes and seconds
+    var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+    var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+    // If the count down is finished, write some text 
+    if (distance <= 0) {
+      clearInterval(x);
+      console.log(this)
+      // if (this == page)
+      wx.redirectTo({
+        url: '/pages/index/index'
+      })
+    }
+
+
+
+    // Display the result in the element with id="demo"
+    var countdown = minutes + ":" + seconds;
+    page.setData({
+      timerCountdown: countdown
+    })
+  }, 1000);
+}
+
+export {
+  increaseGameRound,
+  gameTimer
+}

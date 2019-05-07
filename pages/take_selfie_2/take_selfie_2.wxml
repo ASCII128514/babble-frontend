@@ -14,8 +14,8 @@
       <view class="go-back-button" bindtap='goBack'>
         Go Back 
       </view>
-      <view class="go-button" bindtap='continue'>
-        Next
+      <view class="go-button" bindtap='savePic'>
+        Let's Go!
       </view>
     </view>
     <!-- Buttons ends -->

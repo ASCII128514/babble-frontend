@@ -40,9 +40,9 @@
 			"list": []
 		},
 		"miniprogram": {
-			"current": 20,
-			"list": [
-				{
+			"current": 23,
+
+			"list": [{
 					"id": -1,
 					"name": "game",
 					"pathName": "pages/creation/creation",
@@ -92,10 +92,10 @@
 					"scene": null
 				},
 				{
-					"id": -1,
+					"id": 7,
 					"name": "Waiting Room",
-					"pathName": "pages/room/room",
-					"query": "",
+					"pathName": "pages/index/index",
+					"query": "scene=1",
 					"scene": null
 				},
 				{
@@ -186,6 +186,27 @@
 					"id": -1,
 					"name": "Question",
 					"pathName": "pages/question/question",
+					"query": "scene=1",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "room",
+					"pathName": "pages/index/index",
+					"query": "scene=1",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "playerindex",
+					"pathName": "pages/player_index/player_index",
+					"query": "scene=1",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "room",
+					"pathName": "pages/index/index",
 					"query": "scene=1",
 					"scene": null
 				}
