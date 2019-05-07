@@ -8,13 +8,22 @@
 
   <!-- Main text -->
           <view class="content">
-            <view class='title'>Welcome</view>
-            <input class='teaser' name="name" placeholder="Enter your name"/>
-
-            <view class='bottom-section'>
-                <view class='teaser_2'> Continue to take your selfie</view>
-                <button class='button' bindtap="buttonClicked">Next</button>
+            <view class="symbol_section">
+                <image src="http://lc-qaxMtbr0.cn-n1.lcfile.com/0e440a34d3d77d186707/instruction%20symbol.png" class="instruction_symbol"></image>
             </view>
+            <view class='title'>Welcome</view>
+
+            <!-- form and button -->
+            <form>
+                  <input class='teaser' name="name" placeholder="Enter your name"/>
+                
+                <view class='bottom-section'>
+                    <view class='teaser_2'> Continue to take your selfie</view>
+                    <button class='button' bindtap="buttonClicked" >Next</button>
+                </view>
+            </form>
+            <!-- form and button ends -->
+
           </view>
   <!-- Main text -->
 

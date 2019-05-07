@@ -28,12 +28,12 @@
   <!-- top-section -->
 
 
-  <!-- example card -->
-      <view class="card">
-        <image class="avatar" src='http://lc-qaxMtbr0.cn-n1.lcfile.com/54f2ad342a471562c1f6/th.jpeg'></image>
-          <view class="name"> Jon </view>
-      </view>
-  <!-- example card ends -->
+    <!-- example card -->
+        <view class="card">
+          <image class="avatar" src='http://lc-qaxMtbr0.cn-n1.lcfile.com/54f2ad342a471562c1f6/th.jpeg'></image>
+            <view class="name"> Jon </view>
+        </view>
+    <!-- example card ends -->
 
 
     <!-- list with avatars and names -->

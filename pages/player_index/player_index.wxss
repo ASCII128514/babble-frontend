@@ -31,6 +31,15 @@
    
   }
 
+  .symbol_section {
+    display: flex;
+  }
+
+  .instruction_symbol {
+    height: 12px;
+    width: 12px;
+  }
+
   .title {
     font-size: 30px;
     font-weight: bolder;
