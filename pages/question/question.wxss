@@ -10,7 +10,7 @@
   background: linear-gradient(172deg, rgba(252,252,252,1) 0%, rgba(241,249,250,1) 73%, rgba(233,248,251,1) 100%, rgba(255,255,255,0) 100%);
 }
 
-.frame {
+/* .frame {
   width: 80%;
   height: 45vh;
   border-style: solid;
@@ -18,7 +18,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-}
+} */
 
 .question {
     text-align: center;
@@ -36,8 +36,74 @@
   font-size: 20px;
 }
 
-/* bottom section*/
+.top-area {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  /* background-color: blue; */
+  width: 100vw;
+  height: 70vh;
+}
 
+
+/* circle */
+
+.circle-area {
+  width: 100vw;
+  height: 100vw;
+  /* background-color: yellow; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+}
+.progress_box{
+    position: relative;
+    width: 100vw;
+    height: 360px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* background-color: #eee; */
+}
+
+.progress_bg{
+    position: absolute;
+    width:280px;
+    height: 280px;
+}
+
+.progress_canvas{
+    width:280px;
+    height: 280px;
+}
+
+.progress_text{
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.progress_info{
+  font-size: 36rpx;
+  padding-left: 16rpx;
+  letter-spacing: 1rpx;
+  /* background-color: yellow; */
+  height: 190px;
+  width: 180px;
+  text-align: center;
+}
+
+.progress_dot{
+    width:16rpx;
+    height: 16rpx;
+    border-radius: 50%;
+    background-color: #fb9126;
+}
+
+/* bottom section*/
 .b_section {
   display: flex;
   flex-direction: column;
@@ -64,48 +130,4 @@
   font-weight: bolder;
   font-size: 20px;
 }
-
 /* bottom section*/
-
-
-/* circle */
-.progress_box{
-    position: relative;
-    width:220px;
-    height: 220px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background-color: #eee;
-}
-
-.progress_bg{
-    position: absolute;
-    width:220px;
-    height: 220px;
-}
-
-.progress_canvas{
-    width:220px;
-    height: 220px;
-}
-
-.progress_text{
-    position: absolute;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.progress_info{
-  font-size: 36rpx;
-  padding-left: 16rpx;
-  letter-spacing: 2rpx;
-}
-
-.progress_dot{
-    width:16rpx;
-    height: 16rpx;
-    border-radius: 50%;
-    background-color: #fb9126;
-}

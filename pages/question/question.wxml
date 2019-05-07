@@ -5,7 +5,7 @@
   <view class="top-area">
     <!-- title -->
         <view class="title">
-          <view class="timer">Countdown: {{timerCountdown}}</view>
+          <view>Ask {{name}} about... </view>
         </view>
     <!-- title ends -->
 
@@ -15,14 +15,17 @@
             <canvas class="progress_bg" canvas-id="canvasProgressbg"> </canvas>
             <canvas class="progress_canvas" canvas-id="canvasProgress"> </canvas>
             <view class="progress_text">
-                <view class="progress_dot"></view>
-                <text class='progress_info'> {{question}}</text>
+                <!-- <view class="progress_dot"></view> -->
+                <text class='progress_info'> {{question}} what happened when Alex said he liked a pizza while he really wanted an ice cream?</text>
             </view>
           </view>
         </view>
     <!-- circle -->
 
-    <view class="round">Round {{currentGameRound}}/{{numberOfRounds}}</view>
+    <!-- timer and round -->
+        <view class="timer">Countdown: {{timerCountdown}}</view>
+        <view class="round">Round {{currentGameRound}}/{{numberOfRounds}}</view>
+    <!-- timer and round -->
 
   </view>
   <!-- Top area ends -->
