@@ -10,26 +10,28 @@
   background: linear-gradient(172deg, rgba(252,252,252,1) 0%, rgba(241,249,250,1) 73%, rgba(233,248,251,1) 100%, rgba(255,255,255,0) 100%);
 }
 
-.frame {
-  width: 95%;
-  height: 45vh;
-  border-style: 3px solid lightblue;
-  padding: 10px;
+.top-area {
+  background-color: blue;
+  width: 100vw;
+  height: 50vh;
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
+  flex-direction: column;
 }
 
-.picture {
+
+.avatar {
     text-align: center;
     height: 40vh;
     width: 95%;
     background-size: cover !important;
+    border-radius: 50%;
   }
 
 .timer {
   font-weight: 900;
-  font-size: 40px;
+  font-size: 20px;
 }
 
 /* bottom section*/

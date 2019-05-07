@@ -10,16 +10,6 @@
   background: linear-gradient(172deg, rgba(252,252,252,1) 0%, rgba(241,249,250,1) 73%, rgba(233,248,251,1) 100%, rgba(255,255,255,0) 100%);
 }
 
-/* .frame {
-  width: 80%;
-  height: 45vh;
-  border-style: solid;
-  padding: 10px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-} */
-
 .question {
     text-align: center;
     height: 40vh;

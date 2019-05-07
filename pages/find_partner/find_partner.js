@@ -24,7 +24,7 @@ Page({
     })
 
     wx.setNavigationBarTitle({
-      title: 'Find your partner',
+      title: 'Who is your partner?',
     })
 
     increaseGameRound();
