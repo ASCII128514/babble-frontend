@@ -1,6 +1,7 @@
 // pages/take_selfie_2/take_selfie_2.js
 let app = getApp()
 
+import { sendPictureToBackend } from '../../utils/create_game_api.js';
 const AV = require('../../utils/av-webapp-min.js');
 
 Page({
@@ -36,24 +37,18 @@ Page({
     })
   },
 
-  continue: function () {
+  savePic: function () {
     console.log("selfie", app.globalData.previewSelfie);
     new AV.File('file-name', {
       blob: {
         uri: app.globalData.previewSelfie,
       },
     }).save().then(
-      file => console.log("save pic", file.url())
+      file => {console.log("save pic", file.url())
+          sendPictureToBackend(file.url());}
     ).catch(console.error);
 
-    // wx.sendSocketMessage({
-    //   data: JSON.stringify({
-    //     command: "subscribe",
-    //     token: wx.getStorageSync("token"),
-    //     selfie: 'http://lc-qaxMtbr0.cn-n1.lcfile.com/aa5ade585b80d9e75f79'
-    //     // data: data
-    //   }),
-    // });
+
     
     wx.navigateTo({
       url: '/pages/room/room'

@@ -82,8 +82,27 @@ const setTime = function (e, page, gameTimeIndex) {
   });
 };
 
+const sendPictureToBackend = function (url) {
+  console.log("url", url);
+  var value = wx.getStorageSync("token");
+  if (value) {
+    wx.request({
+      url: `https://babble.wogengapp.cn/api/v1/user/profile`,
+      method: "PUT",
+      data: {
+        token: value,
+        url: url
+      },
+      success: res => {
+        console.log("this shit worked, yo!");
+      },
+    });
+  }
+};
+
 export {
   createGame,
   setTime,
-  convertArrayToSeconds
+  convertArrayToSeconds,
+  sendPictureToBackend
 };
