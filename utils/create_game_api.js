@@ -96,8 +96,8 @@ const sendPictureToBackend = function (url) {
   }
 };
 
-const sendNameToBackend = function (name) {
-  console.log("parameter:", name);
+const sendNameToBackend = function (userInput) {
+  var name = userInput.detail.value.name
   var value = wx.getStorageSync("token");
   if (value) {
     wx.request({
