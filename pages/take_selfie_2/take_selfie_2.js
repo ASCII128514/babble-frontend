@@ -48,9 +48,6 @@ Page({
           sendPictureToBackend(file.url());}
     ).catch(console.error);
 
-
-
-
     wx.navigateTo({
       url: '/pages/room/room'
     })

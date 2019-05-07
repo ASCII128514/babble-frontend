@@ -83,7 +83,6 @@ const setTime = function (e, page, gameTimeIndex) {
 };
 
 const sendPictureToBackend = function (url) {
-  console.log("url", url);
   var value = wx.getStorageSync("token");
   if (value) {
     wx.request({
@@ -92,6 +91,21 @@ const sendPictureToBackend = function (url) {
       data: {
         token: value,
         url: url
+      },
+    });
+  }
+};
+
+const sendNameToBackend = function (name) {
+  console.log("parameter:", name);
+  var value = wx.getStorageSync("token");
+  if (value) {
+    wx.request({
+      url: `https://babble.wogengapp.cn/api/v1/user/name`,
+      method: "PUT",
+      data: {
+        token: value,
+        name: name
       },
       success: res => {
         console.log("this shit worked, yo!");
@@ -104,5 +118,6 @@ export {
   createGame,
   setTime,
   convertArrayToSeconds,
-  sendPictureToBackend
+  sendPictureToBackend,
+  sendNameToBackend
 };
