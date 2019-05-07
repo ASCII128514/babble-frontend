@@ -27,7 +27,7 @@
             <picker mode="multiSelector" bindchange="questionTimeAmount" value="{{gameTimeIndices}}" range="{{[gameTime.minute_possibilities, gameTime.second_possibilities]}}">
               <view class="picker">
                 <!-- Current selection: {{gameTime[0][time[0]]}}, {{gameTime[1][time[1]]}} -->
-                Time: {{gameTimeIndices.questionTime.minutes}}:{{gameTimeIndices.questionTime.seconds}}
+                Time: {{minute}}:{{second}}
               </view>
             </picker>
           <!-- timer -->

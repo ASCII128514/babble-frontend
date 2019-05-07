@@ -32,6 +32,27 @@ Page({
     this.setData({ gameTime })
 
     let gameTimeIndices = getApp().globalData.gameTimeIndices
-    this.setData({ gameTimeIndices })
+    this.setData({ gameTimeIndices,
+      minute: gameTimeIndices.questionTime.minutes,
+      second: gameTimeIndices.questionTime.seconds })
   },
+
+  questionTimeAmount: function (res) {
+
+    getApp().globalData.gameTimeIndices.questionTime.minutes = `${res.detail.value[0]}`
+    var s
+    if (res.detail.value[1] === 0) {
+      s = '00'
+    } else {
+      s = `${res.detail.value[1] * 15}`
+    }
+    getApp().globalData.gameTimeIndices.questionTime.seconds = s
+    let gameTimeIndices = getApp().globalData.gameTimeIndices
+    console.log(gameTimeIndices)
+    this.setData({
+      gameTimeIndices,
+      minute: gameTimeIndices.questionTime.minutes,
+      second: gameTimeIndices.questionTime.seconds
+    })
+  }
 })
