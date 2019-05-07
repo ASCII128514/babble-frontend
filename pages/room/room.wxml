@@ -16,7 +16,7 @@
     <!-- status area -->
     <view class="status">
       <!-- start button -->
-      <view class="button">Start the game!</view>
+      <view class="button" bindtap='getPair'>Start the game!</view>
       <!-- start button -->
       <!-- numer of people -->
       <view class="people">6 joiners</view>
