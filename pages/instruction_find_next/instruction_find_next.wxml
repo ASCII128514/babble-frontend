@@ -1,7 +1,7 @@
 <view class="container">
 
     <!-- imagine -->
-        <view class="background" style="background-image: url('http://lc-qaxMtbr0.cn-n1.lcfile.com/c5b6116d8a205363a3d5/rounds.png');">
+        <view class="background" style="background-image: url('http://lc-qaxMtbr0.cn-n1.lcfile.com/a53ed31fea8591a50a2c/player_find.png');">
         </view>
     <!-- imagine -->
 
@@ -9,23 +9,15 @@
       <view class="content">
           <!-- title -->
             <view class="title">
-              Setting rounds
+              Find next partner
             </view>
           <!-- title -->
 
           <!-- text -->
             <view class="text">
-              How many rounds do you want the participants to play?
+              After 1 minute, your next partner will show up on the screen. Let’s find him/her and continue the conversation!
             </view>
           <!-- text -->
-
-          <!-- rounds picker -->
-            <view class="section section_gap">
-              <view class="picker">
-                <slider class="slider-bar" bindchange="roundsSlider" min="0" max="10" show-value value="5" />
-              </view>
-            </view>
-          <!-- rounds picker -->
       </view>
      <!-- content -->
 
@@ -35,15 +27,15 @@
         <!-- dots -->
           <view class="dots">
             <view class="circle"></view>
+            <view class="circle"></view>
+            <view class="circle"></view>
             <view class="circle-1"></view>
-            <view class="circle"></view>
-            <view class="circle"></view>
           </view>
         <!-- dots ends -->
 
         <!-- navigation button -->
           <view class="button" bindtap='buttonClicked'>
-                  Next
+                  Let's start!
           </view>
         <!-- navigation button -->
     </view>

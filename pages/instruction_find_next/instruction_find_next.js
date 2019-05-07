@@ -1,10 +1,11 @@
-// pages/take_selfie_2/take_selfie_2.js
-let app = getApp()
-
-import { sendPictureToBackend } from '../../utils/create_game_api.js';
-const AV = require('../../utils/av-webapp-min.js');
-
+// pages/instruction_find_next/instruction_find_next.js
 Page({
+
+  buttonClicked: function () {
+    wx.navigateTo({
+      url: '/pages/room/room'
+    })
+  },
 
   /**
    * Page initial data
@@ -17,43 +18,15 @@ Page({
    * Lifecycle function--Called when page load
    */
   onLoad: function (options) {
-    this.setData({
-      previewSelfie: app.globalData.previewSelfie
-    })
-
     wx.setNavigationBarColor({
       frontColor: '#000000',
-      backgroundColor: '#f5f5f5',
+      backgroundColor: '#F9FCFC',
     })
 
     wx.setNavigationBarTitle({
-      title: 'Review your picture',
+      title: 'How to play',
     })
-  },
 
-  goBack: function () {
-    wx.navigateTo({
-      url: '/pages/take_selfie/take_selfie'
-    })
-  },
-
-  savePic: function () {
-    console.log("selfie", app.globalData.previewSelfie);
-    new AV.File('file-name', {
-      blob: {
-        uri: app.globalData.previewSelfie,
-      },
-    }).save().then(
-      file => {console.log("save pic", file.url())
-          sendPictureToBackend(file.url());}
-    ).catch(console.error);
-
-
-
-
-    wx.navigateTo({
-      url: '/pages/room/room'
-    })
   },
 
   /**

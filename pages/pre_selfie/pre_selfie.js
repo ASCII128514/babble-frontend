@@ -1,11 +1,10 @@
-// pages/status_page_2/status_page_2.js
+// pages/pre_selfie/pre_selfie.js
 Page({
-  toStart: function () {
+  buttonClicked: function () {
     wx.navigateTo({
-      url: '/pages/status_page/status_page'
+      url: '/pages/take_selfie/take_selfie'
     })
   },
-
   /**
    * Page initial data
    */
@@ -17,6 +16,15 @@ Page({
    * Lifecycle function--Called when page load
    */
   onLoad: function (options) {
+    wx.setNavigationBarColor({
+      frontColor: '#000000',
+      backgroundColor: '#bbc9c9',
+    })
+
+    wx.setNavigationBarTitle({
+      title: 'Selfie',
+    })
+    
 
   },
 

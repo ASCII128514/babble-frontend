@@ -5,7 +5,7 @@ Page({
 
   buttonClicked: function () {
     wx.navigateTo({
-      url: '/pages/instruction/instruction'
+      url: '/pages/take_selfie/take_selfie'
     })
   },
 
@@ -16,7 +16,7 @@ Page({
     })
 
     wx.setNavigationBarTitle({
-      title: 'Connect - Anytime',
+      title: 'BABBLERS',
     })
   },
 })

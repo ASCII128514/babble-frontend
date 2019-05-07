@@ -1,79 +1,64 @@
 /* pages/find_partner/find_partner.wxss */
 .container {
-    text-align: center;
-    display: flex;
-    justify-content: space-between;
-    flex-direction: column;
-    align-items: center;
-    height: 100vh;
-    width: 100vw;
-    background: rgb(219,247,250);
-    background: linear-gradient(124deg, rgba(219,247,250,1) 0%, rgba(223,252,255,1) 31%, rgba(214,239,248,1) 100%, rgba(255,255,255,0) 100%);
-    
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-direction: column;
+  height: 100vh;
+  width: 100%;
+  background: rgb(252,252,252);
+  background: linear-gradient(172deg, rgba(252,252,252,1) 0%, rgba(241,249,250,1) 73%, rgba(233,248,251,1) 100%, rgba(255,255,255,0) 100%);
 }
 
+.frame {
+  width: 95%;
+  height: 45vh;
+  border-style: 3px solid lightblue;
+  padding: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 
-  /* .background {
-    text-align: center;a
-    height: 101vh;
-    width: 100%;
-    background-size: cover !important;
-    opacity: 0.5;
-  } */
-
-/* Top AREA */
-  .top-area {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    height: 65%;
-    width: 90%;
-    justify-content: space-around;
-  }
-
-  .title {
-    margin: 15px;
-    width: 70%;
-    font-weight: bolder;
-    font-size: 22px;
-  }
-
-  .timer {
-    font-size: 30px;
-  }
-
-  .avatar {
-    border-radius: 50%;
-    height: 300px;
+.picture {
+    text-align: center;
+    height: 40vh;
+    width: 95%;
     background-size: cover !important;
   }
 
-  /* Top AREA ends */
+.timer {
+  font-weight: 900;
+  font-size: 40px;
+}
 
-  .bottom-area {
-    width: 100%;
-    height: 25%;
-    margin-bottom: 3px;
-    margin-left: 8px;
-    padding-right: 8px;
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-    justify-content: space-between;
-    font-weight: bolder;
-  }
+/* bottom section*/
 
-  .button {
-    width: 220px;
-    height: 110px; /* as the half of the width */
-    border-top-left-radius: 110px;  /* 100px of height + 10px of border */
-    border-top-right-radius: 110px; /* 100px of height + 10px of border */
-    border: 3px solid black;
-    border-bottom: 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    color:black;
-    font-size: 30px;
-  
-  }
+.b_section {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  width: 100vw;
+  height: 15vh;
+  margin: 30px;
+}
+
+.name{
+  font-size: 20px;
+  font-weight: 400;
+}
+
+.button {
+  background-color:white;
+  border: 1px solid;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 140px;
+  height: 50px;
+  font-weight: bolder;
+  font-size: 20px;
+}
+
+/* bottom section*/

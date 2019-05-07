@@ -1,17 +1,61 @@
-<!--pages/timer_question/timer_question.wxml-->
-<view>
-  <!-- title -->
-    <view>
-        Set the time for each question
+<view class="container">
+
+    <!-- imagine -->
+        <view class="background" style="background-image: url('http://lc-qaxMtbr0.cn-n1.lcfile.com/140b42661e563bb90ce1/question_time.png');">
+        </view>
+    <!-- imagine -->
+
+    <!-- content -->
+      <view class="content">
+          <!-- title -->
+            <view class="title">
+              Question time
+            </view>
+          <!-- title -->
+
+          <!-- text -->
+            <view class="text">
+              Participants start their conversation with question card. 
+            </view>
+            <view class="text">
+              Set timer for their conversation.
+            </view>
+          <!-- text -->
+
+          <!-- timer -->
+            <!-- <input name="question_timer" placeholder="in seconds" questiontimer/> -->
+            <picker mode="multiSelector" bindchange="questionTimeAmount" value="{{gameTimeIndices}}" range="{{[gameTime.minute_possibilities, gameTime.second_possibilities]}}">
+              <view class="picker">
+                <!-- Current selection: {{gameTime[0][time[0]]}}, {{gameTime[1][time[1]]}} -->
+                Time: {{gameTimeIndices.questionTime.minutes}}:{{gameTimeIndices.questionTime.seconds}}
+              </view>
+            </picker>
+          <!-- timer -->
+
+      </view>
+     <!-- content -->
+
+    <!-- buttons -->
+
+    <view class="buttons-section">
+        <!-- dots -->
+          <view class="dots">
+            <view class="circle"></view>
+            <view class="circle"></view>
+            <view class="circle"></view>
+            <view class="circle-1"></view>
+          </view>
+        <!-- dots ends -->
+
+        <!-- navigation button -->
+          <view class="button" bindtap='buttonClicked'>
+                  Create invitation
+          </view>
+        <!-- navigation button -->
     </view>
-  <!-- title ends -->
-
-  <!-- Timer -->
-    <view>
-      Placeholder for timer
-    </view>
-  <!-- Timer ends -->
-
-
+    <!-- buttons -->
 
 </view>
+
+
+

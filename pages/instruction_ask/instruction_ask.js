@@ -1,11 +1,10 @@
-// pages/timer_question/timer_question.js
+// pages/instruction_ask/instruction_ask.js
 Page({
   buttonClicked: function () {
     wx.navigateTo({
-      url: '/pages/timer_question/timer_question'
+      url: '/pages/instruction_find_next/instruction_find_next'
     })
   },
-
 
   /**
    * Page initial data
@@ -18,14 +17,15 @@ Page({
    * Lifecycle function--Called when page load
    */
   onLoad: function (options) {
-    wx.setNavigationBarColor({
-      frontColor: '#000000',
-      backgroundColor: '#F9FCFC',
-    })
+   
+      wx.setNavigationBarColor({
+        frontColor: '#000000',
+        backgroundColor: '#F9FCFC',
+      })
 
-    wx.setNavigationBarTitle({
-      title: 'Game setting',
-    })
+      wx.setNavigationBarTitle({
+        title: 'How to play',
+      })
 
   },
 

@@ -1,52 +1,42 @@
-<!--pages/find_partner/find_partner.wxml-->
+<!-- pages/find_partner/find_partner.wxml -->
 <view class="container">
-
   <!-- background -->
-  
-       <!-- Top area  -->
-      <view class="top-area">
-
-        <!-- title -->
-          <view class="title">
-            <view class="round">Round {{currentGameRound}}/{{numberOfRounds}}</view>
-            <view class="timer">Countdown: {{timerCountdown}}</view>
-          </view>
-        <!-- title ends -->
-
-        <!-- test the API data -->
-        <view>
-          {{getApp().globalData.playerPair.url}}
-        </view>
-        <!-- test ends -->
-
-        <!-- avatar -->
-          <view>
-            <image class="avatar" src="http://lc-qaxMtbr0.cn-n1.lcfile.com/31cf09e7f686ddea8e2e/selfie_1.jpg">
-            IMG </image>
-          </view>
-        <!-- avatar ends -->
-     
-      </view>
-      <!-- Top area ends -->
-
-      <!-- bottom area -->
-
-        <!-- info: round and seconds -->
-          <view class="bottom-area">
-                    <!-- button: found partner -->
-                        <view class="btn-area" bindtap='goToQuestion'>
-                          <view class="button" formType="submit">
-                            READY
-                          </view>
-                        </view>
-                    <!-- button: found partner ends -->
-          </view>
-        <!-- info: round and seconds ends -->
-
-       
-
-      <!-- bottom area ends -->
-
-
-  <!-- background ends -->
+  <!-- Top area -->
+  <view class="top-area">
+    <!-- title -->
+    <view class="title">
+      <view class="round">Round {{currentGameRound}}/{{numberOfRounds}}</view>
+      <view class="timer">Countdown: {{timerCountdown}}</view>
+    </view>
+    <!-- title ends -->
+    <!-- test the API data -->
+    <view>{{getApp().globalData.playerPair.url}}</view>
+    <!-- test ends -->
+    <!-- avatar -->
+    <view>
+      <image class="avatar" src="http://lc-qaxMtbr0.cn-n1.lcfile.com/31cf09e7f686ddea8e2e/selfie_1.jpg">
+        IMG
+      </image>
+    </view>
+    <!-- avatar ends -->
+  </view>
+  <!-- Top area ends -->
+  <!-- bottom area -->
+  <!-- info: round and seconds -->
+  <view class="bottom-area">
+    <!-- button: found partner -->
+    <view class="btn-area" bindtap='goToQuestion'>
+      <view class="button" formType="submit">READY</view>
+    </view>
+    <!-- button: found partner ends -->
+  </view>
+  <!-- content -->
+  <!-- buttons -->
+  <view class="buttons-section">
+    <!-- navigation button -->
+    <view class="button" bindtap='buttonClicked'>FOUND</view>
+    <!-- navigation button -->
+  </view>
+  <!-- buttons -->
+  <!-- bottom section -->
 </view>

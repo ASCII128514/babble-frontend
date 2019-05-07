@@ -17,8 +17,8 @@ const increaseGameRound = function () {
 
 const gameTimer = function (totalSeconds, whichTimer, targetPage, page) {
   // Set the date we're counting down to
-  let timerEndTime = totalSeconds[whichTimer] * 1000
-  
+  // let timerEndTime = totalSeconds[whichTimer] * 1000
+  let timerEndTime = 6 * 1000
   var countDownTime = new Date().getTime() + timerEndTime;
 
     // Update the count down every 1 second
@@ -37,8 +37,14 @@ const gameTimer = function (totalSeconds, whichTimer, targetPage, page) {
     // If the count down is finished, write some text 
     if (distance <= 0) {
       clearInterval(x);
-      console.log("timer over");
+      console.log(this)
+      // if (this == page)
+      wx.redirectTo({
+        url: '/pages/index/index'
+      })
     }
+
+
 
     // Display the result in the element with id="demo"
     var countdown = minutes + ":" + seconds;

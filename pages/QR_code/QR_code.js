@@ -2,12 +2,17 @@
 let app = getApp()
 
 Page({
+  buttonClicked: function () {
+    wx.navigateTo({
+      url: '/pages/status_page/status_page'
+    })
+  },
 
   /**
    * Page initial data
    */
   data: {
-    
+
   },
 
   /**
@@ -17,6 +22,16 @@ Page({
     this.setData({
       qrCodeUrl: app.globalData.qrCodeUrl
     })
+
+    wx.setNavigationBarColor({
+      frontColor: '#000000',
+      backgroundColor: '#F9FCFC',
+    })
+
+    wx.setNavigationBarTitle({
+      title: 'QR code',
+    })
+
   },
 
   /**

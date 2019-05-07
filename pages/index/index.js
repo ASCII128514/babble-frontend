@@ -5,8 +5,13 @@ const app = getApp();
 Page({
   buttonClicked: function () {
     wx.navigateTo({
-      url: "/pages/instruction_creator/instruction_creator",
-    });
+      // <<<<<<< HEAD
+      //       url: "/pages/instruction_creator/instruction_creator",
+      //     });
+      // =======
+      url: '/pages/instruction/instruction'
+    })
+
   },
 
   toPlayer: function () {
@@ -17,13 +22,15 @@ Page({
 
   onLoad: function (query) {
     wx.setNavigationBarColor({
-      frontColor: "#000000",
-      backgroundColor: "#aec6d9",
-    });
+
+      frontColor: '#000000',
+      backgroundColor: '#F9FCFC',
+    })
     wx.setNavigationBarTitle({
-      title: "The best ice-breaker!",
-    });
-    console.log("in Onload");
+      title: 'The Icebreaker',
+    })
+    console.log('in Onload')
+
     // scene 需要使用 decodeURIComponent 才能获取到生成二维码时传入的 scene
     let scene = null;
     console.log(typeof query.scene);

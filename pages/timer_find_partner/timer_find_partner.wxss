@@ -1,1 +1,109 @@
-/* pages/timer_find_partner/timer_find_partner.wxss */
+.container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: column;
+  height: 100vh;
+  width: 100%;
+  background: rgb(252,252,252);
+  background: linear-gradient(172deg, rgba(252,252,252,1) 0%, rgba(241,249,250,1) 73%, rgba(233,248,251,1) 100%, rgba(255,255,255,0) 100%);
+}
+
+.background {
+    text-align: center;
+    height: 50vh;
+    width: 95%;
+    background-size: cover !important;
+    border-bottom-left-radius: 30px;
+    border-top-right-radius: 30px;
+  }
+
+
+/* content with texts */
+.content {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  height: 20%;
+}
+
+.title{
+  font-size: 40px;
+  font-weight: bolder;
+}
+
+.text {
+  width: 90%;
+  height: 80px;
+  font-weight: 400;
+  font-size: 15px;
+  margin-top: 20px;
+  text-align: center;
+}
+
+.picker {
+  margin-top: 30px;
+  width: 200px;
+  height: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: bolder;  
+}
+
+.slider-bar {
+  width: 150px;
+}
+/* content with texts ends */
+
+.buttons-section {
+  display: flex;
+  justify-content: space-around;
+  width: 95%;
+  height: 10%;
+}
+
+.buttons {
+  background-color: yellow;
+  margin-bottom: 20px;
+}
+
+/* progress dots */
+.dots {
+  height: 20px;
+  width: 60px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  padding-top: 10px;
+}
+
+.circle {
+  border-style: 1px solid black;
+  background-color:rgb(182, 207, 245);
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+}
+
+.circle-1 {
+  border-style: 1px solid black;
+  background-color:rgb(90, 151, 241);
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+}
+/* progress dots ends */
+
+.button {
+  background-color:rgb(90, 151, 241);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: 10px;
+  width: 140px;
+  height: 30px;
+  border-radius: 10px;
+  font-size:bold;
+}

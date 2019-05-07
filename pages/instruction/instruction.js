@@ -3,7 +3,7 @@ Page({
 
   buttonClicked: function () {
     wx.navigateTo({
-      url: '/pages/take_selfie/take_selfie'
+      url: '/pages/set_rounds/set_rounds'
     })
   },
 
@@ -23,7 +23,7 @@ Page({
     
       wx.setNavigationBarColor({
         frontColor: '#000000',
-        backgroundColor: '#ffffff',
+        backgroundColor: '#F9FCFC',
       })
 
       wx.setNavigationBarTitle({

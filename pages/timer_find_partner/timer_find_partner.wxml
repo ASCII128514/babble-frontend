@@ -1,17 +1,58 @@
-<!--pages/timer_find_partner/timer_find_partner.wxml-->
-<view>
-  <!-- title -->
-    <view>
-        Set the time for participants to find his/her partner
+<view class="container">
+
+    <!-- imagine -->
+        <view class="background" style="background-image: url('http://lc-qaxMtbr0.cn-n1.lcfile.com/e10ba4cb13f86d27f879/find_partner.png');">
+        </view>
+    <!-- imagine -->
+
+    <!-- content -->
+      <view class="content">
+          <!-- title -->
+            <view class="title">
+              Find partner
+            </view>
+          <!-- title -->
+
+          <!-- text -->
+            <view class="text">
+              Provide time for participants to find his/her partner
+            </view>
+          <!-- text -->
+
+          <!-- timer -->
+            <!-- <input name="question_timer" placeholder="in seconds" questiontimer/> -->
+            <picker mode="multiSelector" bindchange="questionTimeAmount" value="{{gameTimeIndices}}" range="{{[gameTime.minute_possibilities, gameTime.second_possibilities]}}">
+              <view class="picker">
+                <!-- Current selection: {{gameTime[0][time[0]]}}, {{gameTime[1][time[1]]}} -->
+                Time: {{gameTimeIndices.questionTime.minutes}}:{{gameTimeIndices.questionTime.seconds}}
+              </view>
+            </picker>
+          <!-- timer -->
+          
+      </view>
+     <!-- content -->
+
+    <!-- buttons -->
+
+    <view class="buttons-section">
+        <!-- dots -->
+          <view class="dots">
+            <view class="circle"></view>
+            <view class="circle"></view>
+            <view class="circle-1"></view>
+            <view class="circle"></view>
+          </view>
+        <!-- dots ends -->
+
+        <!-- navigation button -->
+          <view class="button" bindtap='buttonClicked'>
+                  Next
+          </view>
+        <!-- navigation button -->
     </view>
-  <!-- title ends -->
-
-  <!-- Timer -->
-    <view>
-      Placeholder for timer
-    </view>
-  <!-- Timer ends -->
-
-
+    <!-- buttons -->
 
 </view>
+
+
+

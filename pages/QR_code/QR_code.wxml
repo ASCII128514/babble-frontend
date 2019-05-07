@@ -1,4 +1,20 @@
 <!--pages/QR_code/QR_code.wxml-->
-<text>pages/QR_code/QR_code.wxml</text>
 
-<image class="QR" src="{{qrCodeUrl}}"></image>
+<view class="container">
+
+  <!-- QR code -->
+      <image class="QR" src="{{qrCodeUrl}}"></image>
+  <!-- QR code ends -->
+
+  <!-- text -->
+    <view class="text">
+      Invite people by share this QR code
+    </view>
+  <!-- text ends -->
+
+  <!-- button -->
+    <view class="button" bindtap='buttonClicked'>
+        Next
+    </view>
+  <!-- button -->
+</view>

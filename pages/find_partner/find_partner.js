@@ -3,9 +3,13 @@
 import { increaseGameRound, gameTimer } from '../../utils/play_game_api.js';
 import { convertArrayToSeconds } from '../../utils/create_game_api.js';
 
+
+var x;
+
+
 Page({
   // button to next page
-  goToQuestion: function () {
+  buttonClicked: function () {
     wx.navigateTo({
       url: '/pages/question/question'
     })
@@ -13,9 +17,10 @@ Page({
 
   // top bar styling
   onLoad: function (options) {
+    var page = this
     wx.setNavigationBarColor({
       frontColor: '#000000',
-      backgroundColor: '#DFFBFE',
+      backgroundColor: '#FBFBFB',
     })
 
     wx.setNavigationBarTitle({
@@ -41,8 +46,87 @@ Page({
     })
 
     let objectOfSeconds = convertArrayToSeconds();
-    gameTimer(objectOfSeconds, 'find_partner_timer', '/pages/question/question', this);
-    console.log("test GD", getApp().globalData.countdown);
+    // Set the date we're counting down to
+    // let timerEndTime = objectOfSeconds['find_partner_timer'] * 1000
+    let timerEndTime = 6 * 1000
+    var countDownTime = new Date().getTime() + timerEndTime;
+
+    // Update the count down every 1 second
+
+
+
+    x = setInterval(function () {
+
+      // Get todays date and time
+      var now = new Date().getTime();
+
+      // Find the distance between now and the count down date
+      var distance = countDownTime - now;
+
+      // Time calculations for days, hours, minutes and seconds
+      var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+      var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+      // If the count down is finished, write some text 
+      if (distance <= 0) {
+        clearInterval(x);
+        console.log(this)
+        // if (this == page)
+        // wx.redirectTo({
+        //   url: '/pages/question/question'
+        // })
+      }
+
+
+
+      // Display the result in the element with id="demo"
+      var s = seconds
+      var m = minutes
+      if (s == -1 ) {
+        s = 0
+      }
+      if (m == -1) {
+        m = 0
+      }
+      var countdown = m + ":" + s;
+      page.setData({
+        timerCountdown: countdown
+      })
+    }, 1000);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
   },
 
   /**
@@ -101,5 +185,18 @@ Page({
    */
   onShareAppMessage: function () {
 
+  },
+
+  goToQuestion: function() {
+    clearInterval(x);
+    // send the extra minutes to the next page
+    console.log(typeof(this.data.timerCountdown))
+    var arr = this.data.timerCountdown.split(':')
+    var sec = Number.parseInt(arr[0]) * 60 + Number.parseInt(arr[1])
+    getApp().globalData.extraSec = sec
+    console.log(getApp().globalData.extraSec);
+    // wx.navigateTo({
+    //   url: '/pages/question/question'
+    // })
   }
 })
