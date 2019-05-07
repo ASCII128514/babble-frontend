@@ -52,10 +52,15 @@ Page({
 
         } else if (value.message.type == "pair") {
           getApp().globalData.pair = value.message.pairs[wx.getStorageSync('token')]
+          getApp().globalData.currentGameRound = value.message.round
           console.log(getApp().globalData.pair)
           console.log("question", getApp().globalData.pair.question)
-          wx.redirectTo({
+          wx.reLaunch({
             url: '/pages/find_partner/find_partner'
+          })
+        } else if (value.message.type == 'finish') {
+          wx.reLaunch({
+            url: '/pages/index/index',
           })
         }
       }
@@ -95,13 +100,19 @@ Page({
 
 
       // If the count down is finished, write some text 
-      if (distance <= 0) {
+      if (distance <= 0 ) {
         clearInterval(x);
         console.log(this)
         // if (this == page)
-        wx.request({
-          url: `https://babble.wogengapp.cn/api/v1/game/${getApp().globalData.qrCodeData}/pair?round=${getApp().globalData.currentGameRound + 1}&token=${wx.getStorageSync('token')}`
-        })
+        if ( getApp().globalData.currentGameRound < getApp().globalData.numberOfRounds ){
+          wx.request({
+            url: `https://babble.wogengapp.cn/api/v1/game/${getApp().globalData.qrCodeData}/pair?round=${getApp().globalData.currentGameRound + 1}&token=${wx.getStorageSync('token')}`
+          }) 
+        } else {
+          wx.reLaunch({
+            url: '/pages/index/index'
+          })
+        }
       }
 
 

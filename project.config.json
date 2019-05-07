@@ -40,7 +40,7 @@
 			"list": []
 		},
 		"miniprogram": {
-			"current": 22,
+			"current": 24,
 			"list": [
 				{
 					"id": -1,
@@ -208,6 +208,13 @@
 					"name": "room",
 					"pathName": "pages/index/index",
 					"query": "scene=1",
+					"scene": null
+				},
+				{
+					"id": 24,
+					"name": "playerindex-1",
+					"pathName": "pages/login/login",
+					"query": "scene=65",
 					"scene": null
 				}
 			]

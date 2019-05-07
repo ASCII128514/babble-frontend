@@ -24,7 +24,7 @@ Page({
       title: 'Find your partner',
     })
 
-    increaseGameRound();
+    // increaseGameRound();
     const currentGameRound = getApp().globalData.currentGameRound
     this.setData({ currentGameRound })
 
@@ -38,6 +38,11 @@ Page({
         if (value.message.type == "pairs") {
           console.log("pairs:", value.message.pairs);
           this.setData({ pairs: value.message.pairs })
+          getApp().globalData.currentGameRound = value.message.round
+        } else if (value.message.type == 'finish') {
+          wx.reLaunch({
+            url: '/pages/index/index',
+          })
         }
       }
     })
@@ -68,7 +73,7 @@ Page({
       if (distance <= 0) {
         clearInterval(x);
         console.log(this)
-        wx.redirectTo({
+        wx.reLaunch({
           url: '/pages/question/question'
         })
       }
