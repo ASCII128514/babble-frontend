@@ -16,7 +16,7 @@
             <canvas class="progress_canvas" canvas-id="canvasProgress"> </canvas>
             <view class="progress_text">
                 <!-- <view class="progress_dot"></view> -->
-                <text class='progress_info'> {{question}} what happened when Alex said he liked a pizza while he really wanted an ice cream?</text>
+                <text class='progress_info'> {{question}} what happened when Alex said he xlah dlah dklads adsgk asdlf asdlkg jkasg lja sg </text>
             </view>
           </view>
         </view>
