@@ -4,27 +4,30 @@
   <!-- Top area -->
   <view class="top-area">
     <!-- title -->
-    <view class="title">
-      <view class="round">Round {{currentGameRound}}/{{numberOfRounds}}</view>
-      <view class="timer">Countdown: {{timerCountdown}}</view>
-    </view>
+        <view class="title">
+          <view class="timer">Countdown: {{timerCountdown}}</view>
+        </view>
     <!-- title ends -->
-    <!-- question -->
-    <view>{{question}}</view>
-    <!-- question ends -->
+
+    <!-- circle -->
+        <view class="circle-area">
+          <view class='progress_box'>
+            <canvas class="progress_bg" canvas-id="canvasProgressbg"> </canvas>
+            <canvas class="progress_canvas" canvas-id="canvasProgress"> </canvas>
+            <view class="progress_text">
+                <view class="progress_dot"></view>
+                <text class='progress_info'> {{question}}</text>
+            </view>
+          </view>
+        </view>
+    <!-- circle -->
+
+    <view class="round">Round {{currentGameRound}}/{{numberOfRounds}}</view>
+
   </view>
   <!-- Top area ends -->
-  <!-- bottom area -->
-  <!-- info: round and seconds -->
-  <view class="bottom-area">
-    <!-- button: found partner -->
-    <view class="button" bindtap='goToQuestion'>Ready</view>
-    <!-- button: found partner ends -->
-  </view>
-  <!-- info: round and seconds ends -->
-  <!-- timer -->
-  <view class="timer">00:20</view>
-  <!-- timer ends -->
+
+
   <!-- bottom section -->
   <view class="b_section">
     <!-- buttons -->
