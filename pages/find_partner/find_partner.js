@@ -8,12 +8,6 @@ var x;
 
 
 Page({
-  // button to next page
-  buttonClicked: function () {
-    wx.navigateTo({
-      url: '/pages/question/question'
-    })
-  },
 
   // top bar styling
   onLoad: function (options) {
@@ -47,8 +41,8 @@ Page({
 
     let objectOfSeconds = convertArrayToSeconds();
     // Set the date we're counting down to
-    // let timerEndTime = objectOfSeconds['find_partner_timer'] * 1000
-    let timerEndTime = 6 * 1000
+    let timerEndTime = objectOfSeconds['find_partner_timer'] * 1000
+    // let timerEndTime = 6 * 1000
     var countDownTime = new Date().getTime() + timerEndTime;
 
     // Update the count down every 1 second

@@ -47,7 +47,7 @@ Page({
         sendPictureToBackend(file.url())
       })
       .then(res => {
-        wx.navigateTo({
+        wx.reLaunch({
           url: '/pages/room/room'
         })
       })

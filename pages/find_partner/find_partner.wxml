@@ -23,20 +23,4 @@
   <!-- Top area ends -->
   <!-- bottom area -->
   <!-- info: round and seconds -->
-  <view class="bottom-area">
-    <!-- button: found partner -->
-    <view class="btn-area" bindtap='goToQuestion'>
-      <view class="button" formType="submit">READY</view>
-    </view>
-    <!-- button: found partner ends -->
-  </view>
-  <!-- content -->
-  <!-- buttons -->
-  <view class="buttons-section">
-    <!-- navigation button -->
-    <view class="button" bindtap='buttonClicked'>FOUND</view>
-    <!-- navigation button -->
-  </view>
-  <!-- buttons -->
-  <!-- bottom section -->
 </view>

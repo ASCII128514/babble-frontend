@@ -82,8 +82,8 @@ Page({
 
 
     // Set the date we're counting down to
-    // let timerEndTime = objectOfSeconds['question_timer'] * 1000 + getApp().globalData.extraSec * 1000
-    let timerEndTime = 6 * 1000 + getApp().globalData.extraSec * 1000
+    let timerEndTime = objectOfSeconds['question_timer'] * 1000 + getApp().globalData.extraSec * 1000
+    // let timerEndTime = 6 * 1000 + getApp().globalData.extraSec * 1000
     var countDownTime = new Date().getTime() + timerEndTime;
     getApp().globalData.extraSec = 0
 
