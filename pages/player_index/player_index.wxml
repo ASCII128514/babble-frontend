@@ -6,11 +6,14 @@
       </view>
   <!-- backgroud -->
 
+  <!-- instruction symbol -->
+    <view class="symbol_section">
+        <image src="http://lc-qaxMtbr0.cn-n1.lcfile.com/0e440a34d3d77d186707/instruction%20symbol.png" class="instruction_symbol"></image>
+    </view>
+ <!-- instruction symbol -->
+
   <!-- Main text -->
           <view class="content">
-            <view class="symbol_section">
-                <image src="http://lc-qaxMtbr0.cn-n1.lcfile.com/0e440a34d3d77d186707/instruction%20symbol.png" class="instruction_symbol"></image>
-            </view>
             <view class='title'>Welcome</view>
 
             <!-- form and button -->
@@ -23,8 +26,6 @@
                 </view>
             </form>
             <!-- form and button ends -->
-
           </view>
   <!-- Main text -->
-
 </view>
