@@ -41,8 +41,8 @@
 		},
 		"miniprogram": {
 			"current": 23,
-			"list": [
-				{
+
+			"list": [{
 					"id": -1,
 					"name": "game",
 					"pathName": "pages/creation/creation",
