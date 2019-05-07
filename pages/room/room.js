@@ -12,7 +12,7 @@ Page({
    * Page initial data
    */
   data: {
-
+    numOfPeople: 0
   },
 
   /**
@@ -29,6 +29,7 @@ Page({
         if (value.message.type == "users") {
           console.log("players:", value.message.players);
           page.setData({playerList: value.message.players})
+          page.setData({numOfPeople: value.message.players.length})
 
         } else if (value.message.type == "pair") {
           getApp().globalData.pair = value.message.pairs[wx.getStorageSync('token')]
