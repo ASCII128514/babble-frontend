@@ -4,22 +4,14 @@
   width: 100%;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  justify-content: space-around;
   align-items: center;
   background-size: cover !important;
 }
 
-.page-body-wrapper {
-  height: 100vh;
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-around;
-  align-items: center;
-}
-
 .camera {
   border-radius: 50%;
+  height: 55vh;
 }
 
 /* selfie button */

@@ -4,25 +4,17 @@
   width: 100%;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
-  align-items: center;
-  background-size: cover !important;
-
-}
-
-.wrapper {
-  height: 60%;
-  width: 100%;
-  display: flex;
-  flex-direction: column;
   justify-content: space-around;
   align-items: center;
+  background-size: cover !important;
 }
 
 /* picture area */
 
 .picture {
   border-radius: 50%;
+  height: 55vh;
+  width: 95vw;
 }
 /* picture area ends */
 
@@ -32,7 +24,7 @@
   justify-content: space-between;
   width: 80%;
   height: 50px;
-  margin-bottom: 130px;
+  margin-top: 20px;
 }
 
 .go-back-button {
