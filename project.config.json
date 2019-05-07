@@ -93,7 +93,7 @@
 				{
 					"id": 7,
 					"name": "Waiting Room",
-					"pathName": "pages/room/room",
+					"pathName": "pages/index/index",
 					"query": "scene=1",
 					"scene": null
 				},

@@ -26,7 +26,6 @@ const createGame = function (objectOfSeconds, page) {
       success: res => {
 
         let qrCodeUrl = res.data.url
-        // console.log(getApp())
         getApp().globalData.qrCodeUrl = qrCodeUrl
         // getApp().setGlobalData({
         //   qrCodeUrl

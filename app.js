@@ -1,4 +1,11 @@
 //app.js
+const AV = require('./utils/av-webapp-min.js')
+const config = require('./secret')
+AV.init({
+  appId: config.appid,
+  appKey: config.secret
+})
+
 App({
   onLaunch: function () {
     console.log(wx.getStorageSync("token"));
