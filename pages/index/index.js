@@ -14,11 +14,6 @@ Page({
 
   },
 
-  toPlayer: function () {
-    wx.navigateTo({
-      url: "/pages/player_index/player_index",
-    });
-  },
 
   onLoad: function (query) {
     wx.setNavigationBarColor({
@@ -90,7 +85,7 @@ Page({
               }
             });
             wx.navigateTo({
-              url: "/pages/instruction/instruction",
+              url: "/pages/player_index/player_index",
             });
           }
         },
