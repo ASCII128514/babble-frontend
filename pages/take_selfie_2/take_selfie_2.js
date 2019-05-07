@@ -52,10 +52,6 @@ Page({
       })
     }).catch(console.error);
 
-
-
-
- 
   },
 
   /**
