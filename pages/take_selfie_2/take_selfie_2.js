@@ -46,14 +46,16 @@ Page({
     }).save().then(
       file => {console.log("save pic", file.url())
           sendPictureToBackend(file.url());}
-    ).catch(console.error);
+    ).then(res => {
+      wx.navigateTo({
+        url: '/pages/room/room'
+      })
+    }).catch(console.error);
 
 
 
 
-    wx.navigateTo({
-      url: '/pages/room/room'
-    })
+ 
   },
 
   /**
