@@ -1,5 +1,6 @@
 <view class="container">
   <!-- Background -->
+
   <view class="background" style="background-image: linear-gradient(-200deg, rgba(0,90,168,0.2) 0%, rgba(0,76,61,0.2) 60%), url('http://lc-qaxMtbr0.cn-n1.lcfile.com/3918e9a0879471434fb9/Index_1.png');"></view>
   <!-- backgroud -->
   <!-- Main text -->

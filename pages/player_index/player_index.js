@@ -14,6 +14,12 @@ Page({
     })
   },
 
+  toInstruction: function () {
+    wx.navigateTo({
+      url: '/pages/instruction_p/instruction_p'
+    })
+  },
+
   onLoad: function (options) {
     wx.setNavigationBarColor({
       frontColor: '#000000',

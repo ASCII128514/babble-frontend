@@ -15,8 +15,8 @@
 
           <!-- text -->
             <view class="text">
-              You and your partner have 1 min to ask each other the question shown on the screen. 
-Let’s break the ice and get the conversation started!
+              You and your partner have pre-set time to ask each other the question shown on the screen. 
+After that, your next partner will show up on your screen!
             </view>
           <!-- text -->
       </view>
@@ -30,13 +30,12 @@ Let’s break the ice and get the conversation started!
             <view class="circle"></view>
             <view class="circle"></view>
             <view class="circle-1"></view>
-            <view class="circle"></view>
           </view>
         <!-- dots ends -->
 
         <!-- navigation button -->
           <view class="button" bindtap='buttonClicked'>
-                  Next
+                  Ready?
           </view>
         <!-- navigation button -->
     </view>

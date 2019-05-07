@@ -15,7 +15,7 @@
 
           <!-- text -->
             <view class="text">
-              You have 30 sec to find your speaking partner, so hurry up and find that person!
+              You have pre-set time to find your speaking partner! For each round, you have one partner.
             </view>
           <!-- text -->
       </view>
@@ -28,7 +28,6 @@
           <view class="dots">
             <view class="circle"></view>
             <view class="circle-1"></view>
-            <view class="circle"></view>
             <view class="circle"></view>
           </view>
         <!-- dots ends -->
