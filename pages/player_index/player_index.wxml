@@ -8,7 +8,7 @@
 
   <!-- instruction symbol -->
     <view class="symbol_section">
-        <image src="http://lc-qaxMtbr0.cn-n1.lcfile.com/0e440a34d3d77d186707/instruction%20symbol.png" class="instruction_symbol"></image>
+        <image src="http://lc-qaxMtbr0.cn-n1.lcfile.com/0e440a34d3d77d186707/instruction%20symbol.png" class="instruction_symbol" bindtap='toInstruction'></image>
     </view>
  <!-- instruction symbol -->
 
@@ -20,8 +20,7 @@
             <input class='teaser' name="name" placeholder="Enter your name"/>
 
             <view class='bottom-section'>
-                <view class='teaser_2'> Continue to take your selfie</view>
-                <button formType="submit" class='button' bindtap="buttonClicked">Next</button>
+                <button formType="submit" class='button'>Let's start!</button>
             </view>
           </form>
           </view>

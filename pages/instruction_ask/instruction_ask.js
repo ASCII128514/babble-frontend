@@ -2,7 +2,7 @@
 Page({
   buttonClicked: function () {
     wx.navigateTo({
-      url: '/pages/instruction_find_next/instruction_find_next'
+      url: '/pages/player_index/player_index'
     })
   },
 

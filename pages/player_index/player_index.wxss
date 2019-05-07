@@ -32,7 +32,7 @@
   }
 
   .symbol_section {
-    padding-left: 10px;
+    padding-left: 15px;
   }
 
   .instruction_symbol {
@@ -47,10 +47,11 @@
   }
 
   .teaser {
-    font-size: 16px;
+    font-size: 20px;
     font-weight: bolder;
     margin-top: 5px;
     text-align: center;
+    color: blueviolet;
   }
 
   .bottom-section {
@@ -60,13 +61,6 @@
     align-items: center;
   }
  
-   .teaser_2 {
-    font-size: 16px;
-    font-weight: bolder;
-    margin-bottom: 5px;
-    text-align: center;
-  }
-
   .button {
     display: flex;
     justify-content: center;
@@ -74,8 +68,8 @@
     margin-top: 10px;
     margin-bottom: 40px;
     border-radius: 20px;
-    width: 40vw;
-    background-color:rgb(90, 151, 241);
+    width: 60vw;
+    background-color:rgb(167, 195, 236);
     font-weight: bold;
     height: 40px;
   }
