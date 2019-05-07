@@ -28,18 +28,5 @@
     <!-- timer and round -->
 
   </view>
-  <!-- Top area ends -->
 
-
-  <!-- bottom section -->
-  <view class="b_section">
-    <!-- buttons -->
-    <view class="buttons-section">
-      <!-- navigation button -->
-      <view class="button" bindtap='buttonClicked'>READY</view>
-      <!-- navigation button -->
-    </view>
-    <!-- buttons -->
-  </view>
-  <!-- bottom section -->
 </view>

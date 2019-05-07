@@ -27,10 +27,11 @@ const createGame = function (objectOfSeconds, page) {
 
         let qrCodeUrl = res.data.url
         getApp().globalData.qrCodeUrl = qrCodeUrl
+        getApp().globalData.roomId = res.data.room
         // getApp().setGlobalData({
         //   qrCodeUrl
         // })
-        wx.navigateTo({
+        wx.reLaunch({
           url: "/pages/QR_code/QR_code",
         });
       },

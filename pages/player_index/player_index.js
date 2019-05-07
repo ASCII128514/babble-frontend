@@ -4,6 +4,9 @@ const app = getApp()
 import { sendNameToBackend } from '../../utils/create_game_api.js';
 
 Page({
+  data: {
+
+  },
   nameSubmit: function (e) {
     sendNameToBackend(e);
     wx.navigateTo({
@@ -25,6 +28,10 @@ Page({
 
     wx.setNavigationBarTitle({
       title: 'BABBLERS',
+    })
+
+    this.setData({
+      name: app.globalData.currentUser.name
     })
   },
 })

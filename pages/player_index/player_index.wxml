@@ -17,7 +17,7 @@
             <view class='title'>Welcome</view>
 
           <form bindsubmit="nameSubmit">
-            <input class='teaser' name="name" placeholder="Enter your name"/>
+            <input class='teaser' name="name" placeholder="Enter your name" value="{{name}}"/>
 
             <view class='bottom-section'>
                 <button formType="submit" class='button'>Let's start!</button>

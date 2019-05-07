@@ -3,21 +3,11 @@ import { gameTimer } from '../../utils/play_game_api.js';
 import { convertArrayToSeconds } from '../../utils/create_game_api.js';
 Page({
 
-  goToNext: function () {
-    wx.navigateTo({
-      url: '/pages/find_partner/find_partner'
-    })
-  },
-  /**
-   * Page initial data
-   */
+
   data: {
     numOfPeople: 0
   },
 
-  /**
-   * Lifecycle function--Called when page load
-   */
   onLoad: function (options) {
     const playerList = getApp().globalData.playerList
     const page = this
@@ -30,6 +20,7 @@ Page({
           console.log("players:", value.message.players);
           page.setData({playerList: value.message.players})
           page.setData({numOfPeople: value.message.players.length})
+          
 
         } else if (value.message.type == "pair") {
           getApp().globalData.pair = value.message.pairs[wx.getStorageSync('token')]
@@ -42,77 +33,14 @@ Page({
       }
     })
   },
-
-
-
-
-
-
   getPair: function() {
     wx.request({
       url: `https://babble.wogengapp.cn/api/v1/game/${getApp().globalData.qrCodeData}/pair?round=${getApp().globalData.currentGameRound + 1}&token=${wx.getStorageSync('token')}`
     })
   },
-  
-
-
-
-
-
-
-
-
-
-
-
-  /**
-   * Lifecycle function--Called when page is initially rendered
-   */
   onReady: function () {
     wx.request({
       url: `https://babble.wogengapp.cn/api/v1/game/${getApp().globalData.qrCodeData}/display`,
     })
-  },
-
-  /**
-   * Lifecycle function--Called when page show
-   */
-  onShow: function () {
-
-  },
-
-  /**
-   * Lifecycle function--Called when page hide
-   */
-  onHide: function () {
-
-  },
-
-  /**
-   * Lifecycle function--Called when page unload
-   */
-  onUnload: function () {
-
-  },
-
-  /**
-   * Page event handler function--Called when user drop down
-   */
-  onPullDownRefresh: function () {
-
-  },
-
-  /**
-   * Called when page reach bottom
-   */
-  onReachBottom: function () {
-
-  },
-
-  /**
-   * Called when user click on the top right corner to share
-   */
-  onShareAppMessage: function () {
-
   }
 })

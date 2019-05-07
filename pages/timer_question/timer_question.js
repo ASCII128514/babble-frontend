@@ -1,16 +1,18 @@
 // pages/timer_question/timer_question.js
+import { createGame, setTime, convertArrayToSeconds } from '../../utils/create_game_api.js';
+
 Page({
 
   buttonClicked: function () {
-    wx.navigateTo({
-      url: '/pages/QR_code/QR_code'
-    })
+    let objectOfSeconds = convertArrayToSeconds();
+    createGame(objectOfSeconds, this);
   },
   /**
    * Page initial data
    */
   data: {
-
+    gameTime: {},
+    gameTimeIndices: {},
   },
 
   /**
@@ -25,55 +27,11 @@ Page({
     wx.setNavigationBarTitle({
       title: 'Game setting',
     })
+    // Copy arrays from globalData to data
+    const gameTime = getApp().globalData.gameTime
+    this.setData({ gameTime })
 
+    let gameTimeIndices = getApp().globalData.gameTimeIndices
+    this.setData({ gameTimeIndices })
   },
-
-  /**
-   * Lifecycle function--Called when page is initially rendered
-   */
-  onReady: function () {
-
-  },
-
-  /**
-   * Lifecycle function--Called when page show
-   */
-  onShow: function () {
-
-  },
-
-  /**
-   * Lifecycle function--Called when page hide
-   */
-  onHide: function () {
-
-  },
-
-  /**
-   * Lifecycle function--Called when page unload
-   */
-  onUnload: function () {
-
-  },
-
-  /**
-   * Page event handler function--Called when user drop down
-   */
-  onPullDownRefresh: function () {
-
-  },
-
-  /**
-   * Called when page reach bottom
-   */
-  onReachBottom: function () {
-
-  },
-
-  /**
-   * Called when user click on the top right corner to share
-   */
-  onShareAppMessage: function () {
-
-  }
 })

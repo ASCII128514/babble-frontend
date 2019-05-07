@@ -75,6 +75,7 @@ Page({
     this.countInterval()
   },
 
+
   // top bar styling
   onLoad: function (options) {
     var page = this
@@ -119,8 +120,8 @@ Page({
     let objectOfSeconds = convertArrayToSeconds();
 
     // Set the date we're counting down to
-    // let timerEndTime = objectOfSeconds['question_timer'] * 1000 + getApp().globalData.extraSec * 1000
-    let timerEndTime = 6 * 1000 + getApp().globalData.extraSec * 1000
+    let timerEndTime = objectOfSeconds['question_timer'] * 1000 + getApp().globalData.extraSec * 1000
+    // let timerEndTime = 6 * 1000 + getApp().globalData.extraSec * 1000
     var countDownTime = new Date().getTime() + timerEndTime;
     getApp().globalData.extraSec = 0
 
@@ -138,13 +139,13 @@ Page({
       var seconds = Math.floor((distance % (1000 * 60)) / 1000);
 
 
-      // If the count down is finished, write some text 
+      // If the count down is finished, write some text
       if (distance <= 0) {
         clearInterval(x);
         console.log(this)
         // if (this == page)
-        wx.redirectTo({
-          url: '/pages/find_partner/find_partner'
+        wx.request({
+          url: `https://babble.wogengapp.cn/api/v1/game/${getApp().globalData.qrCodeData}/pair?round=${getApp().globalData.currentGameRound + 1}&token=${wx.getStorageSync('token')}`
         })
       }
 

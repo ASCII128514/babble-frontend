@@ -1,5 +1,6 @@
 {
   "pages": [
+    "pages/login/login",
     "pages/index/index",
     "pages/logs/logs",
     "pages/creation/creation",
@@ -20,8 +21,8 @@
     "pages/instruction_ask/instruction_ask",
     "pages/instruction_find_next/instruction_find_next",
     "pages/pre_selfie/pre_selfie"
-  ],
 
+  ],
   "window": {
     "backgroundTextStyle": "light",
     "navigationBarBackgroundColor": "#fff",

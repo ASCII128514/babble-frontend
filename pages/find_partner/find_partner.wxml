@@ -3,23 +3,26 @@
   <!-- background -->
 
   <!-- Top area -->
-      <view class="top-area">
 
-        <view>Find {{name}}</view>
-        <!-- test the API data -->
-          <view>
-            {{getApp().globalData.playerPair.url}}
-          </view>
-        <!-- test ends -->
+  <view class="top-area">
+    <!-- title -->
+    <view class="title">
+      <view class="round">Round {{currentGameRound}}/{{numberOfRounds}}</view>
+      <view class="timer">Countdown: {{timerCountdown}}</view>
+    </view>
+    <!-- title ends -->
+    <!-- test the API data -->
+    <view>{{getApp().globalData.playerPair.url}}</view>
+    <!-- test ends -->
+    <!-- avatar -->
+    <view>
+      <image class="avatar" src="{{user.selfie}}">
+        IMG
+      </image>
+    </view>
+    <!-- avatar ends -->
+  </view>
 
-        <!-- avatar -->
-        
-          <image class="avatar" src="http://lc-qaxMtbr0.cn-n1.lcfile.com/31cf09e7f686ddea8e2e/selfie_1.jpg">
-            IMG
-          </image>
-        
-        <!-- avatar ends -->
-      </view>
   <!-- Top area ends -->
 
   <!-- bottom area -->
@@ -31,8 +34,8 @@
         </view>
     </view>
     <!-- info: round and seconds -->
- 
-  
+
+
     <view class="buttons-section">
       <!-- button -->
         <view class="button" bindtap='buttonClicked'>
@@ -40,5 +43,8 @@
         </view>
       <!-- button -->
     </view>
-  <!-- bottom section -->
+
+    <!-- button: found partner ends -->
+  </view>
+
 </view>

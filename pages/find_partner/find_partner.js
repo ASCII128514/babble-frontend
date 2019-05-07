@@ -8,15 +8,12 @@ var x;
 
 
 Page({
-  // button to next page
-  buttonClicked: function () {
-    wx.navigateTo({
-      url: '/pages/question/question'
-    })
-  },
 
   // top bar styling
   onLoad: function (options) {
+    this.setData({
+      user: getApp().globalData.pair.user
+    })
     var page = this
     wx.setNavigationBarColor({
       frontColor: '#000000',
@@ -47,8 +44,8 @@ Page({
 
     let objectOfSeconds = convertArrayToSeconds();
     // Set the date we're counting down to
-    // let timerEndTime = objectOfSeconds['find_partner_timer'] * 1000
-    let timerEndTime = 6 * 1000
+    let timerEndTime = objectOfSeconds['find_partner_timer'] * 1000
+    // let timerEndTime = 6 * 1000
     var countDownTime = new Date().getTime() + timerEndTime;
 
     // Update the count down every 1 second
@@ -71,10 +68,9 @@ Page({
       if (distance <= 0) {
         clearInterval(x);
         console.log(this)
-        // if (this == page)
-        // wx.redirectTo({
-        //   url: '/pages/question/question'
-        // })
+        wx.redirectTo({
+          url: '/pages/question/question'
+        })
       }
 
 
@@ -195,8 +191,8 @@ Page({
     var sec = Number.parseInt(arr[0]) * 60 + Number.parseInt(arr[1])
     getApp().globalData.extraSec = sec
     console.log(getApp().globalData.extraSec);
-    // wx.navigateTo({
-    //   url: '/pages/question/question'
-    // })
+    wx.navigateTo({
+      url: '/pages/question/question'
+    })
   }
 })
