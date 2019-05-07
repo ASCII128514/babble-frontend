@@ -1,11 +1,47 @@
 <!--pages/instruction/instruction.wxml-->
 <view class="container">
-        <view class="background" style="background-image: url('http://lc-qaxMtbr0.cn-n1.lcfile.com/9c76fe9ef71ce18292d6/instruction.png');">
-            <view class="text" bindtap='buttonClicked'>
-                Let's start!
-            </view>
-        
+
+    <!-- imagine -->
+        <view class="background" style="background-image: url('http://lc-qaxMtbr0.cn-n1.lcfile.com/03bf998218b8b2820c2f/Instruction_1.png');">
         </view>
+    <!-- imagine -->
+
+    <!-- content -->
+      <view class="content">
+          <!-- title -->
+            <view class="title">
+              Users take a selfie
+            </view>
+          <!-- title -->
+
+          <!-- text -->
+            <view class="text">
+              Babblers break the ice by matching people to engage in one to one conversation. 
+      To start, all participants take a selfie.
+            </view>
+          <!-- text -->
+      </view>
+     <!-- content -->
+
+    <!-- buttons -->
+
+    <view class="buttons-section">
+        <!-- dots -->
+          <view class="dots">
+            <view class="circle-1"></view>
+            <view class="circle"></view>
+            <view class="circle"></view>
+            <view class="circle"></view>
+          </view>
+        <!-- dots ends -->
+
+        <!-- navigation button -->
+          <view class="button" bindtap='buttonClicked'>
+                  Next
+          </view>
+        <!-- navigation button -->
+    </view>
+    <!-- buttons -->
 
 </view>
 

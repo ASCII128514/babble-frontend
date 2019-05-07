@@ -9,7 +9,7 @@ var x;
 
 Page({
   // button to next page
-  goToQuestion: function () {
+  buttonClicked: function () {
     wx.navigateTo({
       url: '/pages/question/question'
     })
@@ -20,7 +20,7 @@ Page({
     var page = this
     wx.setNavigationBarColor({
       frontColor: '#000000',
-      backgroundColor: '#DFFBFE',
+      backgroundColor: '#FBFBFB',
     })
 
     wx.setNavigationBarTitle({

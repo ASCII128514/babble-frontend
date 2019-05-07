@@ -38,21 +38,6 @@
   height: 80px;
   font-weight: 400;
   font-size: 15px;
-  margin-top: 20px;
-  text-align: center;
-}
-
-.picker {
-  margin-top: 30px;
-  width: 200px;
-  height: 30px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.slider-bar {
-  width: 150px;
 }
 /* content with texts ends */
 

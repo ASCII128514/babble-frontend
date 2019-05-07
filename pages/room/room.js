@@ -3,6 +3,11 @@ import { gameTimer } from '../../utils/play_game_api.js';
 import { convertArrayToSeconds } from '../../utils/create_game_api.js';
 Page({
 
+  goToNext: function () {
+    wx.navigateTo({
+      url: '/pages/find_partner/find_partner'
+    })
+  },
   /**
    * Page initial data
    */

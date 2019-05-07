@@ -22,7 +22,7 @@ Page({
     var page = this
     wx.setNavigationBarColor({
       frontColor: '#000000',
-      backgroundColor: '#DFFBFE',
+      backgroundColor: '#FBFBFB',
     })
 
     wx.setNavigationBarTitle({

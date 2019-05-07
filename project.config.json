@@ -40,7 +40,7 @@
 			"list": []
 		},
 		"miniprogram": {
-			"current": 7,
+			"current": 20,
 			"list": [{
 					"id": -1,
 					"name": "game",
@@ -113,13 +113,6 @@
 				},
 				{
 					"id": -1,
-					"name": "Creator Instruction",
-					"pathName": "pages/instruction_creator/instruction_creator",
-					"query": "",
-					"scene": null
-				},
-				{
-					"id": -1,
 					"name": "room1",
 					"pathName": "pages/index/index",
 					"query": "scene=1",
@@ -129,6 +122,69 @@
 					"id": -1,
 					"name": "room",
 					"pathName": "pages/index/index",
+					"query": "scene=1",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "Set Rounds",
+					"pathName": "pages/set_rounds/set_rounds",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "Set question timer",
+					"pathName": "pages/timer_question/timer_question",
+					"query": "scene=1",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "Set find partner timer",
+					"pathName": "pages/timer_find_partner/timer_find_partner",
+					"query": "scene=1",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "Instruction Player",
+					"pathName": "pages/instruction_p/instruction_p",
+					"query": "scene=1",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "Instruction find partner",
+					"pathName": "pages/instruction_find/instruction_find",
+					"query": "scene=1",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "Instruction ask question",
+					"pathName": "pages/instruction_ask/instruction_ask",
+					"query": "scene=1",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "Instruction find next partner",
+					"pathName": "pages/instruction_find_next/instruction_find_next",
+					"query": "scene=1",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "Pre-selfie page",
+					"pathName": "pages/pre_selfie/pre_selfie",
+					"query": "scene=1",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "Question",
+					"pathName": "pages/question/question",
 					"query": "scene=1",
 					"scene": null
 				},

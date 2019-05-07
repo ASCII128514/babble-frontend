@@ -3,6 +3,8 @@
   display: flex;
   flex-direction: column;
   width: 100%;
+  background: rgb(252,252,252);
+  background: linear-gradient(172deg, rgba(252,252,252,1) 0%, rgba(241,249,250,1) 73%, rgba(233,248,251,1) 100%, rgba(255,255,255,0) 100%);
 }
 
 .background {
@@ -12,7 +14,9 @@
     width: 100%;
     /* if you have a 70px navbar => height: calc(100vh - 70px); */
     background-size: cover !important;
-    border-bottom-left-radius: 40px;
+    border-bottom-left-radius: 50px;
+    /* border-top-right-radius: 50px; */
+    opacity: 0.9;
   }
 
   .content {
@@ -38,12 +42,14 @@
   }
 
   .button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     margin-top: 10px;
     margin-bottom: 40px;
     border-radius: 20px;
     width: 40vw;
-    background: rgb(2,0,36);
-    background: linear-gradient(301deg, rgba(2,0,36,1) 0%, rgba(0,81,149,0.6895133053221288) 0%, rgba(13,236,119,1) 100%); 
-    font-weight: bolder;
+    background-color:rgb(90, 151, 241);
+    font-weight: bold;
     height: 40px;
   }

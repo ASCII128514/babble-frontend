@@ -1,35 +1,28 @@
-// pages/QR_code/QR_code.js
-let app = getApp()
-
+// pages/instruction_p/instruction_p.js
 Page({
   buttonClicked: function () {
     wx.navigateTo({
-      url: '/pages/status_page/status_page'
+      url: '/pages/pre_selfie/pre_selfie'
     })
   },
-
   /**
    * Page initial data
    */
   data: {
-    
+
   },
 
   /**
    * Lifecycle function--Called when page load
    */
   onLoad: function (options) {
-    this.setData({
-      qrCodeUrl: app.globalData.qrCodeUrl
-    })
-
     wx.setNavigationBarColor({
       frontColor: '#000000',
       backgroundColor: '#F9FCFC',
     })
 
     wx.setNavigationBarTitle({
-      title: 'QR code',
+      title: 'How to play',
     })
 
   },

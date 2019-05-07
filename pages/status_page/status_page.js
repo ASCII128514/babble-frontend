@@ -18,6 +18,14 @@ Page({
    * Lifecycle function--Called when page load
    */
   onLoad: function (options) {
+    wx.setNavigationBarColor({
+      frontColor: '#000000',
+      backgroundColor: '#F9FCFC',
+    })
+
+    wx.setNavigationBarTitle({
+      title: 'Status',
+    })
 
   },
 
