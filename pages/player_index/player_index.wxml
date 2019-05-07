@@ -10,7 +10,7 @@
           <view class="content">
             <view class='title'>Welcome</view>
           <form bindsubmit="nameSubmit">
-            <input class='teaser' name="name" placeholder="Enter your name"/>
+            <input class='teaser' name="name" placeholder="Enter your name" value="{{name}}"/>
 
             <view class='bottom-section'>
                 <view class='teaser_2'> Continue to take your selfie</view>

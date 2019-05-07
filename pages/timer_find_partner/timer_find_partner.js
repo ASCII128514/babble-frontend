@@ -11,7 +11,8 @@ Page({
    * Page initial data
    */
   data: {
-
+    gameTime: {},
+    gameTimeIndices: {},
   },
 
   /**
@@ -27,54 +28,13 @@ Page({
       title: 'Game setting',
     })
 
-  },
+    // Copy arrays from globalData to data
+    const gameTime = getApp().globalData.gameTime
+    this.setData({ gameTime })
 
-  /**
-   * Lifecycle function--Called when page is initially rendered
-   */
-  onReady: function () {
-
-  },
-
-  /**
-   * Lifecycle function--Called when page show
-   */
-  onShow: function () {
+    let gameTimeIndices = getApp().globalData.gameTimeIndices
+    this.setData({ gameTimeIndices })
 
   },
 
-  /**
-   * Lifecycle function--Called when page hide
-   */
-  onHide: function () {
-
-  },
-
-  /**
-   * Lifecycle function--Called when page unload
-   */
-  onUnload: function () {
-
-  },
-
-  /**
-   * Page event handler function--Called when user drop down
-   */
-  onPullDownRefresh: function () {
-
-  },
-
-  /**
-   * Called when page reach bottom
-   */
-  onReachBottom: function () {
-
-  },
-
-  /**
-   * Called when user click on the top right corner to share
-   */
-  onShareAppMessage: function () {
-
-  }
 })

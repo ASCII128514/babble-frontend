@@ -3,8 +3,9 @@ let app = getApp()
 
 Page({
   buttonClicked: function () {
-    wx.navigateTo({
-      url: '/pages/status_page/status_page'
+    var page = this
+    wx.reLaunch({
+      url: `/pages/index/index?scene=${this.data.roomId}`
     })
   },
 
@@ -20,8 +21,10 @@ Page({
    */
   onLoad: function (options) {
     this.setData({
-      qrCodeUrl: app.globalData.qrCodeUrl
+      qrCodeUrl: app.globalData.qrCodeUrl,
+      roomId: app.globalData.roomId
     })
+    app.globalData.roomId = null
 
     wx.setNavigationBarColor({
       frontColor: '#000000',
