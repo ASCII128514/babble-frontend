@@ -38,7 +38,9 @@
       <view class="card">
         <!-- <image class="picture" src="{{product.picture_url}}"></image> -->
         <view class="product-info">
-          <view class="product-name">{{player.id}}</view>
+          <view class="player-id">{{player.id}}</view>
+          <image class="avatar" src='{{player.selfie}}'></image>
+          <view class="name">{{player.name}}</view>
         </view>
 
       </view>

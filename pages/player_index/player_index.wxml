@@ -16,16 +16,14 @@
           <view class="content">
             <view class='title'>Welcome</view>
 
-            <!-- form and button -->
-            <form>
-                  <input class='teaser' name="name" placeholder="Enter your name"/>
-                
-                <view class='bottom-section'>
-                    <view class='teaser_2'> Continue to take your selfie</view>
-                    <button class='button' bindtap="buttonClicked" >Next</button>
-                </view>
-            </form>
-            <!-- form and button ends -->
+          <form bindsubmit="nameSubmit">
+            <input class='teaser' name="name" placeholder="Enter your name"/>
+
+            <view class='bottom-section'>
+                <view class='teaser_2'> Continue to take your selfie</view>
+                <button formType="submit" class='button' bindtap="buttonClicked">Next</button>
+            </view>
+          </form>
           </view>
   <!-- Main text -->
 </view>

@@ -1,9 +1,12 @@
 // pages/player_index/player_index.js
 const app = getApp()
 
-Page({
+import { sendNameToBackend } from '../../utils/create_game_api.js';
 
-  buttonClicked: function () {
+Page({
+  
+  nameSubmit: function (e) {
+    sendNameToBackend(e);
     wx.navigateTo({
       url: '/pages/take_selfie/take_selfie'
     })

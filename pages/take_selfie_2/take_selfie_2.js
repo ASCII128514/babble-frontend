@@ -1,17 +1,14 @@
 // pages/take_selfie_2/take_selfie_2.js
-let app = getApp()
+import { sendPictureToBackend } from '../../utils/create_game_api.js'
 
-import { sendPictureToBackend } from '../../utils/create_game_api.js';
-const AV = require('../../utils/av-webapp-min.js');
+let app = getApp()
+const AV = require('../../utils/av-webapp-min.js')
 
 Page({
-
   /**
    * Page initial data
    */
-  data: {
-
-  },
+  data: {},
 
   /**
    * Lifecycle function--Called when page load
@@ -23,11 +20,11 @@ Page({
 
     wx.setNavigationBarColor({
       frontColor: '#000000',
-      backgroundColor: '#f5f5f5',
+      backgroundColor: '#f5f5f5'
     })
 
     wx.setNavigationBarTitle({
-      title: 'Review your picture',
+      title: 'Review your picture'
     })
   },
 
@@ -38,70 +35,57 @@ Page({
   },
 
   savePic: function () {
-    console.log("selfie", app.globalData.previewSelfie);
+    console.log('selfie', app.globalData.previewSelfie)
     new AV.File('file-name', {
       blob: {
-        uri: app.globalData.previewSelfie,
-      },
-    }).save().then(
-      file => {console.log("save pic", file.url())
-          sendPictureToBackend(file.url());}
-    ).catch(console.error);
-
-
-
-
-    wx.navigateTo({
-      url: '/pages/room/room'
+        uri: app.globalData.previewSelfie
+      }
     })
+      .save()
+      .then(file => {
+        console.log('save pic', file.url())
+        sendPictureToBackend(file.url())
+      })
+      .then(res => {
+        wx.navigateTo({
+          url: '/pages/room/room'
+        })
+      })
+      .catch(console.error)
   },
 
   /**
    * Lifecycle function--Called when page is initially rendered
    */
-  onReady: function () {
-
-  },
+  onReady: function () {},
 
   /**
    * Lifecycle function--Called when page show
    */
-  onShow: function () {
-
-  },
+  onShow: function () {},
 
   /**
    * Lifecycle function--Called when page hide
    */
-  onHide: function () {
-
-  },
+  onHide: function () {},
 
   /**
    * Lifecycle function--Called when page unload
    */
-  onUnload: function () {
-
-  },
+  onUnload: function () {},
 
   /**
    * Page event handler function--Called when user drop down
    */
-  onPullDownRefresh: function () {
-
-  },
+  onPullDownRefresh: function () {},
 
   /**
    * Called when page reach bottom
    */
-  onReachBottom: function () {
-
-  },
+  onReachBottom: function () {},
 
   /**
    * Called when user click on the top right corner to share
    */
-  onShareAppMessage: function () {
-
-  }
+  onShareAppMessage: function () {}
 })
