@@ -16,6 +16,7 @@
             <canvas class="progress_canvas" canvas-id="canvasProgress"> </canvas>
             <view class="progress_text">
                 <!-- <view class="progress_dot"></view> -->
+                <!-- <image class="avatar" src="http://lc-qaxMtbr0.cn-n1.lcfile.com/949ea3c54c9e576e0317/Arya.jpeg"></image> -->
                 <text class='progress_info'> {{question}} what happened when Alex said he xlah dlah dklads adsgk asdlf asdlkg jkasg lja sg </text>
             </view>
           </view>

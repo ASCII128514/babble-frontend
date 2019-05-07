@@ -11,10 +11,10 @@ Page({
     // 使用 wx.createContext 获取绘图上下文 context
     var ctx = wx.createCanvasContext('canvasProgressbg')
     ctx.setLineWidth(4);// 设置圆环的宽度
-    ctx.setStrokeStyle('#20183b'); // 设置圆环的颜色
+    ctx.setStrokeStyle('#EEF0F4'); // 设置圆环的颜色
     ctx.setLineCap('round') // 设置圆环端点的形状
     ctx.beginPath();//开始一个新的路径
-    ctx.arc(110, 110, 100, 0, 2 * Math.PI, false);
+    ctx.arc(150, 150, 138, 0, 2 * Math.PI, false);
     //设置一个原点(100,100)，半径为90的圆的路径到当前路径
     ctx.stroke();//对当前路径进行描边
     ctx.draw();
@@ -32,7 +32,7 @@ Page({
     context.setLineCap('round')
     context.beginPath();
     // 参数step 为绘制的圆环周长，从0到2为一周 。 -Math.PI / 2 将起始角设在12点钟位置 ，结束角 通过改变 step 的值确定
-    context.arc(110, 110, 100, -Math.PI / 2, step * Math.PI - Math.PI / 2, false);
+    context.arc(150, 150, 138, -Math.PI / 2, step * Math.PI - Math.PI / 2, false);
     context.stroke();
     context.draw()
   },
@@ -141,7 +141,7 @@ Page({
 
   // circle 
   data: {
-    progress_txt: '正在匹配中...',
+    progress_txt: 'matching...',
     count: 0, // 设置 计数器 初始为0
     countTimer: null // 设置 定时器 初始为null
   },

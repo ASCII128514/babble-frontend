@@ -125,3 +125,11 @@
   font-size: 20px;
 }
 /* bottom section*/
+
+.avatar {
+    text-align: center;
+    height: 190px;
+    width: 190px;
+    background-size: cover !important;
+    border-radius: 50%;
+  }

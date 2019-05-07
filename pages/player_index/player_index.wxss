@@ -72,4 +72,5 @@
     background-color:rgb(167, 195, 236);
     font-weight: bold;
     height: 40px;
+    color: white;
   }

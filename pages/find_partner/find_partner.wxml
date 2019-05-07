@@ -20,17 +20,18 @@
             <canvas class="progress_bg" canvas-id="canvasProgressbg"> </canvas>
             <canvas class="progress_canvas" canvas-id="canvasProgress"> </canvas>
             <view class="progress_text">
-                <view class="progress_dot"></view>
-                <text class='progress_info'> {{progress_txt}}</text>
+                <!-- <view class="progress_dot"></view> -->
+                <image class="avatar" src='{{playerList.selfie}}'></image>
+                
             </view>
           </view>
         </view>
     <!-- circle -->
 
         <!-- avatar -->
-            <!-- <view>
-              <image class="avatar" src="http://lc-qaxMtbr0.cn-n1.lcfile.com/922e96f3068fb5f9c7d2"></image>
-            </view> -->
+            <view>
+              
+            </view>
         <!-- avatar ends -->
 
     </view>

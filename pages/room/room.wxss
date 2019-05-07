@@ -56,36 +56,33 @@
 /* top section ends */
 
 /* avatars */
-.avatar-section {
+.players {
   margin-top: 20px;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   align-items: center;
 }
 
-    /* card */
-      .card {
-        width: 110px;
-        height: 140px;
-        display: flex;
-        justify-content: space-around;
-        align-items: center;
-        flex-direction: column;
-        grid-gap: 10px;
+/* card */
+.card {
+  width: 110px;
+  height: 140px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-direction: column;
+  grid-gap: 10px;
+}
 
-      }
+.avatar {
+  background-color: yellow;
+  border-radius: 50%;
+  width: 100px;
+  height: 100px;
+}
 
-      .avatar {
-        background-color: yellow;
-        border-radius: 50%;
-        width: 100px;
-        height: 100px;
-      }
-
-      .name {
-        background-color: white;
-        font-size: 15px;
-
-      }
-
-    /* card ends */
+.name {
+  background-color: white;
+  font-size: 15px;
+}
+/* card ends */
