@@ -100,7 +100,7 @@ App({
     numberOfRounds: 5,
 
     playerList: [],
-
+    extraSec: 0,
 
     currentGameRound: 0
   }

@@ -35,16 +35,8 @@ Page({
         }
       }
     })
-
-    let objectOfSeconds = convertArrayToSeconds();
-    gameTimer(objectOfSeconds, 'find_partner_timer', '/pages/question/question', this);
   },
 
-  shittyButton: function () {
-    wx.redirectTo({
-      url: '/pages/find_partner/find_partner'
-    })
-  },
 
 
 
@@ -71,7 +63,9 @@ Page({
    * Lifecycle function--Called when page is initially rendered
    */
   onReady: function () {
-
+    wx.request({
+      url: `https://babble.wogengapp.cn/api/v1/game/${getApp().globalData.qrCodeData}/display`,
+    })
   },
 
   /**
