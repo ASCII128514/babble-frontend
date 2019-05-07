@@ -11,6 +11,9 @@ Page({
 
   // top bar styling
   onLoad: function (options) {
+    this.setData({
+      user: getApp().globalData.pair.user
+    })
     var page = this
     wx.setNavigationBarColor({
       frontColor: '#000000',
@@ -65,10 +68,9 @@ Page({
       if (distance <= 0) {
         clearInterval(x);
         console.log(this)
-        // if (this == page)
-        // wx.redirectTo({
-        //   url: '/pages/question/question'
-        // })
+        wx.redirectTo({
+          url: '/pages/question/question'
+        })
       }
 
 
@@ -189,8 +191,8 @@ Page({
     var sec = Number.parseInt(arr[0]) * 60 + Number.parseInt(arr[1])
     getApp().globalData.extraSec = sec
     console.log(getApp().globalData.extraSec);
-    // wx.navigateTo({
-    //   url: '/pages/question/question'
-    // })
+    wx.navigateTo({
+      url: '/pages/question/question'
+    })
   }
 })

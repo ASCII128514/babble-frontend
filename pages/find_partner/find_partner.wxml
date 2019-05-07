@@ -14,7 +14,7 @@
     <!-- test ends -->
     <!-- avatar -->
     <view>
-      <image class="avatar" src="http://lc-qaxMtbr0.cn-n1.lcfile.com/31cf09e7f686ddea8e2e/selfie_1.jpg">
+      <image class="avatar" src="{{user.selfie}}">
         IMG
       </image>
     </view>
@@ -23,4 +23,11 @@
   <!-- Top area ends -->
   <!-- bottom area -->
   <!-- info: round and seconds -->
+  <view class="bottom-area">
+    <!-- button: found partner -->
+    <view class="btn-area" bindtap='goToQuestion'>
+      <view class="button" formType="submit">READY</view>
+    </view>
+    <!-- button: found partner ends -->
+  </view>
 </view>

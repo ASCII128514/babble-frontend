@@ -200,7 +200,7 @@
 					"id": 22,
 					"name": "playerindex",
 					"pathName": "pages/login/login",
-					"query": "scene=1",
+					"query": "scene=63",
 					"scene": null
 				},
 				{

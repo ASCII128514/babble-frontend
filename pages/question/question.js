@@ -10,13 +10,6 @@ import { increaseGameRound, gameTimer } from '../../utils/play_game_api.js';
 import { convertArrayToSeconds } from '../../utils/create_game_api.js';
 
 Page({
-
-  goToQuestion: function () {
-    wx.redirectTo({
-      url: '/pages/find_partner/find_partner'
-    })
-  },
-
   // top bar styling
   onLoad: function (options) {
     var page = this
@@ -106,8 +99,8 @@ Page({
         clearInterval(x);
         console.log(this)
         // if (this == page)
-        wx.redirectTo({
-          url: '/pages/find_partner/find_partner'
+        wx.request({
+          url: `https://babble.wogengapp.cn/api/v1/game/${getApp().globalData.qrCodeData}/pair?round=${getApp().globalData.currentGameRound + 1}&token=${wx.getStorageSync('token')}`
         })
       }
 
