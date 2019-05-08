@@ -1,6 +1,6 @@
 <!--pages/take_selfie_2/take_selfie_2.wxml-->
     
-  <view class="container" style="background-image: url('http://lc-qaxMtbr0.cn-n1.lcfile.com/3fb6123bd6b4399f1679/blur_background.png');">
+  <view class="container">
 
     <!-- picture section -->
           <view class="preview-picture"> 
@@ -10,11 +10,11 @@
 
 
     <!-- Buttons -->
-    <view class="buttons">
-      <view class="go-back-button" bindtap='goBack'>
+    <view class=".btn-area-1">
+      <view class="button" bindtap='goBack'>
         Go Back 
       </view>
-      <view class="go-button" bindtap='savePic'>
+      <view class="button" bindtap='savePic'>
         Let's Go!
       </view>
     </view>

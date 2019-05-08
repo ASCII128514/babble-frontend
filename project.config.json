@@ -38,7 +38,6 @@
 			"list": []
 		},
 		"miniprogram": {
-
 			"current": 22,
 			"list": [
 				{
@@ -193,6 +192,13 @@
 					"name": "Room_ui",
 					"pathName": "pages/room/room",
 					"query": "scene=1",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "Selfie preview",
+					"pathName": "pages/take_selfie_2/take_selfie_2",
+					"query": "scene=63",
 					"scene": null
 				}
 			]

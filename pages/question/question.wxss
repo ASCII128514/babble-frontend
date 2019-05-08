@@ -1,7 +1,7 @@
 /* pages/question/question.wxss */
 .container {
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   align-items: center;
   flex-direction: column;
   height: 100vh;
@@ -9,6 +9,29 @@
   background: rgb(252,252,252);
   background: linear-gradient(172deg, rgba(252,252,252,1) 0%, rgba(241,249,250,1) 73%, rgba(233,248,251,1) 100%, rgba(255,255,255,0) 100%);
 }
+
+.top-part {
+  width: 100vw;
+  height: 60vh;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: column;
+  padding: 3px;
+}
+
+ .title {
+   font-family: serif;
+   margin-top: 10px;
+ }
+
+.avatar {
+    text-align: center;
+    height: 190px;
+    width: 190px;
+    background-size: cover !important;
+    border-radius: 50%;
+  }
 
 .question {
     text-align: center;
@@ -19,6 +42,7 @@
     justify-content: center;
     align-items: center;
     font-weight: bolder;
+    font-family: calibri;
   }
 
 .timer {
@@ -26,26 +50,21 @@
   font-size: 20px;
 }
 
-.top-area {
-  display: flex;
-  justify-content: center;
-  flex-direction: column;
-  align-items: center;
-  /* background-color: blue; */
-  width: 100vw;
-  height: 70vh;
+/* bottom section*/
+.round {
+  font-family: calibri;
+  margin-bottom: 30px;
 }
-
+/* bottom section*/
 
 /* circle */
-
 .circle-area {
   width: 100vw;
   height: 100vw;
-  /* background-color: yellow; */
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-direction: column;
 
 }
 .progress_box{
@@ -89,47 +108,4 @@
   padding-bottom: 25px;
   border-radius: 50%;
 }
-
-.progress_dot{
-    width:16rpx;
-    height: 16rpx;
-    border-radius: 50%;
-    background-color: #fb9126;
-}
-
-/* bottom section*/
-.b_section {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-around;
-  align-items: center;
-  width: 100vw;
-  height: 15vh;
-  margin: 30px;
-}
-
-.name{
-  font-size: 20px;
-  font-weight: 400;
-}
-
-.button {
-  background-color:white;
-  border: 1px solid;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 140px;
-  height: 50px;
-  font-weight: bolder;
-  font-size: 20px;
-}
-/* bottom section*/
-
-.avatar {
-    text-align: center;
-    height: 190px;
-    width: 190px;
-    background-size: cover !important;
-    border-radius: 50%;
-  }
+/* circle ends */
