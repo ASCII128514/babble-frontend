@@ -53,6 +53,7 @@
   margin-top: 10px;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 5px;
   height: 70%;
   width: 100vw;
   justify-items: center;
