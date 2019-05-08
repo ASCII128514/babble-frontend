@@ -6,6 +6,13 @@ var x;
 
 Page({
 
+  buttonClicked: function () {
+    wx.navigateTo({
+      url: '/pages/question/question'
+    })
+  },
+
+
   // drawing circle
   drawProgressbg: function () {
     // 使用 wx.createContext 获取绘图上下文 context
