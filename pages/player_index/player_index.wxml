@@ -7,16 +7,18 @@
     </view>
   </view>
   <!-- backgroud -->
+
   <!-- Main text -->
-
-
+   
       <form class="form" bindsubmit="nameSubmit">
+      
         <view class='teaser'> What is your name?</view>
-        <input class='entry_form' name="name" placeholder="" value="{{name}}"/>
-        <button formType="submit" class='button' bindtap="buttonClicked">
+        <view class='entry_form'><input name="name" placeholder="" value="{{name}}"/></view>
+        <view formType="submit" class='button' bindtap="buttonClicked">
             Start Babbling
-        </button>
+        </view>
       </form>
+      
 
   <!-- Main text -->
 </view>
