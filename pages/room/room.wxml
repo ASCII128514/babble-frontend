@@ -1,44 +1,120 @@
 <!-- pages/room/room.wxml -->
 <view class="container">
 
-  <!-- top-section -->
+<!-- top info section -->
   <view class="top-section">
-    <!-- title -->
-        <view class="title">Participants are joining...</view>
-    </view>
+      <!-- title -->
+        <view class="title">
+            {{numOfPeople}} people have joined
+        </view>
+      <!-- title ends -->
 
-
-<view class="btn-area">
-  <button class="button" bindtap='getPair'>Play!</button>
-    <!-- title ends -->
-    <!-- status area -->
-      <view class="status">
-        <!-- start button -->
-          <view class="button" bindtap='getPair'>
-            Start the game!
-          </view>
-        <!-- start button -->
-
-        <!-- numer of people -->
-          <view class="people">{{numOfPeople}} joiners</view>
-        <!-- numer of people ends -->
-      </view>
-    <!-- status area ends -->
+      <!-- button -->
+        <view class="button" bindtap='getPair'>
+          Waiting for others...
+        </view>
+      <!-- button ends -->
   </view>
-  <!-- top-section -->
+
+  <view class="space">
+  </view>
+  <!-- top info section ends -->
+  
 
   <!-- list with avatars and names -->
   <view class="players">
-    <block wx:for="{{playerList}}" wx:for-item="player">
-        <view class="card">
-            <!-- <image class="picture" src="{{product.picture_url}}"></image> -->
-            <view class="product-info">
-              <image class="avatar" src='{{player.selfie}}'></image>
-              <view class="name">{{player.name}}</view>
+      <block wx:for="{{playerList}}" wx:for-item="player">
+          <view class="card">
+              <view class="product-info">
+                <image class="avatar" src='{{player.selfie}}'></image>
+                <view class="name">{{player.name}}</view>
+            </view>
           </view>
-        </view>
-    </block>
+      </block>
   </view>
   <!-- list with avatars and names -->
+
+
+  <!-- test avatars -->
+      <!-- <view class="players">
+
+          <view class="card">
+            <image class="avatar" src='http://lc-qaxMtbr0.cn-n1.lcfile.com/54f2ad342a471562c1f6/th.jpeg'></image>
+            <view class="name"> Jon </view>
+          </view>
+          <view class="card">
+            <image class= "avatar" src="http://lc-qaxMtbr0.cn-n1.lcfile.com/09c446f768bcdc197cd6/danny.jpeg"></image>
+            <view class="name"> Daenerys </view>
+          </view>
+          <view class="card">
+            <image class= "avatar" src="http://lc-qaxMtbr0.cn-n1.lcfile.com/c37f9c2171c77c0c37e4/tyrion.jpeg"></image>
+            <view class="name"> Tyrion </view>
+          </view>
+          <view class="card">
+            <image class= "avatar" src="http://lc-qaxMtbr0.cn-n1.lcfile.com/de3a36760029a231ffdd/Cersei.jpeg"></image>
+            <view class="name"> Cersei </view>
+          </view>
+          <view class="card">
+            <image class= "avatar" src="http://lc-qaxMtbr0.cn-n1.lcfile.com/ef638c517658acd97298/Sansa.jpeg"></image>
+            <view class="name"> Sansa </view>
+          </view>
+          <view class="card">
+            <image class= "avatar" src="http://lc-qaxMtbr0.cn-n1.lcfile.com/949ea3c54c9e576e0317/Arya.jpeg"></image>
+            <view class="name"> Arya </view>
+          </view>
+          <view class="card">
+            <image class="avatar" src='http://lc-qaxMtbr0.cn-n1.lcfile.com/54f2ad342a471562c1f6/th.jpeg'></image>
+            <view class="name"> Jon </view>
+          </view>
+          <view class="card">
+            <image class= "avatar" src="http://lc-qaxMtbr0.cn-n1.lcfile.com/09c446f768bcdc197cd6/danny.jpeg"></image>
+            <view class="name"> Daenerys </view>
+          </view>
+          <view class="card">
+            <image class= "avatar" src="http://lc-qaxMtbr0.cn-n1.lcfile.com/c37f9c2171c77c0c37e4/tyrion.jpeg"></image>
+            <view class="name"> Tyrion </view>
+          </view>
+          <view class="card">
+            <image class= "avatar" src="http://lc-qaxMtbr0.cn-n1.lcfile.com/de3a36760029a231ffdd/Cersei.jpeg"></image>
+            <view class="name"> Cersei </view>
+          </view>
+          <view class="card">
+            <image class= "avatar" src="http://lc-qaxMtbr0.cn-n1.lcfile.com/ef638c517658acd97298/Sansa.jpeg"></image>
+            <view class="name"> Sansa </view>
+          </view>
+          <view class="card">
+            <image class= "avatar" src="http://lc-qaxMtbr0.cn-n1.lcfile.com/949ea3c54c9e576e0317/Arya.jpeg"></image>
+            <view class="name"> Arya </view>
+          </view>
+           <view class="card">
+            <image class= "avatar" src="http://lc-qaxMtbr0.cn-n1.lcfile.com/de3a36760029a231ffdd/Cersei.jpeg"></image>
+            <view class="name"> Cersei </view>
+          </view>
+          <view class="card">
+            <image class= "avatar" src="http://lc-qaxMtbr0.cn-n1.lcfile.com/ef638c517658acd97298/Sansa.jpeg"></image>
+            <view class="name"> Sansa </view>
+          </view>
+          <view class="card">
+            <image class= "avatar" src="http://lc-qaxMtbr0.cn-n1.lcfile.com/949ea3c54c9e576e0317/Arya.jpeg"></image>
+            <view class="name"> Arya </view>
+          </view>
+          <view class="card">
+            <image class= "avatar" src="http://lc-qaxMtbr0.cn-n1.lcfile.com/949ea3c54c9e576e0317/Arya.jpeg"></image>
+            <view class="name"> Arya </view>
+          </view>
+           <view class="card">
+            <image class= "avatar" src="http://lc-qaxMtbr0.cn-n1.lcfile.com/de3a36760029a231ffdd/Cersei.jpeg"></image>
+            <view class="name"> Cersei </view>
+          </view>
+          <view class="card">
+            <image class= "avatar" src="http://lc-qaxMtbr0.cn-n1.lcfile.com/ef638c517658acd97298/Sansa.jpeg"></image>
+            <view class="name"> Sansa </view>
+          </view>
+          <view class="card">
+            <image class= "avatar" src="http://lc-qaxMtbr0.cn-n1.lcfile.com/949ea3c54c9e576e0317/Arya.jpeg"></image>
+            <view class="name"> Arya </view>
+          </view>
+    </view> -->
+  <!-- test avatars -->
 </view>
 
