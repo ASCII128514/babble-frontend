@@ -137,6 +137,7 @@ Page({
             url: '/pages/find_partner/find_partner'
           })
         } else if (value.message.type == 'finish') {
+          wx.setStorageSync('room', null);
           wx.reLaunch({
             url: '/pages/index/index',
           })
