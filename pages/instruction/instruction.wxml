@@ -10,14 +10,13 @@
       <view class="content">
           <!-- title -->
             <view class="title">
-              Users take a selfie
+              Players Take Selfie
             </view>
           <!-- title -->
 
           <!-- text -->
             <view class="text">
-              Babblers break the ice by matching people to engage in one to one conversation. 
-      To start, all participants take a selfie.
+              Babblers helps players break the ice by matching them with someone to talk to. In order to recognize each other, the players need to take a selfie.
             </view>
           <!-- text -->
       </view>

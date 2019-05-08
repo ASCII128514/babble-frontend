@@ -1,5 +1,7 @@
 // pages/login/login.js
-import { switching } from '../../utils/redirect.js'
+import {
+  switching
+} from '../../utils/redirect.js'
 
 Page({
 
@@ -70,7 +72,7 @@ Page({
                 key: "token",
                 data: token.data.authen,
                 success: () => {
-                  app.globalData.currentUser = res.data.currentUser
+                  app.globalData.currentUser = token.data.currentUser
                   console.log("new user success");
                   switching(query)
                 },
