@@ -57,13 +57,23 @@ Page({
   // count interval
   countInterval: function () {
     // 设置倒计时 定时器 每100毫秒执行一次，计数器count+1 ,耗时6秒绘一圈
+    let objectOfSeconds = convertArrayToSeconds();
+    var sec = objectOfSeconds['question_timer'] * 10 + getApp().globalData.extraSec * 10
+
+    // var s = this.data.timerCountdown
+    // console.log(this.data)
+    console.log(sec)
+    // var a = s.split(':')
+    // var sec = (Number.parseInt(a[0]) * 60 + Number.parseInt(a[1])) * 1000
     this.countTimer = setInterval(() => {
-      if (this.data.count <= 600) {
+      // split the fucking number from the first into seconds
+
+      if (this.data.count <= sec) {
         /* 绘制彩色圆环进度条
         注意此处 传参 step 取值范围是0到2，
         所以 计数器 最大值 60 对应 2 做处理，计数器count=60的时候step=2
         */
-        this.drawCircle(this.data.count / (600 / 2))
+        this.drawCircle(this.data.count / (sec / 2))
         this.data.count++;
       } else {
         this.setData({
@@ -78,6 +88,7 @@ Page({
     this.drawProgressbg();
     // this.drawCircle(2)
     this.countInterval()
+    getApp().globalData.extraSec = 0
   },
 
 
@@ -139,7 +150,6 @@ Page({
     let timerEndTime = objectOfSeconds['question_timer'] * 1000 + getApp().globalData.extraSec * 1000
     // let timerEndTime = 6 * 1000 + getApp().globalData.extraSec * 1000
     var countDownTime = new Date().getTime() + timerEndTime;
-    getApp().globalData.extraSec = 0
 
     // Update the count down every 1 second
     x = setInterval(function () {
