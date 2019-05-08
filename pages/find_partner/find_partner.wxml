@@ -1,6 +1,5 @@
 <!-- pages/find_partner/find_partner.wxml -->
 <view class="container">
-  <!-- background -->
 
   <!-- Top area -->
     <view class="top-area">

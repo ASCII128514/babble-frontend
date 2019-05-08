@@ -23,6 +23,7 @@
 .title {
   font-family: serif;
   margin-top: 10px;
+  font-size: 30px;
 }
 
 .timer {
