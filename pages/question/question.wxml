@@ -1,29 +1,34 @@
 <!-- pages/question/question.wxml -->
 <view class="container">
-  <!-- background -->
-  <!-- Top area -->
-  <view class="top-area">
+  <!-- top part -->
+    <view class="top-part">
     <!-- title -->
-    <view class="title">
-      <view>Ask {{name}} about...</view>
-    </view>
-    <!-- title ends -->
-    <!-- circle -->
-    <view class="circle-area">
-      <view class='progress_box'>
-        <canvas class="progress_bg" canvas-id="canvasProgressbg"></canvas>
-        <canvas class="progress_canvas" canvas-id="canvasProgress"></canvas>
-        <view class="progress_text">
-          <!-- <view class="progress_dot"></view> -->
-          <!-- <image class="avatar" src="http://lc-qaxMtbr0.cn-n1.lcfile.com/949ea3c54c9e576e0317/Arya.jpeg"></image> -->
-          <text class='progress_info'>{{question}}</text>
+        <view class="title">
+          <view>Ask {{name}} about...</view>
         </view>
+    <!-- title ends -->
+
+    <!-- circle & countdown -->
+      <view class="circle-area">
+          <view class='progress_box'>
+            <canvas class="progress_bg" canvas-id="canvasProgressbg"></canvas>
+            <canvas class="progress_canvas" canvas-id="canvasProgress"></canvas>
+            <view class="progress_text">
+              <!-- <image class="avatar" src="http://lc-qaxMtbr0.cn-n1.lcfile.com/949ea3c54c9e576e0317/Arya.jpeg"></image> -->
+              <text class='progress_info'>{{question}}</text>
+            </view>
+          </view>
+        <!-- timer -->
+          <view class="timer">Countdown:</view>
+          <view class="timer">{{timerCountdown}}</view>
+        <!-- timer ends -->
       </view>
+    <!-- circle & countdown-->
     </view>
-    <!-- circle -->
-    <!-- timer and round -->
-    <view class="timer">Countdown: {{timerCountdown}}</view>
-    <view class="round">Round {{currentGameRound}}/{{numberOfRounds}}</view>
-    <!-- timer and round -->
-  </view>
+ <!-- top part -->
+
+    <!-- round -->
+      <view class="round">Round {{currentGameRound}}/{{numberOfRounds}}</view>
+    <!-- round -->
+
 </view>
