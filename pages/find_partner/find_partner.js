@@ -54,7 +54,7 @@ Page({
   countInterval: function () {
     // 设置倒计时 定时器 每100毫秒执行一次，计数器count+1 ,耗时6秒绘一圈
     let objectOfSeconds = convertArrayToSeconds();
-    var sec = objectOfSeconds['question_timer'] * 10
+    var sec = objectOfSeconds['find_partner_timer'] * 10
     this.countTimer = setInterval(() => {
       if (this.data.count <= sec) {
         /* 绘制彩色圆环进度条
@@ -74,7 +74,19 @@ Page({
   },
 
   onLoad: function (options) {
-    // topbar styling
+    this.setData({
+      user: getApp().globalData.pair.user
+    })
+    console.log(this.data.user)
+    console.log(getApp().globalData.pair.user)
+    console.log(getApp().globalData.pair.user.selfie)
+    var selfie = getApp().globalData.pair.user.selfie
+    var name = getApp().globalData.pair.user.name
+    this.setData({
+      selfie: selfie,
+      name: name
+    })
+    var page = this
     wx.setNavigationBarColor({
       frontColor: '#ffffff',
       backgroundColor: '#5a97f1',
@@ -186,47 +198,6 @@ Page({
     this.countInterval()
   },
 
-  /**
-   * Lifecycle function--Called when page show
-   */
-  onShow: function () {
-
-  },
-
-  /**
-   * Lifecycle function--Called when page hide
-   */
-  onHide: function () {
-
-  },
-
-  /**
-   * Lifecycle function--Called when page unload
-   */
-  onUnload: function () {
-
-  },
-
-  /**
-   * Page event handler function--Called when user drop down
-   */
-  onPullDownRefresh: function () {
-
-  },
-
-  /**
-   * Called when page reach bottom
-   */
-  onReachBottom: function () {
-
-  },
-
-  /**
-   * Called when user click on the top right corner to share
-   */
-  onShareAppMessage: function () {
-
-  },
 
   goToQuestion: function () {
     clearInterval(x);
@@ -237,7 +208,7 @@ Page({
     getApp().globalData.extraSec = sec
     console.log(getApp().globalData.extraSec);
     clearInterval(this.countTimer);
-    wx.navigateTo({
+    wx.reLaunch({
       url: '/pages/question/question'
     })
   }

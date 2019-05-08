@@ -49,6 +49,7 @@ Page({
     getApp().globalData.gameTimeIndices.questionTime.seconds = s
     let gameTimeIndices = getApp().globalData.gameTimeIndices
     console.log(gameTimeIndices)
+    console.log(getApp().globalData)
     this.setData({
       gameTimeIndices,
       minute: gameTimeIndices.questionTime.minutes,
