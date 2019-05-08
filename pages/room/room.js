@@ -7,6 +7,7 @@ Page({
   },
 
   onLoad: function (options) {
+    console.log(getApp().globalData)
     const playerList = getApp().globalData.playerList
     const page = this
     page.setData({

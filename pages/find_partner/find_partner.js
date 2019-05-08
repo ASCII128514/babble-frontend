@@ -45,7 +45,7 @@ Page({
   countInterval: function () {
     // 设置倒计时 定时器 每100毫秒执行一次，计数器count+1 ,耗时6秒绘一圈
     let objectOfSeconds = convertArrayToSeconds();
-    var sec = objectOfSeconds['question_timer'] * 10
+    var sec = objectOfSeconds['find_partner_timer'] * 10
     this.countTimer = setInterval(() => {
       if (this.data.count <= sec) {
         /* 绘制彩色圆环进度条

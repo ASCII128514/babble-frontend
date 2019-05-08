@@ -42,6 +42,28 @@ const switching = function (query) {
         console.log("res data:", res.data);
         if (res.data.game.status !== "end") {
           getApp().globalData.players = res.players;
+
+          var x = res.data.game.find_partner_timer % 60
+          if (x === 0) {
+            x = '00'
+          } else {
+            x = `${x}`
+          }
+          getApp().globalData.gameTimeIndices.partnerTime.seconds = x
+          var m = Number.parseInt(res.data.game.find_partner_timer / 60)
+          getApp().globalData.gameTimeIndices.partnerTime.minutes = m
+          console.log('mintue', m)
+          var y = res.data.game.question_timer % 60
+          if (y === 0) {
+            y = '00'
+          } else {
+            y = `${y}`
+          }
+          getApp().globalData.gameTimeIndices.questionTime.seconds = y
+          var j = Number.parseInt(res.data.game.question_timer / 60)
+          getApp().globalData.gameTimeIndices.questionTime.minutes = j
+          console.log('mintue', getApp().globalData.gameTimeIndices.questionTime.minutes)
+
           const response = res;
           wx.connectSocket({
             url: "wss://babble.wogengapp.cn/cable",
