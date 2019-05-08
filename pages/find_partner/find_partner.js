@@ -1,6 +1,11 @@
 // pages/find_partner/find_partner.js
-import { increaseGameRound, gameTimer } from '../../utils/play_game_api.js';
-import { convertArrayToSeconds } from '../../utils/create_game_api.js';
+import {
+  increaseGameRound,
+  gameTimer
+} from '../../utils/play_game_api.js';
+import {
+  convertArrayToSeconds
+} from '../../utils/create_game_api.js';
 
 var x;
 
@@ -10,13 +15,13 @@ Page({
   drawProgressbg: function () {
     // 使用 wx.createContext 获取绘图上下文 context
     var ctx = wx.createCanvasContext('canvasProgressbg')
-    ctx.setLineWidth(4);// 设置圆环的宽度
+    ctx.setLineWidth(4); // 设置圆环的宽度
     ctx.setStrokeStyle('#EEF0F4'); // 设置圆环的颜色
     ctx.setLineCap('round') // 设置圆环端点的形状
-    ctx.beginPath();//开始一个新的路径
+    ctx.beginPath(); //开始一个新的路径
     ctx.arc(150, 150, 138, 0, 2 * Math.PI, false);
     //设置一个原点(100,100)，半径为90的圆的路径到当前路径
-    ctx.stroke();//对当前路径进行描边
+    ctx.stroke(); //对当前路径进行描边
     ctx.draw();
   },
 
@@ -73,10 +78,14 @@ Page({
 
     // increaseGameRound();
     const currentGameRound = getApp().globalData.currentGameRound
-    this.setData({ currentGameRound })
+    this.setData({
+      currentGameRound
+    })
 
     const numberOfRounds = getApp().globalData.numberOfRounds
-    this.setData({ numberOfRounds })
+    this.setData({
+      numberOfRounds
+    })
 
     wx.onSocketMessage(function (res) {
       const value = JSON.parse(res.data)
@@ -84,7 +93,9 @@ Page({
       if (value.type != 'ping' && value.type != 'welcome' && value.type != 'confirm_subscription') {
         if (value.message.type == "pairs") {
           console.log("pairs:", value.message.pairs);
-          this.setData({ pairs: value.message.pairs })
+          this.setData({
+            pairs: value.message.pairs
+          })
           getApp().globalData.currentGameRound = value.message.round
         } else if (value.message.type == 'finish') {
           wx.reLaunch({
@@ -114,7 +125,7 @@ Page({
       var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
       var seconds = Math.floor((distance % (1000 * 60)) / 1000);
 
-      // If the count down is finished, write some text 
+      // If the count down is finished, write some text
       if (distance <= 0) {
         clearInterval(x);
         console.log(this)
@@ -126,7 +137,7 @@ Page({
       // Display the result in the element with id="demo"
       var s = seconds
       var m = minutes
-      if (s == -1 ) {
+      if (s == -1) {
         s = 0
       }
       if (m == -1) {
@@ -201,10 +212,10 @@ Page({
 
   },
 
-  goToQuestion: function() {
+  goToQuestion: function () {
     clearInterval(x);
     // send the extra minutes to the next page
-    console.log(typeof(this.data.timerCountdown))
+    console.log(typeof (this.data.timerCountdown))
     var arr = this.data.timerCountdown.split(':')
     var sec = Number.parseInt(arr[0]) * 60 + Number.parseInt(arr[1])
     getApp().globalData.extraSec = sec
