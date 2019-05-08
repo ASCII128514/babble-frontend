@@ -18,8 +18,8 @@ Page({
    */
   onLoad: function (options) {
     wx.setNavigationBarColor({
-      frontColor: '#000000',
-      backgroundColor: '#F9FCFC',
+      frontColor: '#ffffff',
+      backgroundColor: '#A7C3EC',
     })
 
     wx.setNavigationBarTitle({
