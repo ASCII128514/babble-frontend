@@ -1,13 +1,15 @@
 <view class="container">
   <!-- Background -->
 
-  <view class="background" style="background-image: linear-gradient(-200deg, rgba(0,90,168,0.2) 0%, rgba(0,76,61,0.2) 60%), url('http://lc-qaxMtbr0.cn-n1.lcfile.com/3918e9a0879471434fb9/Index_1.png');"></view>
+  <view class="background">
+    <view class="background_picture" style="background-image: linear-gradient(-200deg, rgba(0,90,168,0.2) 0%, rgba(0,76,61,0.2) 60%), url('http://lc-qaxMtbr0.cn-n1.lcfile.com/3918e9a0879471434fb9/Index_1.png');"></view>
+    <view class='title'>BABBLERS</view>
+  </view>
   <!-- backgroud -->
   <!-- Main text -->
-  <view class="content">
-    <view class='title'>BABBLERS</view>
-    <view class='teaser'>Get the conversation started</view>
-    <button class='button' bindtap="buttonClicked">Next</button>
+  <view class="content">    
+    <view class='teaser'>Click to learn how to play and to set up your game.</view>
+    <button class='button' bindtap="buttonClicked">Start Babbling</button>
   </view>
   <!-- Main text -->
 </view>

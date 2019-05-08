@@ -3,11 +3,12 @@
   display: flex;
   flex-direction: column;
   width: 100%;
+  height: 100%;
   background: rgb(252,252,252);
   background: linear-gradient(172deg, rgba(252,252,252,1) 0%, rgba(241,249,250,1) 73%, rgba(233,248,251,1) 100%, rgba(255,255,255,0) 100%);
 }
 
-.background {
+.background_picture {
     color: white;
     text-align: center;
     height: 70vh;
@@ -16,40 +17,52 @@
     background-size: cover !important;
     border-bottom-left-radius: 50px;
     /* border-top-right-radius: 50px; */
-    opacity: 0.9;
+    opacity: 0.75;
+  }
+
+  .title {
+    font-size: 70px;
+    font-weight: bolder;
+    color: white;
+    text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.57);
+    font-family: serif;
+    position: absolute;
+    top: 13%;
+    left: 6.5%;
   }
 
   .content {
     padding-top: 10px;
-    width: 100%;
+    width: 85%;
     height: 30vh;
     display: flex;
     align-items: center;
-    justify-content: space-between;
     flex-direction: column;
-  }
-
-  .title {
-    font-size: 45px;
-    font-weight: bolder;
-    text-shadow: 0px 1px rgba(0, 0, 0, 0.2);
+    margin: 16px;
   }
 
   .teaser {
-    font-size: 16px;
-    font-weight: bolder;
+    font-size: 24px;
     margin-bottom: 5px;
+    font-family: calibri;
+    text-align: center;
   }
 
-  .button {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-top: 10px;
-    margin-bottom: 40px;
-    border-radius: 20px;
-    width: 40vw;
-    background-color:rgb(90, 151, 241);
-    font-weight: bold;
-    height: 40px;
-  }
+.button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 24px;
+  margin-bottom: 24px;
+  border-radius: 16px;
+  width: 50vw;
+  background-color: rgb(130, 96, 168);
+  color: white;
+  font-weight: bold;
+  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.button:hover {
+text-shadow: 0px 0px 6px rgba(255, 255, 255, 1);
+transition: all 0.4s ease 0s;
+}
