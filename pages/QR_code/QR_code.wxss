@@ -17,6 +17,10 @@
   border-radius: 50%;
 }
 
+.text {
+  font-family: calibri;
+}
+
 .button {
   display: flex;
   justify-content: center;
