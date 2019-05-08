@@ -1,9 +1,10 @@
 <view class="container">
   <!-- Background -->
-  <view class="background">
+  <!-- <view class="background">
     <view class="background_picture" style="background-image: linear-gradient(-200deg, rgba(0,90,168,0.2) 0%, rgba(0,76,61,0.2) 60%), url('http://lc-qaxMtbr0.cn-n1.lcfile.com/3918e9a0879471434fb9/Index_1.png');"></view>
     <view class='title'>Babblers</view>
-  </view>
+  </view> -->
+  <view class="background" style="background-image: linear-gradient(-200deg, rgba(0,90,168,0.2) 0%, rgba(0,76,61,0.2) 60%), url('http://lc-qaxMtbr0.cn-n1.lcfile.com/3918e9a0879471434fb9/Index_1.png');"></view>
   <!-- backgroud -->
   <!-- instruction symbol -->
   <!-- <view class="symbol_section">
@@ -15,7 +16,7 @@
     </view> -->
   <!-- instruction symbol -->
   <!-- Main text -->
-  <view class="content">
+  <!-- <view class="content">
     <view class='title'>Welcome</view>
     <form bindsubmit="nameSubmit">
       <input class='teaser' name="name" placeholder="Enter your name" value="{{name}}" />
@@ -23,18 +24,13 @@
         <button formType="submit" class='button'>Let's start!</button>
       </view>
     </form>
-  </view>
-  <!-- <view class="content">
-
+  </view> -->
+  <view class="content">
+    <view class='title'>Welcome</view>
     <form bindsubmit="nameSubmit">
-      <view class='teaser_2'> Enter your name to get started:</view>
-      <input class='teaser' name="name" placeholder="Enter your name" value="{{name}}"/>
-
-      <view class='bottom-section'>
-
-          <button formType="submit" class='button' bindtap="buttonClicked">Start Babbling</button>
-      </view>
+      <input class='teaser' name="name" placeholder="Enter your name" value="{{name}}" />
+      <button formType="submit" class='button'>Let's start!</button>
     </form>
-    </view> -->
+  </view>
   <!-- Main text -->
 </view>
