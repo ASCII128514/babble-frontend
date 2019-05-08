@@ -68,6 +68,15 @@ Page({
     this.setData({
       user: getApp().globalData.pair.user
     })
+    console.log(this.data.user)
+    console.log(getApp().globalData.pair.user)
+    console.log(getApp().globalData.pair.user.selfie)
+    var selfie = getApp().globalData.pair.user.selfie
+    var name = getApp().globalData.pair.user.name
+    this.setData({
+      selfie: selfie,
+      name: name
+    })
     var page = this
     wx.setNavigationBarColor({
       frontColor: '#000000',
@@ -174,47 +183,6 @@ Page({
     this.countInterval()
   },
 
-  /**
-   * Lifecycle function--Called when page show
-   */
-  onShow: function () {
-
-  },
-
-  /**
-   * Lifecycle function--Called when page hide
-   */
-  onHide: function () {
-
-  },
-
-  /**
-   * Lifecycle function--Called when page unload
-   */
-  onUnload: function () {
-
-  },
-
-  /**
-   * Page event handler function--Called when user drop down
-   */
-  onPullDownRefresh: function () {
-
-  },
-
-  /**
-   * Called when page reach bottom
-   */
-  onReachBottom: function () {
-
-  },
-
-  /**
-   * Called when user click on the top right corner to share
-   */
-  onShareAppMessage: function () {
-
-  },
 
   goToQuestion: function () {
     clearInterval(x);
@@ -225,7 +193,7 @@ Page({
     getApp().globalData.extraSec = sec
     console.log(getApp().globalData.extraSec);
     clearInterval(this.countTimer);
-    wx.navigateTo({
+    wx.reLaunch({
       url: '/pages/question/question'
     })
   }
