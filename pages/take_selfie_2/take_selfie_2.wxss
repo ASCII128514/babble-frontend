@@ -15,7 +15,7 @@
 
 .picture {
   border-radius: 50%;
-  height: 55vh;
+  height: 50vh;
   width: 95vw;
 }
 /* picture area ends */

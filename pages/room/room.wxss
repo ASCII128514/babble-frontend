@@ -30,7 +30,7 @@
     }
 
     .button {
-      background-color: #A7C3EC;
+      background-color:rgb(90, 151, 241);
       display: flex;
       justify-content: center;
       align-items: center;
@@ -57,6 +57,7 @@
   height: 70%;
   width: 100vw;
   justify-items: center;
+  grid-row-gap: 8px;
 }
 
 /* card */
