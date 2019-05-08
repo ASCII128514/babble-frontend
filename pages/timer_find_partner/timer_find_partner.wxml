@@ -15,18 +15,23 @@
 
           <!-- text -->
             <view class="text">
-              Provide time for participants to find their partner
+              Provide time for players to find their partner
             </view>
           <!-- text -->
 
           <!-- timer -->
             <!-- <input name="question_timer" placeholder="in seconds" questiontimer/> -->
-            <picker mode="multiSelector" bindchange="questionTimeAmount" value="{{gameTimeIndices}}" range="{{[gameTime.minute_possibilities, gameTime.second_possibilities]}}">
-              <view class="picker">
-                <!-- Current selection: {{gameTime[0][time[0]]}}, {{gameTime[1][time[1]]}} -->
-                {{minute}}:{{second}}
+            <view class="time"> 
+              <view class="text_timer"> 
+                Set Timer:
               </view>
-            </picker>
+              <picker mode="multiSelector" bindchange="questionTimeAmount" value="{{gameTimeIndices}}" range="{{[gameTime.minute_possibilities, gameTime.second_possibilities]}}">           
+                <view class="picker">
+                  <!-- Current selection: {{gameTime[0][time[0]]}}, {{gameTime[1][time[1]]}} -->
+                  {{minute}}:{{second}}
+                </view>
+              </picker>
+            </view>
           <!-- timer -->
           
       </view>

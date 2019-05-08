@@ -26,7 +26,7 @@
   flex-direction: column;
   justify-content: space-around;
   align-items: center;
-  height: 20%;
+  height: 30%;
 }
 
 .title{
@@ -45,9 +45,17 @@
   font-family: calibri;
 }
 
+.time {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+}
+
 .picker {
-  margin-top: 30px;
-  width: 200px;
+  margin-left: 8px;
+  width: 100px;
   height: 30px;
   display: flex;
   justify-content: center;

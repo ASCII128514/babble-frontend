@@ -20,6 +20,10 @@
           <!-- text -->
 
           <!-- timer -->
+             <view class="time"> 
+                <view class="text_timer"> 
+                  Set Timer:
+                </view>
             <!-- <input name="question_timer" placeholder="in seconds" questiontimer/> -->
             <picker mode="multiSelector" bindchange="questionTimeAmount" value="{{gameTimeIndices}}" range="{{[gameTime.minute_possibilities, gameTime.second_possibilities]}}">
               <view class="picker">
@@ -27,6 +31,7 @@
                 {{minute}}:{{second}}
               </view>
             </picker>
+            </view>
           <!-- timer -->
 
       </view>
