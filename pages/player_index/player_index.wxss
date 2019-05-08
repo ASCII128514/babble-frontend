@@ -2,7 +2,7 @@
 .container {
   display: flex;
   flex-direction: column;
-  width: 100%;
+  width: 100vw;
   background: rgb(252,252,252);
   background: linear-gradient(172deg, rgba(252,252,252,1) 0%, rgba(241,249,250,1) 73%, rgba(233,248,251,1) 100%, rgba(255,255,255,0) 100%);
   height: 100vh;
@@ -13,10 +13,8 @@
     text-align: center;
     height: 65vh;
     width: 100%;
-    /* if you have a 70px navbar => height: calc(100vh - 70px); */
     background-size: cover !important;
     border-bottom-left-radius: 50px;
-    /* border-top-right-radius: 50px; */
     opacity: 0.9;
   }
 
@@ -26,7 +24,7 @@
     height: 40vh;
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: space-around;
     flex-direction: column;
    
   }
@@ -41,7 +39,7 @@
   }
 
   .title {
-    font-size: 30px;
+    font-size: 26px;
     font-weight: bolder;
     text-shadow: 0px 1px rgba(0, 0, 0, 0.2);
   }
@@ -54,13 +52,6 @@
     color: blueviolet;
   }
 
-  .bottom-section {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-  }
- 
   .button {
     display: flex;
     justify-content: center;
