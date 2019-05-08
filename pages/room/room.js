@@ -7,7 +7,18 @@ Page({
   },
 
   onLoad: function (options) {
-    console.log(getApp().globalData)
+
+    // top bar styling
+    wx.setNavigationBarColor({
+      frontColor: '#ffffff',
+      backgroundColor: '#A7C3EC',
+    })
+
+    wx.setNavigationBarTitle({
+      title: 'Waiting room',
+    })
+    // top bar styling
+
     const playerList = getApp().globalData.playerList
     const page = this
     page.setData({

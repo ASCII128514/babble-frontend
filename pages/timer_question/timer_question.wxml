@@ -15,10 +15,7 @@
 
           <!-- text -->
             <view class="text">
-              Participants start their conversation with question card. 
-            </view>
-            <view class="text">
-              Set timer for their conversation.
+              Participants start their conversation with question card. Set timer for their conversation.
             </view>
           <!-- text -->
 

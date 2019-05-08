@@ -1,6 +1,6 @@
 <!--pages/take_selfie/take_selfie.wxml-->
 
- <view class="page-body" style="background-image: url('http://lc-qaxMtbr0.cn-n1.lcfile.com/3fb6123bd6b4399f1679/blur_background.png');">
+ <view class="page-body">
   
       <!-- camera -->
         <camera class="camera" device-position="front" flash="off" binderror="error" style="width: 95%; height: 400px;">

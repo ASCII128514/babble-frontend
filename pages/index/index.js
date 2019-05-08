@@ -5,13 +5,8 @@ const app = getApp();
 Page({
   buttonClicked: function () {
     wx.navigateTo({
-      // <<<<<<< HEAD
-      //       url: "/pages/instruction_creator/instruction_creator",
-      //     });
-      // =======
       url: '/pages/instruction/instruction'
     })
-
   },
 
 

@@ -7,6 +7,8 @@
   justify-content: space-around;
   align-items: center;
   background-size: cover !important;
+  background: rgb(252, 252, 252);
+  background: linear-gradient(172deg, rgba(252, 252, 252, 1) 0%, rgba(241, 249, 250, 1) 73%, rgba(233, 248, 251, 1) 100%, rgba(255, 255, 255, 0) 100%);
 }
 
 /* picture area */
@@ -19,30 +21,36 @@
 /* picture area ends */
 
 /* buttons */
-.buttons {
-  display: flex;
-  justify-content: space-between;
+.btn-area-1 {
   width: 80%;
   height: 50px;
   margin-top: 20px;
+  padding: 2px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
 }
 
-.go-back-button {
-  border-radius: 5px;
-  background-color: whitesmoke;
-  width: 130px;
+.button {
   display: flex;
   justify-content: center;
   align-items: center;
-  border: solid;
+  margin: 20px;
+  margin-top: 40px;
+  border-radius: 16px;
+  width: 50vw;
+  /* background-color: rgb(130, 96, 168); */
+  background-color: #A7C3EC;
+  color: white;
+  font-weight: bold;
+  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+  height: 5vh;
 }
 
-.go-button {
-  border-radius: 5px;
-  background-color: whitesmoke;
-  width: 130px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  border: solid;
+.button:hover {
+text-shadow: 0px 0px 6px rgba(255, 255, 255, 1);
+transition: all 0.4s ease 0s;
 }
+
+

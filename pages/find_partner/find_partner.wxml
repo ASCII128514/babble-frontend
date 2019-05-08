@@ -19,26 +19,22 @@
           <image class="avatar" src='{{user.selfie}}'></image>
         </view>
       </view>
+      <!-- circle -->
+      <!-- timer -->
+      <view class="timer">Countdown:</view>
+      <view class="timer">{{timerCountdown}}</view>
+      <!-- timer ends -->
     </view>
-    <!-- circle -->
-    <!-- avatar -->
-    <view></view>
-    <!-- avatar ends -->
-  </view>
-  <!-- Top area ends -->
-  <!-- bottom area -->
-  <!-- info: round and seconds -->
-  <view class="bottom-area">
-    <view class="title">
+    <!-- Top area ends -->
+    <!-- bottom area -->
+    <view class="buttons-section">
+      <!-- button -->
+      <view class="button" bindtap='goToQuestion'>FOUND</view>
+      <!-- button -->
+      <!-- round -->
       <view class="round">Round {{currentGameRound}}/{{numberOfRounds}}</view>
-      <view class="timer">Countdown: {{timerCountdown}}</view>
+      <!-- round -->
     </view>
+    <!-- button: found partner ends -->
   </view>
-  <!-- info: round and seconds -->
-  <view class="buttons-section">
-    <!-- button -->
-    <view class="button" bindtap='goToQuestion'>FOUND</view>
-    <!-- button -->
-  </view>
-  <!-- button: found partner ends -->
 </view>

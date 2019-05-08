@@ -11,6 +11,12 @@ var x;
 
 Page({
 
+  buttonClicked: function () {
+    wx.navigateTo({
+      url: '/pages/question/question'
+    })
+  },
+
   // drawing circle
   drawProgressbg: function () {
     // 使用 wx.createContext 获取绘图上下文 context
@@ -28,9 +34,12 @@ Page({
   drawCircle: function (step) {
     var context = wx.createCanvasContext('canvasProgress');
     // 设置渐变
-    var gradient = context.createLinearGradient(200, 100, 100, 200);
+    // var gradient = context.createLinearGradient(200, 100, 100, 200);
+    var gradient = context.createLinearGradient(300, 200, 50, 20);
     gradient.addColorStop("0", "#2661DD");
-    gradient.addColorStop("0.5", "#40ED94");
+    // gradient.addColorStop("0.3", "#C8E2C3");
+    gradient.addColorStop("0.5", "#F5F6F7");
+    // gradient.addColorStop("0.8", "#F5F6F7");
     gradient.addColorStop("1.0", "#5956CC");
     context.setLineWidth(10);
     context.setStrokeStyle(gradient);
@@ -53,6 +62,7 @@ Page({
         所以 计数器 最大值 60 对应 2 做处理，计数器count=60的时候step=2
         */
         this.drawCircle(this.data.count / (sec / 2))
+        // this.drawCircle(this.data.count / (60 / 2))
         this.data.count++;
       } else {
         this.setData({
@@ -63,7 +73,6 @@ Page({
     }, 100)
   },
 
-  // top bar styling
   onLoad: function (options) {
     this.setData({
       user: getApp().globalData.pair.user
@@ -79,13 +88,19 @@ Page({
     })
     var page = this
     wx.setNavigationBarColor({
-      frontColor: '#000000',
-      backgroundColor: '#FBFBFB',
+      frontColor: '#ffffff',
+      backgroundColor: '#A7C3EC',
     })
 
     wx.setNavigationBarTitle({
-      title: 'Who is your partner?',
+      title: 'Get it started!',
     })
+    // topbar styling ends
+
+    this.setData({
+      user: getApp().globalData.pair.user
+    })
+    var page = this
 
     // increaseGameRound();
     const currentGameRound = getApp().globalData.currentGameRound

@@ -1,7 +1,7 @@
 /* pages/find_partner/find_partner.wxss */
 .container {
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   align-items: center;
   flex-direction: column;
   height: 100vh;
@@ -13,12 +13,22 @@
 .top-area {
   /* background-color: blue; */
   width: 100vw;
-  height: 50vh;
+  height: 60vh;
   display: flex;
   justify-content: space-between;
   align-items: center;
   flex-direction: column;
-  padding: 3px;
+}
+
+.title {
+  font-family: serif;
+  margin-top: 10px;
+}
+
+.timer {
+  font-weight: 900;
+  font-size: 20px;
+  font-family: calibri;
 }
 
 .avatar {
@@ -31,44 +41,7 @@
     /* padding-top: 3rpx; */
   }
 
-.timer {
-  font-weight: 900;
-  font-size: 20px;
-}
-
-/* bottom section*/
-
-.b_section {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-around;
-  align-items: center;
-  width: 100vw;
-  height: 15vh;
-  margin: 30px;
-}
-
-.name{
-  font-size: 20px;
-  font-weight: 400;
-}
-
-.button {
-  background-color:white;
-  border: 1px solid;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 140px;
-  height: 50px;
-  font-weight: bolder;
-  font-size: 20px;
-}
-
-/* bottom section*/
-
 /* circle */
-
 .circle-area {
   width: 100vw;
   height: 100vw;
@@ -119,10 +92,42 @@
   padding-bottom: 25px;
   border-radius: 50%;
 }
+/* circle ends */
 
-.progress_dot{
-    width:16rpx;
-    height: 16rpx;
-    border-radius: 50%;
-    background-color: #fb9126;
+/* bottom section*/
+.buttons-section {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  width: 100vw;
+  height: 15vh;
+  margin: 30px;
 }
+
+.round {
+  font-family: calibri;
+  font-size: 12px;
+}
+
+.button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 20px;
+  margin-top: 40px;
+  border-radius: 16px;
+  width: 50vw;
+  /* background-color: rgb(130, 96, 168); */
+  background-color: #A7C3EC;
+  color: white;
+  font-weight: bold;
+  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+  height: 5vh;
+}
+
+.button:hover {
+text-shadow: 0px 0px 6px rgba(255, 255, 255, 1);
+transition: all 0.4s ease 0s;
+}
+/* bottom section ends*/

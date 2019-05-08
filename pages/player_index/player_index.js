@@ -22,16 +22,15 @@ Page({
 
   onLoad: function (options) {
     wx.setNavigationBarColor({
-      frontColor: '#000000',
-      backgroundColor: '#aec6d9',
+      frontColor: '#ffffff',
+      backgroundColor: '#A7C3EC',
     })
 
     wx.setNavigationBarTitle({
-      title: 'BABBLERS',
+      title: 'Welcome',
     })
-
     this.setData({
       name: app.globalData.currentUser.name
-    })
+    })    
   },
 })
