@@ -7,8 +7,8 @@ Page({
     this.ctx = wx.createCameraContext()
 
     wx.setNavigationBarColor({
-      frontColor: '#000000',
-      backgroundColor: '#FBFBFB',
+      frontColor: '#ffffff',
+      backgroundColor: '#A7C3EC',
     })
 
     wx.setNavigationBarTitle({

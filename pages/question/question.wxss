@@ -54,6 +54,7 @@
 .round {
   font-family: calibri;
   margin-bottom: 30px;
+  font-size: 12px;
 }
 /* bottom section*/
 

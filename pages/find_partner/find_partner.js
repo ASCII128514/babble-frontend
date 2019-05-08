@@ -34,9 +34,12 @@ Page({
   drawCircle: function (step) {
     var context = wx.createCanvasContext('canvasProgress');
     // 设置渐变
-    var gradient = context.createLinearGradient(200, 100, 100, 200);
+    // var gradient = context.createLinearGradient(200, 100, 100, 200);
+    var gradient = context.createLinearGradient(300, 200, 50, 20);
     gradient.addColorStop("0", "#2661DD");
-    gradient.addColorStop("0.5", "#40ED94");
+    // gradient.addColorStop("0.3", "#C8E2C3");
+    gradient.addColorStop("0.5", "#F5F6F7");
+    // gradient.addColorStop("0.8", "#F5F6F7");
     gradient.addColorStop("1.0", "#5956CC");
     context.setLineWidth(10);
     context.setStrokeStyle(gradient);
@@ -59,6 +62,7 @@ Page({
         所以 计数器 最大值 60 对应 2 做处理，计数器count=60的时候step=2
         */
         this.drawCircle(this.data.count / (sec / 2))
+        // this.drawCircle(this.data.count / (60 / 2))
         this.data.count++;
       } else {
         this.setData({
@@ -77,7 +81,7 @@ Page({
     })
 
     wx.setNavigationBarTitle({
-      title: 'Find Your Partner',
+      title: 'Get it started!',
     })
     // topbar styling ends
 

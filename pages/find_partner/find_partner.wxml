@@ -36,10 +36,15 @@
 
   <!-- bottom area -->
     <view class="buttons-section">
-      <view class="round">Round {{currentGameRound}}/{{numberOfRounds}}</view>
       <!-- button -->
         <view class="button" bindtap='goToQuestion'>FOUND</view>
       <!-- button -->
+
+      <!-- round -->
+        <view class="round">
+          Round {{currentGameRound}}/{{numberOfRounds}}
+        </view>
+      <!-- round -->
     </view>
   <!-- button: found partner ends -->
 

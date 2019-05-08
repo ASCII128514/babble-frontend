@@ -30,7 +30,7 @@
     }
 
     .button {
-      background-color:#d0b0e2;
+      background-color: #A7C3EC;
       display: flex;
       justify-content: center;
       align-items: center;

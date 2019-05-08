@@ -36,13 +36,16 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-top: 10px;
-  margin-bottom: 40px;
-  border-radius: 20px;
-  width: 35vw;
-  background-color: rgb(167, 195, 236);
+  margin: 20px;
+  margin-top: 40px;
+  border-radius: 16px;
+  width: 50vw;
+  /* background-color: rgb(130, 96, 168); */
+  background-color: #A7C3EC;
+  color: white;
   font-weight: bold;
   box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+  height: 5vh;
 }
 
 .button:hover {
