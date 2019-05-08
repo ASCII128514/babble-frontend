@@ -10,16 +10,31 @@
   background: linear-gradient(172deg, rgba(252,252,252,1) 0%, rgba(241,249,250,1) 73%, rgba(233,248,251,1) 100%, rgba(255,255,255,0) 100%);
 }
 
+.circle_container {
+  height: vh;
+  width: 100 vw;
+}
+
 .QR {
-  margin-top: 60px;
-  height: 40%;
+  height: 250px;
+  width: 250px;
   border: 1px solid black;
   border-radius: 50%;
 }
 
 .text {
   font-family: calibri;
+  width: 85%;
+
 }
+
+.title{
+  font-size: 6vh;
+  font-weight: bolder;
+  font-family: serif;
+  margin-top: 40px;
+}
+
 
 .button {
   display: flex;
