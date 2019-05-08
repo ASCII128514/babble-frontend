@@ -72,12 +72,12 @@ Page({
   onLoad: function (options) {
     // topbar styling
     wx.setNavigationBarColor({
-      frontColor: '#000000',
-      backgroundColor: '#FBFBFB',
+      frontColor: '#ffffff',
+      backgroundColor: '#A7C3EC',
     })
 
     wx.setNavigationBarTitle({
-      title: 'Who is your partner?',
+      title: 'Find Your Partner',
     })
     // topbar styling ends
 
