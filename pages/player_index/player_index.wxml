@@ -2,22 +2,21 @@
   <!-- Background -->
 
   <view class="background">
-    <view class="background_picture" style="background-image: linear-gradient(-200deg, rgba(0,90,168,0.2) 0%, rgba(0,76,61,0.2) 60%), url('http://lc-qaxMtbr0.cn-n1.lcfile.com/3918e9a0879471434fb9/Index_1.png');"></view>
+    <view class="background_picture" style="background-image: linear-gradient(-200deg, rgba(0,90,168,0.2) 0%, rgba(0,76,61,0.2) 60%), url('http://lc-qaxMtbr0.cn-n1.lcfile.com/3918e9a0879471434fb9/Index_1.png');">
     <view class='title'>BABBLERS</view>
+    </view>
   </view>
   <!-- backgroud -->
   <!-- Main text -->
 
-  <view class="content">
-      <form bindsubmit="nameSubmit">
-        <view class='teaser'> Enter your name to get started:</view>
-        <input class='entry_form' name="name" placeholder="Enter your name" value="{{name}}"/>
-        <view class='bottom-section'>
-          <button formType="submit" class='button' bindtap="buttonClicked">
+
+      <form class="form" bindsubmit="nameSubmit">
+        <view class='teaser'> What is your name?</view>
+        <input class='entry_form' name="name" placeholder="" value="{{name}}"/>
+        <button formType="submit" class='button' bindtap="buttonClicked">
             Start Babbling
-          </button>
-        </view>
+        </button>
       </form>
-  </view>
+
   <!-- Main text -->
 </view>

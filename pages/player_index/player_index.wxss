@@ -6,40 +6,48 @@
   height: 100%;
   background: rgb(252,252,252);
   background: linear-gradient(172deg, rgba(252,252,252,1) 0%, rgba(241,249,250,1) 73%, rgba(233,248,251,1) 100%, rgba(255,255,255,0) 100%);
+  align-items: center;
+}
+
+.background {
+  width: 100vw;
 }
 
 .background_picture {
     color: white;
     text-align: center;
-    height: 70vh;
+    height: 65vh;
     width: 100%;
     /* if you have a 70px navbar => height: calc(100vh - 70px); */
     background-size: cover !important;
     border-bottom-left-radius: 50px;
     /* border-top-right-radius: 50px; */
     opacity: 0.75;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
   }
 
   .title {
-    font-size: 70px;
+    font-size: 50px;
     font-weight: bolder;
     color: white;
-    text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.57);
+    text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.9);
     font-family: serif;
-    position: absolute;
-    top: 13%;
-    left: 6.5%;
   }
 
-  .content {
+  .form {
     padding-top: 10px;
     width: 85%;
     height: 30vh;
     display: flex;
     align-items: center;
+    /* justify-content: center; */
     flex-direction: column;
     margin: 16px;
   }
+
 
   .teaser {
     font-size: 24px;
@@ -49,13 +57,13 @@
   }
 
   .entry_form {
-     width: 100%;
-    height: 25%;
+    width: 50vw;
     padding: 12px;
+    background-color: white;
     border: 1px solid #ccc;
     border-radius: 4px;
     box-sizing: border-box;
-    resize: vertical;
+    box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
   }
 
 .button {
