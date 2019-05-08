@@ -29,9 +29,8 @@ Page({
     wx.setNavigationBarTitle({
       title: 'BABBLERS',
     })
-
     this.setData({
       name: app.globalData.currentUser.name
-    })
+    })    
   },
 })

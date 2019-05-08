@@ -199,7 +199,7 @@
 				{
 					"id": 22,
 					"name": "playerindex",
-					"pathName": "pages/login/login",
+					"pathName": "pages/player_index/player_index",
 					"query": "scene=63",
 					"scene": null
 				},
@@ -211,10 +211,17 @@
 					"scene": null
 				},
 				{
+<<<<<<< HEAD
 					"id": -1,
 					"name": "Room_ui",
 					"pathName": "pages/room/room",
 					"query": "scene=1",
+=======
+					"id": 24,
+					"name": "playerindex-1",
+					"pathName": "pages/login/login",
+					"query": "scene=65",
+>>>>>>> 868689ab14f12d7ea21e0d7566354e8e09165568
 					"scene": null
 				}
 			]

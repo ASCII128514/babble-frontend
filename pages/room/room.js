@@ -36,10 +36,15 @@ Page({
 
         } else if (value.message.type == "pair") {
           getApp().globalData.pair = value.message.pairs[wx.getStorageSync('token')]
+          getApp().globalData.currentGameRound = value.message.round
           console.log(getApp().globalData.pair)
           console.log("question", getApp().globalData.pair.question)
           wx.redirectTo({
             url: '/pages/find_partner/find_partner'
+          })
+        } else if (value.message.type == 'finish') {
+          wx.reLaunch({
+            url: '/pages/index/index',
           })
         }
       }

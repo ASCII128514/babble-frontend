@@ -6,8 +6,13 @@ let numberOfRounds = g.numberOfRounds
 let currentGameRound = g.currentGameRound
 let x
 
-import { increaseGameRound, gameTimer } from '../../utils/play_game_api.js';
-import { convertArrayToSeconds } from '../../utils/create_game_api.js';
+import {
+  increaseGameRound,
+  gameTimer
+} from '../../utils/play_game_api.js';
+import {
+  convertArrayToSeconds
+} from '../../utils/create_game_api.js';
 
 Page({
 
@@ -21,13 +26,13 @@ Page({
   drawProgressbg: function () {
     // 使用 wx.createContext 获取绘图上下文 context
     var ctx = wx.createCanvasContext('canvasProgressbg')
-    ctx.setLineWidth(3);// 设置圆环的宽度
+    ctx.setLineWidth(3); // 设置圆环的宽度
     ctx.setStrokeStyle('#EEF0F4'); // 设置圆环的颜色
     ctx.setLineCap('round') // 设置圆环端点的形状
-    ctx.beginPath();//开始一个新的路径
+    ctx.beginPath(); //开始一个新的路径
     ctx.arc(150, 150, 138, 0, 2 * Math.PI, false);
     //设置一个原点(100,100)，半径为90的圆的路径到当前路径
-    ctx.stroke();//对当前路径进行描边
+    ctx.stroke(); //对当前路径进行描边
     ctx.draw();
   },
 
@@ -93,10 +98,14 @@ Page({
     })
 
     const currentGameRound = getApp().globalData.currentGameRound
-    this.setData({ currentGameRound })
+    this.setData({
+      currentGameRound
+    })
 
     const numberOfRounds = getApp().globalData.numberOfRounds
-    this.setData({ numberOfRounds })
+    this.setData({
+      numberOfRounds
+    })
 
     wx.onSocketMessage(function (res) {
       const value = JSON.parse(res.data)
@@ -104,14 +113,21 @@ Page({
       if (value.type != 'ping' && value.type != 'welcome' && value.type != 'confirm_subscription') {
         if (value.message.type == "users") {
           console.log("players:", value.message.players);
-          page.setData({ playerList: value.message.players })
+          page.setData({
+            playerList: value.message.players
+          })
 
         } else if (value.message.type == "pair") {
           getApp().globalData.pair = value.message.pairs[wx.getStorageSync('token')]
+          getApp().globalData.currentGameRound = value.message.round
           console.log(getApp().globalData.pair)
           console.log("question", getApp().globalData.pair.question)
-          wx.redirectTo({
+          wx.reLaunch({
             url: '/pages/find_partner/find_partner'
+          })
+        } else if (value.message.type == 'finish') {
+          wx.reLaunch({
+            url: '/pages/index/index',
           })
         }
       }
@@ -139,14 +155,21 @@ Page({
       var seconds = Math.floor((distance % (1000 * 60)) / 1000);
 
 
+
       // If the count down is finished, write some text
       if (distance <= 0) {
         clearInterval(x);
         console.log(this)
         // if (this == page)
-        wx.request({
-          url: `https://babble.wogengapp.cn/api/v1/game/${getApp().globalData.qrCodeData}/pair?round=${getApp().globalData.currentGameRound + 1}&token=${wx.getStorageSync('token')}`
-        })
+        if (getApp().globalData.currentGameRound < getApp().globalData.numberOfRounds) {
+          wx.request({
+            url: `https://babble.wogengapp.cn/api/v1/game/${getApp().globalData.qrCodeData}/pair?round=${getApp().globalData.currentGameRound + 1}&token=${wx.getStorageSync('token')}`
+          })
+        } else {
+          wx.reLaunch({
+            url: '/pages/index/index'
+          })
+        }
       }
 
       // Display the result in the element with id="demo"

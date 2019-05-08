@@ -19,7 +19,7 @@
   <view class="space">
   </view>
   <!-- top info section ends -->
-  
+
 
   <!-- list with avatars and names -->
   <view class="players">
@@ -117,4 +117,5 @@
     </view> -->
   <!-- test avatars -->
 </view>
+
 
