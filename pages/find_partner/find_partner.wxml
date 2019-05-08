@@ -1,44 +1,46 @@
 <!-- pages/find_partner/find_partner.wxml -->
 <view class="container">
   <!-- background -->
+
   <!-- Top area -->
-  <view class="top-area">
-    <!-- test the API data -->
-    <view>{{getApp().globalData.playerPair.url}}</view>
-    <!-- test ends -->
-    <!-- text -->
-    <view>Find {{name}}</view>
-    <!-- text -->
-    <!-- circle -->
-    <view class="circle-area">
-      <view class='progress_box'>
-        <canvas class="progress_bg" canvas-id="canvasProgressbg"></canvas>
-        <canvas class="progress_canvas" canvas-id="canvasProgress"></canvas>
-        <view class="progress_text">
-          <!-- <view class="progress_dot"></view> -->
-          <image class="avatar" src='{{playerList.selfie}}'></image>
+    <view class="top-area">
+      <!-- test the API data -->
+      <view>{{getApp().globalData.playerPair.url}}</view>
+      <!-- test ends -->
+
+      <!-- text -->
+        <view class="title">  
+          Find {{name}}
+        </view>
+      <!-- text -->
+
+      <!-- circle -->
+      <view class="circle-area">
+        <view class='progress_box'>
+          <canvas class="progress_bg" canvas-id="canvasProgressbg"></canvas>
+          <canvas class="progress_canvas" canvas-id="canvasProgress"></canvas>
+          <view class="progress_text">
+            <image class="avatar" src='{{playerList.selfie}}'></image>
+          </view>
         </view>
       </view>
+      <!-- circle -->
+
+      <!-- timer -->
+        <view class="timer">Countdown:</view>
+        <view class="timer">{{timerCountdown}}</view>
+      <!-- timer ends-->
     </view>
-    <!-- circle -->
-    <!-- avatar -->
-    <view></view>
-    <!-- avatar ends -->
-  </view>
   <!-- Top area ends -->
+
+
   <!-- bottom area -->
-  <!-- info: round and seconds -->
-  <view class="bottom-area">
-    <view class="title">
+    <view class="buttons-section">
       <view class="round">Round {{currentGameRound}}/{{numberOfRounds}}</view>
-      <view class="timer">Countdown: {{timerCountdown}}</view>
+      <!-- button -->
+        <view class="button" bindtap='goToQuestion'>FOUND</view>
+      <!-- button -->
     </view>
-  </view>
-  <!-- info: round and seconds -->
-  <view class="buttons-section">
-    <!-- button -->
-    <view class="button" bindtap='goToQuestion'>FOUND</view>
-    <!-- button -->
-  </view>
   <!-- button: found partner ends -->
+
 </view>

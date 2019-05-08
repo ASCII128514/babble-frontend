@@ -21,54 +21,12 @@
   padding: 3px;
 }
 
-.avatar {
-    text-align: center;
-    height: 266px;
-    width: 266px;
-    background-size: cover !important;
-    border-radius: 50%;
-    padding-left: 1rpx;
-    /* padding-top: 3rpx; */
-  }
-
-.timer {
-  font-weight: 900;
-  font-size: 20px;
+.title {
+  font-family: calibri;
 }
 
-/* bottom section*/
-
-.b_section {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-around;
-  align-items: center;
-  width: 100vw;
-  height: 15vh;
-  margin: 30px;
-}
-
-.name{
-  font-size: 20px;
-  font-weight: 400;
-}
-
-.button {
-  background-color:white;
-  border: 1px solid;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 140px;
-  height: 50px;
-  font-weight: bolder;
-  font-size: 20px;
-}
-
-/* bottom section*/
 
 /* circle */
-
 .circle-area {
   width: 100vw;
   height: 100vw;
@@ -120,9 +78,43 @@
   border-radius: 50%;
 }
 
-.progress_dot{
-    width:16rpx;
-    height: 16rpx;
-    border-radius: 50%;
-    background-color: #fb9126;
+.timer {
+  font-weight: 900;
+  font-size: 20px;
+  font-family: calibri;
 }
+
+.avatar {
+    text-align: center;
+    height: 266px;
+    width: 266px;
+    background-size: cover !important;
+    border-radius: 50%;
+    padding-left: 1rpx;
+    /* padding-top: 3rpx; */
+  }
+/* circle ends */
+
+/* bottom section*/
+.buttons-section {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  width: 100vw;
+  height: 15vh;
+  margin: 30px;
+}
+
+.button {
+  background-color:white;
+  border: 1px solid;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 140px;
+  height: 50px;
+  font-weight: bolder;
+  font-size: 20px;
+}
+/* bottom section ends*/

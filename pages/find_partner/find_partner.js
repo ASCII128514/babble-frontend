@@ -70,12 +70,8 @@ Page({
     }, 100)
   },
 
-  // top bar styling
   onLoad: function (options) {
-    this.setData({
-      user: getApp().globalData.pair.user
-    })
-    var page = this
+    // topbar styling
     wx.setNavigationBarColor({
       frontColor: '#000000',
       backgroundColor: '#FBFBFB',
@@ -84,6 +80,12 @@ Page({
     wx.setNavigationBarTitle({
       title: 'Who is your partner?',
     })
+    // topbar styling ends
+
+    this.setData({
+      user: getApp().globalData.pair.user
+    })
+    var page = this
 
     // increaseGameRound();
     const currentGameRound = getApp().globalData.currentGameRound

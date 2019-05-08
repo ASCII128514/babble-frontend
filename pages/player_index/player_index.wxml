@@ -26,6 +26,9 @@
       </view>
     </form>
   </view> -->
+
+
+
   <view class="content">
     <view class='title'>Welcome</view>
     <form bindsubmit="nameSubmit">
