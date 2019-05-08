@@ -21,8 +21,6 @@
 		"hidedInDevtools": []
 	},
 	"scripts": {},
-	"simulatorType": "wechat",
-	"simulatorPluginLibVersion": {},
 	"condition": {
 		"search": {
 			"current": -1,
@@ -40,7 +38,7 @@
 			"list": []
 		},
 		"miniprogram": {
-			"current": 24,
+			"current": -1,
 			"list": [
 				{
 					"id": -1,
@@ -92,13 +90,6 @@
 					"scene": null
 				},
 				{
-					"id": 7,
-					"name": "Waiting Room",
-					"pathName": "pages/index/index",
-					"query": "scene=1",
-					"scene": null
-				},
-				{
 					"id": -1,
 					"name": "Selfie_preview",
 					"pathName": "pages/take_selfie_2/take_selfie_2",
@@ -110,13 +101,6 @@
 					"name": "Instruction",
 					"pathName": "pages/instruction/instruction",
 					"query": "",
-					"scene": null
-				},
-				{
-					"id": -1,
-					"name": "room1",
-					"pathName": "pages/index/index",
-					"query": "scene=1",
 					"scene": null
 				},
 				{
@@ -190,16 +174,9 @@
 					"scene": null
 				},
 				{
-					"id": -1,
-					"name": "room",
-					"pathName": "pages/index/index",
-					"query": "scene=1",
-					"scene": null
-				},
-				{
 					"id": 22,
 					"name": "playerindex",
-					"pathName": "pages/player_index/player_index",
+					"pathName": "pages/login/login",
 					"query": "scene=63",
 					"scene": null
 				},
@@ -211,17 +188,10 @@
 					"scene": null
 				},
 				{
-<<<<<<< HEAD
 					"id": -1,
 					"name": "Room_ui",
 					"pathName": "pages/room/room",
 					"query": "scene=1",
-=======
-					"id": 24,
-					"name": "playerindex-1",
-					"pathName": "pages/login/login",
-					"query": "scene=65",
->>>>>>> 868689ab14f12d7ea21e0d7566354e8e09165568
 					"scene": null
 				}
 			]
