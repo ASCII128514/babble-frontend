@@ -5,7 +5,7 @@ Page({
   buttonClicked: function () {
     var page = this
     wx.reLaunch({
-      url: `/pages/index/index?scene=${this.data.roomId}`
+      url: `/pages/login/login?scene=${this.data.roomId}`
     })
   },
 

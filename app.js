@@ -96,7 +96,7 @@ App({
     },
     gameTimeIndices: {
       partnerTime: {
-        minutes: "1",
+        minutes: "2",
         seconds: "00",
       },
       questionTime: {

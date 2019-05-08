@@ -67,6 +67,10 @@ const switching = function (query) {
           wx.reLaunch({
             url: "/pages/player_index/player_index",
           });
+        } else {
+          wx.reLaunch({
+            url: '/pages/index/index',
+          })
         }
       },
     });
