@@ -38,7 +38,8 @@
 			"list": []
 		},
 		"miniprogram": {
-			"current": -1,
+
+			"current": 22,
 			"list": [
 				{
 					"id": -1,
@@ -177,7 +178,7 @@
 					"id": 22,
 					"name": "playerindex",
 					"pathName": "pages/login/login",
-					"query": "scene=63",
+					"query": "scene=82",
 					"scene": null
 				},
 				{

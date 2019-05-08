@@ -51,13 +51,15 @@ Page({
 
   countInterval: function () {
     // 设置倒计时 定时器 每100毫秒执行一次，计数器count+1 ,耗时6秒绘一圈
+    let objectOfSeconds = convertArrayToSeconds();
+    var sec = objectOfSeconds['question_timer'] * 10
     this.countTimer = setInterval(() => {
-      if (this.data.count <= 60) {
+      if (this.data.count <= sec) {
         /* 绘制彩色圆环进度条
         注意此处 传参 step 取值范围是0到2，
         所以 计数器 最大值 60 对应 2 做处理，计数器count=60的时候step=2
         */
-        this.drawCircle(this.data.count / (60 / 2))
+        this.drawCircle(this.data.count / (sec / 2))
         this.data.count++;
       } else {
         this.setData({
@@ -105,6 +107,7 @@ Page({
           })
           getApp().globalData.currentGameRound = value.message.round
         } else if (value.message.type == 'finish') {
+          clearInterval(this.countTimer);
           wx.reLaunch({
             url: '/pages/index/index',
           })
@@ -136,6 +139,7 @@ Page({
       if (distance <= 0) {
         clearInterval(x);
         console.log(this)
+        clearInterval(this.countTimer);
         wx.reLaunch({
           url: '/pages/question/question'
         })
@@ -162,7 +166,7 @@ Page({
    * Page initial data
    */
 
-  // circle 
+  // circle
   data: {
     progress_txt: 'matching...',
     count: 0, // 设置 计数器 初始为0
@@ -227,6 +231,7 @@ Page({
     var sec = Number.parseInt(arr[0]) * 60 + Number.parseInt(arr[1])
     getApp().globalData.extraSec = sec
     console.log(getApp().globalData.extraSec);
+    clearInterval(this.countTimer);
     wx.navigateTo({
       url: '/pages/question/question'
     })

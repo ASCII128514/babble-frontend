@@ -4,30 +4,26 @@
   <!-- Top area -->
   <view class="top-area">
     <!-- title -->
-        <view class="title">
-          <view>Ask {{name}} about... </view>
-        </view>
+    <view class="title">
+      <view>Ask {{name}} about...</view>
+    </view>
     <!-- title ends -->
-
     <!-- circle -->
-        <view class="circle-area">
-          <view class='progress_box'>
-            <canvas class="progress_bg" canvas-id="canvasProgressbg"> </canvas>
-            <canvas class="progress_canvas" canvas-id="canvasProgress"> </canvas>
-            <view class="progress_text">
-                <!-- <view class="progress_dot"></view> -->
-                <!-- <image class="avatar" src="http://lc-qaxMtbr0.cn-n1.lcfile.com/949ea3c54c9e576e0317/Arya.jpeg"></image> -->
-                <text class='progress_info'> {{question}} what happened when Alex said he xlah dlah dklads adsgk asdlf asdlkg jkasg lja sg </text>
-            </view>
-          </view>
+    <view class="circle-area">
+      <view class='progress_box'>
+        <canvas class="progress_bg" canvas-id="canvasProgressbg"></canvas>
+        <canvas class="progress_canvas" canvas-id="canvasProgress"></canvas>
+        <view class="progress_text">
+          <!-- <view class="progress_dot"></view> -->
+          <!-- <image class="avatar" src="http://lc-qaxMtbr0.cn-n1.lcfile.com/949ea3c54c9e576e0317/Arya.jpeg"></image> -->
+          <text class='progress_info'>{{question}}</text>
         </view>
+      </view>
+    </view>
     <!-- circle -->
-
     <!-- timer and round -->
-        <view class="timer">Countdown: {{timerCountdown}}</view>
-        <view class="round">Round {{currentGameRound}}/{{numberOfRounds}}</view>
+    <view class="timer">Countdown: {{timerCountdown}}</view>
+    <view class="round">Round {{currentGameRound}}/{{numberOfRounds}}</view>
     <!-- timer and round -->
-
   </view>
-
 </view>

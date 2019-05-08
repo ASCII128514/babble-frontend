@@ -1,17 +1,29 @@
 const switching = function (query) {
+  // check whether the user already have a game stored in his storage before everything else
+  // make request to the api to check whether the game is ended
+  // set the scene to that room if it is not expired
+  // clear it if the room is expired.
   let scene = null;
+  var storageRoom = wx.getStorageSync('room')
+
+  if (storageRoom) {
+    // make api call to check whether the room is expired
+    scene = storageRoom
+  }
+  console.log(scene)
+
   // console.log(typeof query.scene);
   console.log(query)
-  if (typeof query.scene === 'undefined') {
+  if (typeof query.scene === 'undefined' && scene === null) {
     wx.reLaunch({
       url: '/pages/index/index',
     })
     return
   }
-  if (typeof query.scene !== "undefined" || typeof query.scene !== "string" ) {
+  if (typeof query.scene === "string") {
     console.log("query:", query);
     scene = decodeURIComponent(query.scene);
-  } else {
+  } else if (typeof query.scene === 'integer') {
     scene = query.scene;
   }
   console.log("scene", scene);
@@ -19,7 +31,10 @@ const switching = function (query) {
   console.log(scene !== "undefined");
   console.log(scene !== null);
   console.log("in redirect")
+  console.log(scene)
   if (scene !== null && scene !== "undefined") {
+    wx.setStorageSync('room', scene);
+    console.log('set storage')
     wx.request({
       url: `https://babble.wogengapp.cn/api/v1/game/${scene}`,
       method: "get",
@@ -68,12 +83,18 @@ const switching = function (query) {
             url: "/pages/player_index/player_index",
           });
         } else {
+          // clear the phone's storage
+          wx.setStorageSync('room', null);
           wx.reLaunch({
             url: '/pages/index/index',
           })
         }
-      },
+      }
     });
+  } else {
+    wx.reLaunch({
+      url: '/pages/index/index',
+    })
   }
 };
 

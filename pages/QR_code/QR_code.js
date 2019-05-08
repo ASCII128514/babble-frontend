@@ -24,6 +24,7 @@ Page({
       qrCodeUrl: app.globalData.qrCodeUrl,
       roomId: app.globalData.roomId
     })
+    wx.setStorageSync('room', app.globalData.roomId);
     app.globalData.roomId = null
 
     wx.setNavigationBarColor({
