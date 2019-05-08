@@ -93,7 +93,7 @@ Page({
     })
 
     wx.setNavigationBarTitle({
-      title: 'Get it started!',
+      title: 'Find Your Partner',
     })
     // topbar styling ends
 
