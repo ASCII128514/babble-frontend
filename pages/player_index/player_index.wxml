@@ -1,22 +1,21 @@
 <view class="container">
   <!-- Background -->
-<<<<<<< HEAD
   <view class="background">
     <view class="background_picture" style="background-image: linear-gradient(-200deg, rgba(0,90,168,0.2) 0%, rgba(0,76,61,0.2) 60%), url('http://lc-qaxMtbr0.cn-n1.lcfile.com/3918e9a0879471434fb9/Index_1.png');"></view>
     <view class='title'>Babblers</view>
   </view>
-=======
+
   <!-- <view class="background">
     <view class="background_picture" style="background-image: linear-gradient(-200deg, rgba(0,90,168,0.2) 0%, rgba(0,76,61,0.2) 60%), url('http://lc-qaxMtbr0.cn-n1.lcfile.com/3918e9a0879471434fb9/Index_1.png');"></view>
     <view class='title'>Babblers</view>
   </view> -->
-  <view class="background" style="background-image: linear-gradient(-200deg, rgba(0,90,168,0.2) 0%, rgba(0,76,61,0.2) 60%), url('http://lc-qaxMtbr0.cn-n1.lcfile.com/3918e9a0879471434fb9/Index_1.png');"></view>
->>>>>>> ab1be09b2103caf04b16928f0a03c8e15b373017
+  <!-- <view class="background" style="background-image: linear-gradient(-200deg, rgba(0,90,168,0.2) 0%, rgba(0,76,61,0.2) 60%), url('http://lc-qaxMtbr0.cn-n1.lcfile.com/3918e9a0879471434fb9/Index_1.png');"></view> -->
+
   <!-- backgroud -->
   <!-- instruction symbol -->
   <view class="symbol_section">
     <image src="http://lc-qaxMtbr0.cn-n1.lcfile.com/0e440a34d3d77d186707/instruction%20symbol.png" class="instruction_symbol" bindtap='toInstruction'></image>
-<<<<<<< HEAD
+
   </view>
   <!-- instruction symbol -->
 
@@ -31,30 +30,5 @@
       </view>
     </form>
   </view>
-=======
-  </view> -->
-  <!-- instruction symbol -->
-  <!-- <view class="symbol_section">
-        <image src="http://lc-qaxMtbr0.cn-n1.lcfile.com/0e440a34d3d77d186707/instruction%20symbol.png" class="instruction_symbol" bindtap='toInstruction'></image>
-    </view> -->
-  <!-- instruction symbol -->
-  <!-- Main text -->
-  <!-- <view class="content">
-    <view class='title'>Welcome</view>
-    <form bindsubmit="nameSubmit">
-      <input class='teaser' name="name" placeholder="Enter your name" value="{{name}}" />
-      <view class='bottom-section'>
-        <button formType="submit" class='button'>Let's start!</button>
-      </view>
-    </form>
-  </view> -->
-  <view class="content">
-    <view class='title'>Welcome</view>
-    <form bindsubmit="nameSubmit">
-      <input class='teaser' name="name" placeholder="Enter your name" value="{{name}}" />
-      <button formType="submit" class='button'>Let's start!</button>
-    </form>
-  </view>
-  <!-- Main text -->
->>>>>>> ab1be09b2103caf04b16928f0a03c8e15b373017
+
 </view>
