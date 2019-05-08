@@ -38,9 +38,8 @@
 			"list": []
 		},
 		"miniprogram": {
-			"current": 21,
-			"list": [
-				{
+			"current": 23,
+			"list": [{
 					"id": -1,
 					"name": "game",
 					"pathName": "pages/creation/creation",
@@ -192,6 +191,13 @@
 					"name": "playerindex-1",
 					"pathName": "pages/login/login",
 					"query": "scene=98",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "login",
+					"pathName": "pages/login/login",
+					"query": "scene=82",
 					"scene": null
 				}
 			]

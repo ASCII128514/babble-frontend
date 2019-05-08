@@ -1,11 +1,5 @@
-// pages/instruction/instruction.js
+// pages/finished_game/finished_game.js
 Page({
-
-  buttonClicked: function () {
-    wx.navigateTo({
-      url: '/pages/set_rounds/set_rounds'
-    })
-  },
 
   /**
    * Page initial data
@@ -18,15 +12,6 @@ Page({
    * Lifecycle function--Called when page load
    */
   onLoad: function (options) {
-    
-      wx.setNavigationBarColor({
-        frontColor: '#ffffff',
-        backgroundColor: '#A7C3EC',
-      })
-
-      wx.setNavigationBarTitle({
-        title: 'How to play',
-      })
 
   },
 

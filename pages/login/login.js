@@ -17,6 +17,15 @@ Page({
    */
   onLoad: function (query) {
 
+    wx.setNavigationBarColor({
+      frontColor: '#ffffff',
+      backgroundColor: '#A7C3EC',
+    })
+
+    wx.setNavigationBarTitle({
+      title: 'Welcome',
+    })
+
     var app = getApp()
     console.log(wx.getStorageSync("token"));
     // 展示本地存储能力
