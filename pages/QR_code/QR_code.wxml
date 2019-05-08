@@ -2,13 +2,18 @@
 
 <view class="container">
 
+    <view class="title">
+      Invite Your Players
+    </view>
   <!-- QR code -->
+    <view class="circle_container">
       <image class="QR" src="{{qrCodeUrl}}"></image>
+    </view>
   <!-- QR code ends -->
 
   <!-- text -->
     <view class="text">
-      Invite people by share this QR code
+      Share this QR code with your group members to invite them to join the game.
     </view>
   <!-- text ends -->
 
