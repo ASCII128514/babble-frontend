@@ -12,10 +12,8 @@
    
       <form class="form" bindsubmit="nameSubmit">
       
-        <view class='teaser'> What is your name?</view>
-        <view class='entry_form'><input name="name" placeholder="" value="{{name}}"/></view>
         <view formType="submit" class='button' bindtap="buttonClicked">
-            Start Babbling
+            Game loading...
         </view>
       </form>
       
