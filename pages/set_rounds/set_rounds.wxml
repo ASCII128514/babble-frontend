@@ -9,13 +9,13 @@
       <view class="content">
           <!-- title -->
             <view class="title">
-              Setting rounds
+              Set Rounds
             </view>
           <!-- title -->
 
           <!-- text -->
             <view class="text">
-              How many rounds do you want the participants to play?
+              How many rounds do you want the players to play?
             </view>
           <!-- text -->
 

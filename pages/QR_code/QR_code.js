@@ -33,7 +33,7 @@ Page({
     })
 
     wx.setNavigationBarTitle({
-      title: 'QR code',
+      title: 'Share QR Code',
     })
 
   },
