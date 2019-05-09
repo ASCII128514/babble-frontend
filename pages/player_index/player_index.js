@@ -20,7 +20,7 @@ Page({
 
 
     } else if (verification == true) {
-      sendNameToBackend(e); s
+      sendNameToBackend(e);
       wx.navigateTo({
         url: '/pages/take_selfie/take_selfie'
       })
