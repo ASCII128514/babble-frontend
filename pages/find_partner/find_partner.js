@@ -80,7 +80,7 @@ Page({
     })
 
     wx.setNavigationBarTitle({
-      title: 'Find Your Partner',
+      title: 'Babbling...',
     })
 
     this.setData({

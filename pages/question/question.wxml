@@ -18,18 +18,22 @@
               <text class='progress_info'>{{question}}</text>
             </view>
           </view>
-          
+
         <!-- timer -->
-          <view class="timer">Countdown:</view>
+        <view class="timer-section">
+          <view class="timer-text">Countdown:</view>
           <view class="timer">{{timerCountdown}}</view>
+        </view>
         <!-- timer ends -->
       </view>
     <!-- circle & countdown-->
-    </view>
+     </view>
  <!-- top part -->
 
     <!-- round -->
-      <view class="round">Round {{currentGameRound}}/{{numberOfRounds}}</view>
+      <view class="buttons-section">
+        <view class="round">Round {{currentGameRound}}/{{numberOfRounds}}</view>
+      </view>
     <!-- round -->
-
+   
 </view>

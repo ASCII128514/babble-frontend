@@ -1,7 +1,7 @@
 /* pages/question/question.wxss */
 .container {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
   align-items: center;
   flex-direction: column;
   height: 100vh;
@@ -14,16 +14,18 @@
   width: 100vw;
   height: 75%;
   display: flex;
-  justify-content: space-around;
+  justify-content: center;
   align-items: center;
   flex-direction: column;
   padding: 3px;
+  /* background-color: blue; */
 }
 
  .title {
    font-family: serif;
-   margin-top: 10px;
    font-size: 30px;
+   height: 10%;
+   /* background-color: greenyellow; */
  }
 
 .avatar {
@@ -46,29 +48,42 @@
     font-family: calibri;
   }
 
+.timer-section {
+  height: 10%;
+}
+
+.timer-text {
+  font-size: 10px;
+  font-weight: light;
+  color: grey
+}
+
 .timer {
   font-weight: 900;
-  font-size: 20px;
+  font-size: 30px;
+  font-family: calibri;
 }
 
 /* bottom section*/
 .round {
-  font-family: calibri;
-  margin-bottom: 40px;
-  font-size: 12px;
+  font-size: 10px;
+  font-weight: light;
+  color: grey;
+  /* background-color: green; */
 }
 /* bottom section*/
 
 /* circle */
 .circle-area {
   width: 100vw;
-  height: 100vw;
+  height: 80%;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
-
+  /* background-color: blue; */
 }
+
 .progress_box{
     position: relative;
     width: 100vw;

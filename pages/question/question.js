@@ -101,7 +101,7 @@ Page({
     })
 
     wx.setNavigationBarTitle({
-      title: 'Ask the Question',
+      title: 'Question time',
     })
     var name = getApp().globalData.pair.user.name
     this.setData({
