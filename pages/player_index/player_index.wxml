@@ -1,3 +1,16 @@
+<modal title="Oops!" cancelText="Cancel" confirmText="Try Again" hidden="{{modalHidden}}" bindconfirm="modalConfirm" bindcancel="modalCancel">
+  <!-- <image style="height:40vh; width:100%;" src="../../lib/assets/Exploring-dog.jpg"></image> -->
+  <view class="body">
+    <view class="card-owner">
+      <view class="card-owner-infos">
+        <view class="owner-comments">
+        Please enter your name using up to 10 characters.
+        </view>
+      </view>
+    </view>
+  </view>
+</modal>
+
 <view class="container">
   <!-- Background -->
   <view class="background">
