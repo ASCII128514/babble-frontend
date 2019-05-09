@@ -11,6 +11,12 @@
   background: linear-gradient(172deg, rgba(252, 252, 252, 1) 0%, rgba(241, 249, 250, 1) 73%, rgba(233, 248, 251, 1) 100%, rgba(255, 255, 255, 0) 100%);
 }
 
+.circle {
+  border-radius: 50%;
+  height: 55vh;
+  width: 95%
+}
+
 .camera {
   border-radius: 50%;
   height: 55vh;
