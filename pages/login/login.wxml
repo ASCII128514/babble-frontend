@@ -13,7 +13,7 @@
       <form class="form" bindsubmit="nameSubmit">
       
         <view formType="submit" class='button' bindtap="buttonClicked">
-            Game loading...
+            loading...
         </view>
       </form>
       

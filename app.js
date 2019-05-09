@@ -7,6 +7,11 @@ AV.init({
 })
 
 App({
+  onHide: function() {
+    wx.reLaunch({
+      url: '/pages/special_room/special_room',
+    })
+  },
   onLaunch: function () {
     // var app = this
     // console.log(wx.getStorageSync("token"));
@@ -113,6 +118,7 @@ App({
     playerList: [],
     extraSec: 0,
 
-    currentGameRound: 0
+    currentGameRound: 0,
+    pairs: {}
   }
 });

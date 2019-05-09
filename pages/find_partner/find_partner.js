@@ -124,9 +124,19 @@ Page({
             pair: value.message.pairs[wx.getStorageSync('token')],
             pairs: value.message.pairs
           })
+          getApp().globalData.pairs = value.message.pairs
           getApp().globalData.currentGameRound = value.message.round
+        } else if (value.message.type == "pair") {
+          getApp().globalData.pair = value.message.pairs[wx.getStorageSync('token')]
+          getApp().globalData.currentGameRound = value.message.round
+          console.log(value.message.pairs)
+          console.log(getApp().globalData.pair)
+          console.log("question", getApp().globalData.pair.question)
+          wx.redirectTo({
+            url: '/pages/find_partner/find_partner'
+          })
         } else if (value.message.type == 'finish') {
-          clearInterval(this.countTimer);
+          wx.setStorageSync('room', null);
           wx.reLaunch({
             url: '/pages/index/index',
           })
