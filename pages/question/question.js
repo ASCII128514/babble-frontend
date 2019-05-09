@@ -192,6 +192,9 @@ Page({
       if (m == -1) {
         m = 0
       }
+      if (s < 10) {
+        s = `0${s}`
+      }
       var countdown = m + ":" + s;
       page.setData({
         timerCountdown: countdown

@@ -40,7 +40,7 @@
 			"list": []
 		},
 		"miniprogram": {
-			"current": 21,
+			"current": 23,
 			"list": [
 				{
 					"id": -1,
@@ -201,6 +201,13 @@
 					"name": "login",
 					"pathName": "pages/login/login",
 					"query": "scene=82",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "End Screen",
+					"pathName": "pages/finished_game/finished_game",
+					"query": "",
 					"scene": null
 				}
 			]

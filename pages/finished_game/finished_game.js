@@ -12,7 +12,13 @@ Page({
    * Lifecycle function--Called when page load
    */
   onLoad: function (options) {
-
+    wx.setNavigationBarColor({
+      frontColor: '#ffffff',
+      backgroundColor: '#5a97f1',
+    })
+    wx.setNavigationBarTitle({
+      title: 'Finished Game',
+    })
   },
 
   /**

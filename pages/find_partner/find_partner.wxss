@@ -102,7 +102,7 @@
   justify-content: space-around;
   align-items: center;
   width: 100vw;
-  height: 15vh;
+  height: 20vh;
   margin: 30px;
 }
 
