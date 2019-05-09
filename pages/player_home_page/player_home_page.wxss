@@ -1,0 +1,69 @@
+/* pages/player_home_page.wxss */
+.container {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 100vh;
+  background: #86A8E7;
+  /* background: linear-gradient(172deg, rgba(252,252,252,1) 0%, rgba(241,249,250,1) 73%, rgba(233,248,251,1) 100%, rgba(255,255,255,0) 100%); */
+  align-items: center;
+  justify-content: center;
+}
+
+.title_area {
+  height: 70vh;
+  width: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  z-index: 3;
+  text-shadow: 2px 2px 2px black;
+}
+
+.title {
+  font-size: 40px;
+}
+
+.slogan {
+  font-size: 24px;
+  margin-top: 16px;
+  width: 100vw;
+  text-align: center;
+}
+
+.button_area {
+  height: 30vh;
+  width: 100vh;
+  z-index: 3;
+}
+
+.button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 16px;
+  width: 50vw;
+  background-color:white;
+  color: #5a97f1;
+  font-weight: bold;
+  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+  padding: 16px;
+
+}
+
+#myCanvas {
+  width: 100vw;
+  height: 100vh;
+  position: absolute;
+  z-index: 1;
+}
+
+#backgroundLayer {
+  position: absolute;
+  width: 100vw;
+  height: 100vh;
+  z-index: 2;
+  background-color: rgba(255, 255, 255, 0.35);
+}

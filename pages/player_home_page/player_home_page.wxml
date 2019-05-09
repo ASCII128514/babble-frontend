@@ -1,0 +1,13 @@
+<canvas id="myCanvas" canvas-id="babbleheadCanvas" />
+<view id="backgroundLayer"></view>
+
+<view class="container">
+  <view class="title_area">
+    <view class="title">Babbler</view>
+    <view class="slogan">Create connections with your friends</view>
+  </view>
+
+  <view class="button_area">
+    <button class='button' bindtap="goToNextPage">Start Babbling</button>
+  </view>
+</view>
