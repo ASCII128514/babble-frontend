@@ -5,13 +5,40 @@ import { sendNameToBackend } from '../../utils/create_game_api.js';
 
 Page({
   data: {
+    modalHidden: true,
+  },
+
+  nameSubmit: function (e) {
+    var patt = new RegExp(/^(.{1,10}\w)$/);
+    var verification = patt.test(e.detail.value.name);
+    console.log("verified?", verification);
+
+    if (verification == false) {
+      this.setData ({
+        modalHidden: false
+      })
+
+
+    } else if (verification == true) {
+      sendNameToBackend(e); s
+      wx.navigateTo({
+        url: '/pages/take_selfie/take_selfie'
+      })
+    }    
+  },
+
+  modalCancel: function () {
+    this.setData({
+      modalHidden: true
+    })
 
   },
-  nameSubmit: function (e) {
-    sendNameToBackend(e);
-    wx.navigateTo({
-      url: '/pages/take_selfie/take_selfie'
+
+  modalConfirm: function () {
+    this.setData({
+      modalHidden: true
     })
+
   },
 
   toInstruction: function () {
@@ -33,4 +60,5 @@ Page({
       name: app.globalData.currentUser.name
     })    
   },
+
 })
