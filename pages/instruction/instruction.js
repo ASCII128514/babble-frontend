@@ -21,7 +21,7 @@ Page({
     
       wx.setNavigationBarColor({
         frontColor: '#ffffff',
-        backgroundColor: '#A7C3EC',
+        backgroundColor: '#5a97f1',
       })
 
       wx.setNavigationBarTitle({

@@ -97,11 +97,11 @@ Page({
     var page = this
     wx.setNavigationBarColor({
       frontColor: '#ffffff',
-      backgroundColor: '#A7C3EC',
+      backgroundColor: '#5a97f1',
     })
 
     wx.setNavigationBarTitle({
-      title: 'Question time!',
+      title: 'Ask the Question',
     })
     var name = getApp().globalData.pair.user.name
     this.setData({

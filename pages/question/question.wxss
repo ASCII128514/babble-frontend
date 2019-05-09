@@ -12,9 +12,9 @@
 
 .top-part {
   width: 100vw;
-  height: 60vh;
+  height: 75%;
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
   align-items: center;
   flex-direction: column;
   padding: 3px;
@@ -23,6 +23,7 @@
  .title {
    font-family: serif;
    margin-top: 10px;
+   font-size: 30px;
  }
 
 .avatar {
@@ -55,7 +56,6 @@
   font-family: calibri;
   margin-bottom: 40px;
   font-size: 12px;
-  background-color: yellow;
 }
 /* bottom section*/
 

@@ -1,7 +1,7 @@
 /* pages/find_partner/find_partner.wxss */
 .container {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
   align-items: center;
   flex-direction: column;
   height: 100vh;
@@ -13,9 +13,9 @@
 .top-area {
   /* background-color: blue; */
   width: 100vw;
-  height: 60vh;
+  height: 75%;
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
   align-items: center;
   flex-direction: column;
 }
@@ -23,6 +23,7 @@
 .title {
   font-family: serif;
   margin-top: 10px;
+  font-size: 30px;
 }
 
 .timer {
@@ -111,7 +112,7 @@
 }
 
 .button {
-  display: flex;
+ display: flex;
   justify-content: center;
   align-items: center;
   margin: 20px;
@@ -119,7 +120,7 @@
   border-radius: 16px;
   width: 50vw;
   /* background-color: rgb(130, 96, 168); */
-  background-color: #A7C3EC;
+  background-color:rgb(90, 151, 241);
   color: white;
   font-weight: bold;
   box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);

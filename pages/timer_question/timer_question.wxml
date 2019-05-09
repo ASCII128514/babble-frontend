@@ -9,7 +9,7 @@
       <view class="content">
           <!-- title -->
             <view class="title">
-              Question time
+              Question Time
             </view>
           <!-- title -->
 
@@ -20,13 +20,18 @@
           <!-- text -->
 
           <!-- timer -->
+             <view class="time"> 
+                <view class="text_timer"> 
+                  Set Timer:
+                </view>
             <!-- <input name="question_timer" placeholder="in seconds" questiontimer/> -->
             <picker mode="multiSelector" bindchange="questionTimeAmount" value="{{gameTimeIndices}}" range="{{[gameTime.minute_possibilities, gameTime.second_possibilities]}}">
               <view class="picker">
                 <!-- Current selection: {{gameTime[0][time[0]]}}, {{gameTime[1][time[1]]}} -->
-                Time: {{minute}}:{{second}}
+                {{minute}}:{{second}}
               </view>
             </picker>
+            </view>
           <!-- timer -->
 
       </view>
