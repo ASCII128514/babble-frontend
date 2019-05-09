@@ -40,10 +40,10 @@ Page({
   drawCircle: function (step) {
     var context = wx.createCanvasContext('canvasProgress');
     // 设置渐变
-    var gradient = context.createLinearGradient(200, 100, 100, 200);
-    gradient.addColorStop("0", "#2661DD");
-    gradient.addColorStop("0.5", "#40ED94");
-    gradient.addColorStop("1.0", "#5956CC");
+    var gradient = context.createLinearGradient(250, 250, 0, 0);
+    gradient.addColorStop("0", "#ffeaa5");
+    gradient.addColorStop("0.5", "#ffeaa5");
+    gradient.addColorStop("1.0", "#D6344F");
     context.setLineWidth(10);
     context.setStrokeStyle(gradient);
     context.setLineCap('round')

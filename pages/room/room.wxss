@@ -57,7 +57,7 @@
   height: 70%;
   width: 100vw;
   justify-items: center;
-  grid-row-gap: 8px;
+  grid-row-gap: 5px;
 }
 
 /* card */
@@ -79,5 +79,6 @@
 
 .name {
   font-size: 15px;
+  text-align: center;
 }
 /* card ends */
