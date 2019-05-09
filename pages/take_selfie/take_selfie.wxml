@@ -3,8 +3,10 @@
  <view class="page-body">
   
       <!-- camera -->
-        <camera class="camera" device-position="front" flash="off" binderror="error">
+      <view class="circle">  
+        <camera class="camera" device-position="front" flash="off" binderror="error" style="border-radius: 50%;">
         </camera>
+      </view>
       <!-- camera -->
 
 
