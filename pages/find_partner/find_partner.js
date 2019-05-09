@@ -75,7 +75,8 @@ Page({
 
   onLoad: function (options) {
     this.setData({
-      user: getApp().globalData.pair.user
+      user: getApp().globalData.pair.user,
+      pairs: getApp().globalData.pairs
     })
     console.log(this.data.user)
     console.log(getApp().globalData.pair.user)
@@ -117,9 +118,10 @@ Page({
       const value = JSON.parse(res.data)
       console.log('check value for pairs:', value);
       if (value.type != 'ping' && value.type != 'welcome' && value.type != 'confirm_subscription') {
-        if (value.message.type == "pairs") {
+        if (value.message.type == "pair") {
           console.log("pairs:", value.message.pairs);
           this.setData({
+            pair: value.message.pairs[wx.getStorageSync('token')],
             pairs: value.message.pairs
           })
           getApp().globalData.currentGameRound = value.message.round

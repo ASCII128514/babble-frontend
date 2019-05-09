@@ -41,6 +41,7 @@ Page({
         } else if (value.message.type == "pair") {
           getApp().globalData.pair = value.message.pairs[wx.getStorageSync('token')]
           getApp().globalData.currentGameRound = value.message.round
+          console.log(value.message.pairs)
           console.log(getApp().globalData.pair)
           console.log("question", getApp().globalData.pair.question)
           wx.redirectTo({
