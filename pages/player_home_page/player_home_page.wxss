@@ -65,5 +65,9 @@
   width: 100vw;
   height: 100vh;
   z-index: 2;
-  background-color: rgba(255, 255, 255, 0.35);
+  background-color: rgba(127, 136, 138, 0.349);
+}
+
+.babblehead {
+  position: absolute;
 }

@@ -3,17 +3,17 @@ Page({
     babbleheads: [
     ],
     babbleheadImages: [
-      "http://lc-qaxmtbr0.cn-n1.lcfile.com/2df599644978ef05bbb4/paul.png",
-      "http://lc-qaxmtbr0.cn-n1.lcfile.com/601206fc75b9ac5f0317/brooke.png",
-      "http://lc-qaxmtbr0.cn-n1.lcfile.com/8cf6c87242ab68710a3b/Zozo.png",
-      "http://lc-qaxmtbr0.cn-n1.lcfile.com/0bed6cecabaed2d1e68d/James.png",
-      "http://lc-qaxmtbr0.cn-n1.lcfile.com/66567efdfa9d54c9253f/Sijun.png",
-      "http://lc-qaxmtbr0.cn-n1.lcfile.com/01c62f3fb8d9d52273da/Carly.png",
-      "http://lc-qaxmtbr0.cn-n1.lcfile.com/79711c9a221281038fed/Dave.png",
-      "http://lc-qaxmtbr0.cn-n1.lcfile.com/0f35aeebcf32ed3822e4/Fredly.png",
-      "http://lc-qaxmtbr0.cn-n1.lcfile.com/a0b89e5e4cfbbd440c9e/MareBear.png",
-      "http://lc-qaxmtbr0.cn-n1.lcfile.com/67d5fe26708f5092ec43/Mira.png",
-      "http://lc-qaxmtbr0.cn-n1.lcfile.com/f3f460b2726d2b357636/Wowo.png"
+      "https://lc-qaxmtbr0.cn-n1.lcfile.com/2df599644978ef05bbb4/paul.png",
+      "https://lc-qaxmtbr0.cn-n1.lcfile.com/601206fc75b9ac5f0317/brooke.png",
+      "https://lc-qaxmtbr0.cn-n1.lcfile.com/8cf6c87242ab68710a3b/Zozo.png",
+      "https://lc-qaxmtbr0.cn-n1.lcfile.com/0bed6cecabaed2d1e68d/James.png",
+      "https://lc-qaxmtbr0.cn-n1.lcfile.com/66567efdfa9d54c9253f/Sijun.png",
+      "https://lc-qaxmtbr0.cn-n1.lcfile.com/01c62f3fb8d9d52273da/Carly.png",
+      "https://lc-qaxmtbr0.cn-n1.lcfile.com/79711c9a221281038fed/Dave.png",
+      "https://lc-qaxmtbr0.cn-n1.lcfile.com/0f35aeebcf32ed3822e4/Fredly.png",
+      "https://lc-qaxmtbr0.cn-n1.lcfile.com/a0b89e5e4cfbbd440c9e/MareBear.png",
+      "https://lc-qaxmtbr0.cn-n1.lcfile.com/67d5fe26708f5092ec43/Mira.png",
+      "https://lc-qaxmtbr0.cn-n1.lcfile.com/f3f460b2726d2b357636/Wowo.png"
     ],
     windowWidth: 0
   },
@@ -37,7 +37,10 @@ Page({
 
     wx.getSystemInfo({
       success: (res) => {
-        this.setData({windowWidth: res.windowWidth});
+        this.setData({
+          windowWidth: res.windowWidth,
+          windowHeight: res.windowHeight,  
+        });
       }
     });
   },
@@ -47,10 +50,7 @@ Page({
 
   onReady: function (e) {
     this.createBabbleheads();
-
-    
-    setInterval(this.gameLoop, 50);
-    
+    setInterval(this.gameLoop, 50)
   },
 
 
@@ -61,20 +61,34 @@ Page({
   },
 
 
-
-
+  generateBabbleHead: function() {
+    return {
+      x: this.data.windowWidth / 2,
+      y: this.data.windowHeight / 2,
+      image: this.data.babbleheadImages[this.getRandomInt(0, this.data.babbleheadImages.length)],
+      xVelocity: this.getRandomInt(-5, 5),
+      yVelocity: this.getRandomInt(-5, 5),
+      radius: this.getRandomInt(40, 150)
+    };
+  },
 
   createBabbleheads: function() {
     let babbleheads = [];
 
-    for(let i = 0; i < 30; i++) {
+    for(let i = 0; i < 20; i++) {
+      
       let babblehead = {
-        x: this.getRandomInt(-700, 700),
-        y: this.getRandomInt(0, 700),
+        x: this.data.windowWidth / 2,
+        y: this.data.windowHeight / 2,
         image: this.data.babbleheadImages[this.getRandomInt(0, this.data.babbleheadImages.length)],
-        velocity: this.getRandomInt(1, 5),
-        radius: this.getRandomInt(50, 75)
+        xVelocity: this.getRandomInt(-5, 5),
+        yVelocity: this.getRandomInt(-5, 5),
+        radius: this.getRandomInt(40, 100)
       };
+
+      if (babblehead.xVelocity + babblehead.yVelocity === 0) {
+        babblehead = this.generateBabbleHead();
+      }
     
       babbleheads.push(babblehead);
     }
@@ -83,39 +97,24 @@ Page({
   },
 
 
-
-
-
   gameLoop: function() {
-    console.log(this.data.babbleheads.length);
-    const ctx = wx.createCanvasContext('babbleheadCanvas');
+    const babbleheads = this.data.babbleheads;
+    babbleheads.forEach((babblehead) => {
+      // update position
+      babblehead.x = babblehead.x + babblehead.xVelocity;
+      babblehead.y = babblehead.y + babblehead.yVelocity;
 
-    ctx.clearRect(0, 0, 500, 1000);
-
-    for(let i = 0; i < this.data.babbleheads.length; i++) {
-      let babblehead = this.data.babbleheads[i];
-      babblehead["x"] = babblehead["x"] + babblehead["velocity"];
-
-      if(babblehead["x"] > this.data.windowWidth) {
-        babblehead["dead"] = true;
+      // 
+      if (babblehead.x >= (this.data.windowWidth - babblehead.radius) || babblehead.x <= 0 ) {
+        babblehead.xVelocity = - babblehead.xVelocity;
       }
-      ctx.drawImage(babblehead["image"], babblehead["x"], babblehead["y"], babblehead["radius"], babblehead["radius"]);
+      if (babblehead.y <= 0 || babblehead.y >= (this.data.windowHeight - babblehead.radius)) {
+        babblehead.yVelocity = - babblehead.yVelocity;
+      }
+    });
 
-    }
-
-  for (let i = 0; i < this.data.babbleheads.length; i++) {
-    let babblehead = this.data.babbleheads[i];
-    if (babblehead["dead"]) {
-      babblehead["x"] = this.getRandomInt(-700, -150);
-      babblehead["y"] = this.getRandomInt(0, 700);
-      babblehead["image"] = this.data.babbleheadImages[this.getRandomInt(0, this.data.babbleheadImages.length)];
-      babblehead["dead"] = false;
-      babblehead["radius"] = this.getRandomInt(40, 85);
-    }
+    this.setData({
+      babbleheads
+    })
   }
-    ctx.draw();
-  },
-
-  
-
 })
