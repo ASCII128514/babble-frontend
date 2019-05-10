@@ -35,6 +35,9 @@ Page({
   },
 
   savePic: function () {
+    wx.showLoading({
+      title: 'creating',
+    })
     console.log('selfie', app.globalData.previewSelfie)
     new AV.File('file-name', {
       blob: {
@@ -47,6 +50,7 @@ Page({
         sendPictureToBackend(file.url())
       })
       .then(res => {
+        wx.hideLoading()
         wx.reLaunch({
           url: '/pages/room/room'
         })

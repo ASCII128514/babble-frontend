@@ -8,7 +8,11 @@ let qrCodeUrl = g.qrCodeUrl;
 
 const createGame = function (objectOfSeconds, page) {
   var value = wx.getStorageSync("token");
+  console.log(numberOfRounds)
   if (value) {
+    wx.showLoading({
+      title: 'creating',
+    })
     wx.request({
       url: `https://babble.wogengapp.cn/api/v1/game`,
       method: "POST",
@@ -17,14 +21,14 @@ const createGame = function (objectOfSeconds, page) {
           token: value,
         },
         game: {
-          round_number: numberOfRounds,
+          round_number: getApp().globalData.numberOfRounds,
           find_partner_timer: objectOfSeconds.find_partner_timer,
           selfie_timer: objectOfSeconds.selfie_timer,
           question_timer: objectOfSeconds.question_timer,
         },
       },
       success: res => {
-
+        wx.hideLoading()
         let qrCodeUrl = res.data.url
         getApp().globalData.qrCodeUrl = qrCodeUrl
         getApp().globalData.roomId = res.data.room

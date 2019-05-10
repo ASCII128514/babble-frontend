@@ -31,6 +31,8 @@ Page({
   },
 
   roundsSlider: function(res) {
+    console.log(res.detail.value)
     getApp().globalData.numberOfRounds = res.detail.value
+    console.log(getApp().globalData.numberOfRounds )
   }
 })

@@ -1,4 +1,4 @@
-const switching = function (query) {
+const switching = function (query, page) {
   // check whether the user already have a game stored in his storage before everything else
   // make request to the api to check whether the game is ended
   // set the scene to that room if it is not expired
@@ -9,6 +9,10 @@ const switching = function (query) {
   if (storageRoom) {
     // make api call to check whether the room is expired
     scene = storageRoom
+    page.setData({
+      modalHidden: false
+    })
+    console.log("this is running")
   }
   console.log(scene)
 
@@ -23,8 +27,6 @@ const switching = function (query) {
   if (typeof query.scene === "string") {
     console.log("query:", query);
     scene = decodeURIComponent(query.scene);
-  } else if (typeof query.scene === 'integer') {
-    scene = query.scene;
   }
   console.log("scene", scene);
   getApp().globalData.qrCodeData = scene;
@@ -41,8 +43,9 @@ const switching = function (query) {
       success: res => {
         console.log("res data:", res.data);
         if (res.data.game.status !== "end") {
-          getApp().globalData.players = res.players;
-
+          console.log(res)
+          getApp().globalData.players = res.data.players;
+          getApp().globalData.numberOfRounds = res.data.game.round_number;
           var x = res.data.game.find_partner_timer % 60
           if (x === 0) {
             x = '00'

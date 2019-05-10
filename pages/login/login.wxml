@@ -1,3 +1,15 @@
+<modal cancelText="New Game" confirmText="Yes" hidden="{{modalHidden}}" bindconfirm="modalConfirm" bindcancel="modalCandel">
+<view class="body">
+<view class="card-owner">
+<view class="card-owner-infos">
+<view class="owner-comments" style='text-align: center;'>
+Have you already started a game?
+</view>
+</view> 
+</view>
+</view>
+</modal>
+
 <view class="container">
   <!-- Background -->
 

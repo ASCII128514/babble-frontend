@@ -9,14 +9,16 @@ Page({
    * 页面的初始数据
    */
   data: {
-
+    modalHidden: true,
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (query) {
-
+    this.setData({
+      query: query
+    })
     wx.setNavigationBarColor({
       frontColor: '#ffffff',
       backgroundColor: '#A7C3EC',
@@ -25,7 +27,7 @@ Page({
     wx.setNavigationBarTitle({
       title: 'Welcome',
     })
-
+    var page = this
     var app = getApp()
     console.log(wx.getStorageSync("token"));
     // 展示本地存储能力
@@ -52,7 +54,16 @@ Page({
               app.globalData.currentUser = res.data.currentUser
               const token = res.data;
               console.log("this is in the call back")
-              switching(query)
+              var storageRoom = wx.getStorageSync('room')
+              if (storageRoom) {
+                // make api call to check whether the room is expired
+                page.setData({
+                  modalHidden: false
+                })
+              } else {
+                switching(query, page)
+              }
+
             },
           });
         } else {
@@ -74,7 +85,16 @@ Page({
                 success: () => {
                   app.globalData.currentUser = token.data.currentUser
                   console.log("new user success");
-                  switching(query)
+                  var storageRoom = wx.getStorageSync('room')
+                  if (storageRoom) {
+                    // make api call to check whether the room is expired
+                    page.setData({
+                      modalHidden: false
+                    })
+                  } else {
+                    switching(query, page)
+                  }
+
                 },
               });
             },
@@ -107,5 +127,23 @@ Page({
         }
       },
     });
-  }
+  },
+
+
+  modalConfirm: function () {
+    var page = this
+    this.setData({
+      modalHidden: true
+    })
+    switching(page.data.query, page)
+  },
+
+  modalCandel: function () {
+    var page = this
+    this.setData({
+      modalHidden: true
+    })
+    wx.setStorageSync('room', null);
+    switching(page.data.query, page)
+  },
 })
