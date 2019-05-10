@@ -22,7 +22,8 @@
     "pages/instruction_find_next/instruction_find_next",
     "pages/pre_selfie/pre_selfie",
     "pages/finished_game/finished_game",
-    "pages/special_room/special_room"
+    "pages/special_room/special_room",
+    "pages/player_home_page/player_home_page"
   ],
   "window": {
     "backgroundTextStyle": "light",
