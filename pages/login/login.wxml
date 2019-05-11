@@ -1,14 +1,4 @@
-<modal cancelText="New Game" confirmText="Yes" hidden="{{modalHidden}}" bindconfirm="modalConfirm" bindcancel="modalCandel">
-<view class="body">
-<view class="card-owner">
-<view class="card-owner-infos">
-<view class="owner-comments" style='text-align: center;'>
-Have you already started a game?
-</view>
-</view> 
-</view>
-</view>
-</modal>
+
 
 <view class="container">
   <!-- Background -->
@@ -32,3 +22,14 @@ Have you already started a game?
 
   <!-- Main text -->
 </view>
+<modal cancelText="No" confirmText="Yes" hidden="{{modalHidden}}" bindconfirm="modalConfirm" bindcancel="modalCandel">
+<view class="body">
+<view class="card-owner">
+<view class="card-owner-infos">
+<view class="owner-comments" style='text-align: center;'>
+Do you wnat to join your previous game?
+</view>
+</view> 
+</view>
+</view>
+</modal>

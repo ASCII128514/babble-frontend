@@ -80,7 +80,7 @@ Page({
     })
 
     wx.setNavigationBarTitle({
-      title: 'Find Your Partner',
+      title: 'Babbling...',
     })
 
     this.setData({
@@ -138,11 +138,15 @@ Page({
           })
         } else if (value.message.type == 'finish') {
           wx.setStorageSync('room', null);
+          wx.closeSocket()
           wx.reLaunch({
-            url: '/pages/index/index',
+            url: '/pages/finished_game/finished_game',
           })
         }
       }
+    })
+    wx.onSocketClose(function (res) {
+      console.log('WebSocket 已关闭！')
     })
 
     let objectOfSeconds = convertArrayToSeconds();

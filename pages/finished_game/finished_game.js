@@ -18,6 +18,9 @@ Page({
     })
     wx.setNavigationBarTitle({
       title: 'Finished Game',
+    }),
+    this.setData({
+      number: getApp().globalData.numberOfRounds
     })
   },
 

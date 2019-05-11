@@ -8,6 +8,9 @@ AV.init({
 
 App({
   onHide: function() {
+    wx.onSocketOpen(function () {
+      wx.closeSocket()
+    })
     wx.reLaunch({
       url: '/pages/special_room/special_room',
     })

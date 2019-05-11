@@ -48,14 +48,19 @@ Page({
             url: '/pages/find_partner/find_partner'
           })
         } else if (value.message.type == 'finish') {
+          wx.closeSocket()
           wx.setStorageSync('room', null);
           wx.reLaunch({
-            url: '/pages/index/index',
+            url: '/pages/finished_game/finished_game',
           })
         }
       }
     })
+    wx.onSocketClose(function (res) {
+      console.log('WebSocket 已关闭！')
+    })
   },
+  
   getPair: function () {
     wx.request({
       url: `https://babble.wogengapp.cn/api/v1/game/${getApp().globalData.qrCodeData}/pair?round=${getApp().globalData.currentGameRound + 1}&token=${wx.getStorageSync('token')}`

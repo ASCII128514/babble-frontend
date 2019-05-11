@@ -1,0 +1,20 @@
+<!-- <canvas id="myCanvas" canvas-id="babbleheadCanvas" /> -->
+<block wx:for="{{babbleheads}}">
+  <image 
+    class="babblehead" 
+    src="{{item.image}}" 
+    style="height: {{item.radius}}px; width: {{item.radius}}px; top: {{item.y}}px; left: {{item.x}}px; "  
+  />
+</block>
+<view id="backgroundLayer"></view>
+
+<view class="container">
+  <view class="title_area">
+    <view class="title">Babblers</view>
+    <view class="slogan">Create connections with your friends</view>
+  </view>
+
+  <view class="button_area">
+    <button class='button' bindtap="goToNextPage">Start Babbling</button>
+  </view>
+</view>

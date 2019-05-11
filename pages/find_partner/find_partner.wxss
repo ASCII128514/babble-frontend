@@ -11,7 +11,6 @@
 }
 
 .top-area {
-  /* background-color: blue; */
   width: 100vw;
   height: 75%;
   display: flex;
@@ -24,11 +23,18 @@
   font-family: serif;
   margin-top: 10px;
   font-size: 30px;
+  /* background-color: blue; */
+}
+
+.timer-text {
+  font-size: 10px;
+  font-weight: light;
+  color: grey
 }
 
 .timer {
   font-weight: 900;
-  font-size: 20px;
+  font-size: 30px;
   font-family: calibri;
 }
 
@@ -46,12 +52,12 @@
 .circle-area {
   width: 100vw;
   height: 100vw;
-  /* background-color: yellow; */
   display: flex;
   justify-content: center;
   align-items: center;
-
+  /* background-color: green; */
 }
+
 .progress_box{
     position: relative;
     width: 100vw;
@@ -102,13 +108,15 @@
   justify-content: space-around;
   align-items: center;
   width: 100vw;
-  height: 20vh;
+  height: 25%;
   margin: 30px;
+  /* background-color: green; */
 }
 
 .round {
-  font-family: calibri;
-  font-size: 12px;
+  font-size: 10px;
+  font-weight: light;
+  color: grey;
 }
 
 .button {

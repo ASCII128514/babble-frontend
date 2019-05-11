@@ -1,23 +1,15 @@
-<view class="container">
-  <!-- Background -->
-
-  <view class="background">
+<view class="background">
     <view class="background_picture" style="background-image: linear-gradient(-200deg, rgba(0,90,168,0.2) 0%, rgba(0,76,61,0.2) 60%), url('http://lc-qaxMtbr0.cn-n1.lcfile.com/3918e9a0879471434fb9/Index_1.png');">
-    <view class='title'>Thanks for Babbling!</view>
-    </view>
-  </view>
-  <!-- backgroud -->
-
-  <!-- Main text -->
-   
-      <!-- <form class="form" bindsubmit="nameSubmit">
+          <view class='title'>Thanks for Babbling!</view>
       
-        
-        <view formType="submit" class='button' bindtap="buttonClicked">
-            Start Babbling
+
+      <!-- Main text -->
+        <view class='text'>
+            You have talked to {{number}} strangers!
         </view>
-      </form> -->
+      <!-- Main text -->
       
-
-  <!-- Main text -->
+    </view>
 </view>
+ 
+

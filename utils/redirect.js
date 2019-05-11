@@ -105,7 +105,7 @@ const switching = function (query, page) {
             }
           });
           wx.reLaunch({
-            url: "/pages/player_index/player_index",
+            url: "/pages/player_home_page/player_home_page",
           });
         } else {
           // clear the phone's storage

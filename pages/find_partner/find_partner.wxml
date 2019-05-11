@@ -21,7 +21,7 @@
       <!-- circle -->
 
       <!-- timer -->
-          <view class="timer">Countdown:</view>
+          <view class="timer-text">Countdown:</view>
           <view class="timer">{{timerCountdown}}</view>
       <!-- timer ends -->
 

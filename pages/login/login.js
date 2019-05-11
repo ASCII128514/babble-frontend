@@ -55,12 +55,14 @@ Page({
               const token = res.data;
               console.log("this is in the call back")
               var storageRoom = wx.getStorageSync('room')
-              if (storageRoom) {
+              if (typeof query.scene === 'undefined' && storageRoom) {
                 // make api call to check whether the room is expired
+                console.log("this is running in 60")
                 page.setData({
                   modalHidden: false
                 })
               } else {
+                console.log('65')
                 switching(query, page)
               }
 
@@ -86,7 +88,7 @@ Page({
                   app.globalData.currentUser = token.data.currentUser
                   console.log("new user success");
                   var storageRoom = wx.getStorageSync('room')
-                  if (storageRoom) {
+                  if (typeof query.scene === 'undefined' && storageRoom ) {
                     // make api call to check whether the room is expired
                     page.setData({
                       modalHidden: false

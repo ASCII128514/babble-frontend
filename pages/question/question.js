@@ -101,7 +101,7 @@ Page({
     })
 
     wx.setNavigationBarTitle({
-      title: 'Ask the Question',
+      title: 'Question time',
     })
     var name = getApp().globalData.pair.user.name
     this.setData({
@@ -139,11 +139,15 @@ Page({
           })
         } else if (value.message.type == 'finish') {
           wx.setStorageSync('room', null);
+          wx.closeSocket()
           wx.reLaunch({
-            url: '/pages/index/index',
+            url: '/pages/finished_game/finished_game',
           })
         }
       }
+    })
+    wx.onSocketClose(function (res) {
+      console.log('WebSocket 已关闭！')
     })
 
     let objectOfSeconds = convertArrayToSeconds();
@@ -172,15 +176,15 @@ Page({
         clearInterval(x);
         console.log(this)
         // if (this == page)
-        if (getApp().globalData.currentGameRound < getApp().globalData.numberOfRounds) {
+        // if (getApp().globalData.currentGameRound < getApp().globalData.numberOfRounds) {
           wx.request({
             url: `https://babble.wogengapp.cn/api/v1/game/${getApp().globalData.qrCodeData}/pair?round=${getApp().globalData.currentGameRound + 1}&token=${wx.getStorageSync('token')}`
           })
-        } else {
-          wx.reLaunch({
-            url: '/pages/index/index'
-          })
-        }
+        // } else {
+        //   wx.reLaunch({
+        //     url: '/pages/finished_game/finished_game'
+        //   })
+        // }
       }
 
       // Display the result in the element with id="demo"
