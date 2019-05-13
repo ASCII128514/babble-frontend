@@ -1,62 +1,53 @@
 // pages/timer_question/timer_question.js
 Page({
-  buttonClicked: function () {
+  buttonClicked() {
     wx.navigateTo({
-      url: '/pages/timer_question/timer_question'
-    })
+      url: '/pages/timer_question/timer_question',
+    });
   },
 
-
-  /**
-   * Page initial data
-   */
   data: {
     gameTime: {},
     gameTimeIndices: {},
   },
 
-  /**
-   * Lifecycle function--Called when page load
-   */
-  onLoad: function (options) {
+  onLoad() {
     wx.setNavigationBarColor({
       frontColor: '#ffffff',
       backgroundColor: '#5a97f1',
-    })
+    });
 
     wx.setNavigationBarTitle({
       title: 'Game setting',
-    })
+    });
 
     // Copy arrays from globalData to data
-    const gameTime = getApp().globalData.gameTime
-    this.setData({ gameTime })
-
-    let gameTimeIndices = getApp().globalData.gameTimeIndices
-    this.setData({ gameTimeIndices,
+    const { gameTime } = getApp().globalData;
+    const { gameTimeIndices } = getApp().globalData;
+    this.setData({
+      gameTime,
+      gameTimeIndices,
       minute: gameTimeIndices.partnerTime.minutes,
-      second: gameTimeIndices.partnerTime.seconds
-    })
-
+      second: gameTimeIndices.partnerTime.seconds,
+    });
   },
 
-  questionTimeAmount: function (res) {
-
-    getApp().globalData.gameTimeIndices.partnerTime.minutes = `${res.detail.value[0]}`
-    var s
+  questionTimeAmount(res) {
+    getApp().globalData.gameTimeIndices.partnerTime.minutes = `${res.detail.value[0]}`;
+    let s;
     if (res.detail.value[1] === 0) {
-      s = '00'
+      s = '00';
     } else {
-      s = `${res.detail.value[1] * 15}`
+      s = `${res.detail.value[1] * 15}`;
     }
-    getApp().globalData.gameTimeIndices.partnerTime.seconds = s
-    let gameTimeIndices = getApp().globalData.gameTimeIndices
-    console.log(gameTimeIndices)
-    console.log(getApp().globalData)
-    this.setData({ gameTimeIndices,
+    getApp().globalData.gameTimeIndices.partnerTime.seconds = s;
+    const { gameTimeIndices } = getApp().globalData;
+    console.log(gameTimeIndices);
+    console.log(getApp().globalData);
+    this.setData({
+      gameTimeIndices,
       minute: gameTimeIndices.partnerTime.minutes,
-      second: gameTimeIndices.partnerTime.seconds
-    })
-  }
-
-})
+      second: gameTimeIndices.partnerTime.seconds,
+    });
+  },
+});
