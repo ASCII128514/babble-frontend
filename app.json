@@ -2,7 +2,6 @@
   "pages": [
     "pages/login/login",
     "pages/index/index",
-    "pages/logs/logs",
     "pages/status_page/status_page",
     "pages/player_index/player_index",
     "pages/take_selfie/take_selfie",
