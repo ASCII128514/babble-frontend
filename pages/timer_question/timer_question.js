@@ -5,7 +5,7 @@ Page({
 
   buttonClicked() {
     const objectOfSeconds = convertArrayToSeconds();
-    createGame(objectOfSeconds, this);
+    createGame(objectOfSeconds);
   },
 
   data: {

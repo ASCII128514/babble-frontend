@@ -1,21 +1,16 @@
 const app = getApp();
-let globalData = app.globalData;
-let g = globalData || {};
-let gameTime = g.gameTime || [];
-let gameTimeIndices = g.gameTimeIndices || [];
-let numberOfRounds = g.numberOfRounds;
-let qrCodeUrl = g.qrCodeUrl;
 
-const createGame = function (objectOfSeconds, page) {
-  var value = wx.getStorageSync("token");
-  console.log(numberOfRounds)
+const createGame = (objectOfSeconds) => {
+  const { numberOfRounds } = app.globalData;
+  const value = wx.getStorageSync('token');
+  console.log(numberOfRounds);
   if (value) {
     wx.showLoading({
       title: 'creating',
-    })
+    });
     wx.request({
-      url: `https://babble.wogengapp.cn/api/v1/game`,
-      method: "POST",
+      url: 'https://babble.wogengapp.cn/api/v1/game',
+      method: 'POST',
       data: {
         tokens: {
           token: value,
@@ -27,37 +22,38 @@ const createGame = function (objectOfSeconds, page) {
           question_timer: objectOfSeconds.question_timer,
         },
       },
-      success: res => {
-        wx.hideLoading()
-        let qrCodeUrl = res.data.url
-        getApp().globalData.qrCodeUrl = qrCodeUrl
-        getApp().globalData.roomId = res.data.room
+      success: (res) => {
+        wx.hideLoading();
+        const qrCodeUrl = res.data.url;
+        getApp().globalData.qrCodeUrl = qrCodeUrl;
+        getApp().globalData.roomId = res.data.room;
         // getApp().setGlobalData({
         //   qrCodeUrl
         // })
         wx.reLaunch({
-          url: "/pages/QR_code/QR_code",
+          url: '/pages/QR_code/QR_code',
         });
       },
     });
   }
 };
 
-const convertArrayToSeconds = function () {
-  let partnerTimeMinutes = gameTimeIndices.partnerTime.minutes;
-  let partnerTimeUserInputSeconds = gameTimeIndices.partnerTime.seconds;
-  let partnerTimeTotalSeconds =
-    partnerTimeMinutes * 60 + parseInt(partnerTimeUserInputSeconds, 10);
+const convertArrayToSeconds = () => {
+  const { gameTimeIndices } = app.globalData;
+  const partnerTimeMinutes = gameTimeIndices.partnerTime.minutes;
+  const partnerTimeUserInputSeconds = gameTimeIndices.partnerTime.seconds;
+  const partnerTimeTotalSeconds = partnerTimeMinutes * 60
+  + parseInt(partnerTimeUserInputSeconds, 10);
 
-  let questionTimeMinutes = gameTimeIndices.questionTime.minutes;
-  let questionTimeUserInputSeconds = gameTimeIndices.questionTime.seconds;
-  let questionTimeTotalSeconds =
-    questionTimeMinutes * 60 + parseInt(questionTimeUserInputSeconds, 10);
+  const questionTimeMinutes = gameTimeIndices.questionTime.minutes;
+  const questionTimeUserInputSeconds = gameTimeIndices.questionTime.seconds;
+  const questionTimeTotalSeconds = questionTimeMinutes * 60
+  + parseInt(questionTimeUserInputSeconds, 10);
 
-  let selfieTimeMinutes = gameTimeIndices.selfieTime.minutes;
-  let selfieTimeUserInputSeconds = gameTimeIndices.selfieTime.seconds;
-  let selfieTimeTotalSeconds =
-    selfieTimeMinutes * 60 + parseInt(selfieTimeUserInputSeconds, 10);
+  const selfieTimeMinutes = gameTimeIndices.selfieTime.minutes;
+  const selfieTimeUserInputSeconds = gameTimeIndices.selfieTime.seconds;
+  const selfieTimeTotalSeconds = selfieTimeMinutes * 60
+    + parseInt(selfieTimeUserInputSeconds, 10);
 
   const settingsTotalSeconds = {
     find_partner_timer: partnerTimeTotalSeconds,
@@ -68,52 +64,53 @@ const convertArrayToSeconds = function () {
   return settingsTotalSeconds;
 };
 
-const setTime = function (e, page, gameTimeIndex) {
-  let defineTimeIndex = gameTimeIndex + "Time";
+const setTime = (e, page, gameTimeIndex) => {
+  const { gameTime } = app.globalData;
+  const defineTimeIndex = `${gameTimeIndex} Time`;
 
-  let arrayOfMinutes = gameTime.minute_possibilities;
-  let minute = Number.parseInt(arrayOfMinutes[e.detail.value[0]], 10);
+  const arrayOfMinutes = gameTime.minute_possibilities;
+  const minute = Number.parseInt(arrayOfMinutes[e.detail.value[0]], 10);
 
-  let arrayOfSeconds = gameTime.second_possibilities;
-  let second = Number.parseInt(arrayOfSeconds[e.detail.value[1]], 10);
+  const arrayOfSeconds = gameTime.second_possibilities;
+  const second = Number.parseInt(arrayOfSeconds[e.detail.value[1]], 10);
 
   app.globalData.gameTimeIndices[defineTimeIndex].minutes = minute;
   app.globalData.gameTimeIndices[defineTimeIndex].seconds = second;
 
-  const gameTimeIndices = app.globalData.gameTimeIndices;
+  const { gameTimeIndices } = app.globalData;
 
   page.setData({
     gameTimeIndices,
   });
 };
 
-const sendPictureToBackend = function (url) {
-  var value = wx.getStorageSync("token");
+const sendPictureToBackend = (url) => {
+  const value = wx.getStorageSync('token');
   if (value) {
     wx.request({
-      url: `https://babble.wogengapp.cn/api/v1/user/profile`,
-      method: "PUT",
+      url: 'https://babble.wogengapp.cn/api/v1/user/profile',
+      method: 'PUT',
       data: {
         token: value,
-        url: url
+        url,
       },
     });
   }
 };
 
-const sendNameToBackend = function (userInput) {
-  var name = userInput.detail.value.name
-  var value = wx.getStorageSync("token");
+const sendNameToBackend = (userInput) => {
+  const { name } = userInput.detail.value;
+  const value = wx.getStorageSync('token');
   if (value) {
     wx.request({
-      url: `https://babble.wogengapp.cn/api/v1/user/name`,
-      method: "PUT",
+      url: 'https://babble.wogengapp.cn/api/v1/user/name',
+      method: 'PUT',
       data: {
         token: value,
-        name: name
+        name,
       },
-      success: res => {
-        console.log("this shit worked, yo!");
+      success: () => {
+        console.log('this shit worked, yo!');
       },
     });
   }
@@ -124,5 +121,5 @@ export {
   setTime,
   convertArrayToSeconds,
   sendPictureToBackend,
-  sendNameToBackend
+  sendNameToBackend,
 };
