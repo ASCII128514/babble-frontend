@@ -95,8 +95,8 @@ Page({
   gameLoop() {
     const { babbleheads } = this.data;
     for (let i = 0; i < babbleheads.length; i += 1) {
-      babbleheads[i].x += babbleheads[i].x.xVelocity;
-      babbleheads[i].y += babbleheads[i].y.yVelocity;
+      babbleheads[i].x += babbleheads[i].xVelocity;
+      babbleheads[i].y += babbleheads[i].yVelocity;
 
       if (babbleheads[i].x >= (this.data.windowWidth - babbleheads[i].radius)
       || babbleheads[i].x <= 0) {
