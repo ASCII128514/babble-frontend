@@ -11,21 +11,21 @@ Page({
   /**
    * Lifecycle function--Called when page load
    */
-  onLoad: function (options) {
+  onLoad() {
     wx.setNavigationBarColor({
       frontColor: '#ffffff',
       backgroundColor: '#5a97f1',
-    })
+    });
     wx.setNavigationBarTitle({
       title: 'Finished Game',
-    }),
+    });
     this.setData({
-      number: getApp().globalData.numberOfRounds
-    })
+      number: getApp().globalData.numberOfRounds,
+    });
   },
-  goToIndex: function() {
+  goToIndex() {
     wx.reLaunch({
       url: '/pages/index/index',
-    })
-  }
-})
+    });
+  },
+});
