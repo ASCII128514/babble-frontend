@@ -87,7 +87,7 @@ const switching = (query, page) => {
               }),
             });
           });
-          listenSocket(this);
+          listenSocket(page);
           wx.reLaunch({
             url: '/pages/player_home_page/player_home_page',
           });

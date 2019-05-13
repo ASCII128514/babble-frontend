@@ -1,7 +1,6 @@
 // pages/login/login.js
-import {
-  switching,
-} from '../../utils/redirect';
+import switching from '../../utils/redirect';
+// const switching = require('../../utils/redirect');
 
 Page({
 
