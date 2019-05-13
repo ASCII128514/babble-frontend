@@ -1,8 +1,8 @@
 // pages/creation/creation.js
-import { createGame, setTime, convertArrayToSeconds } from '../../utils/create_game_api.js';
+import { createGame, setTime, convertArrayToSeconds } from '../../utils/create_game_api';
 
-let app = getApp()
-let globalData = app.globalData || {}
+const app = getApp();
+const { globalData } = app;
 
 Page({
   /**
@@ -15,25 +15,19 @@ Page({
   },
 
   // styling for top bar
-  onLoad: function (options) {
+  onLoad() {
     wx.setNavigationBarColor({
       frontColor: '#000000',
       backgroundColor: '#aec6d9',
-    })
+    });
 
     wx.setNavigationBarTitle({
       title: 'BABBLE',
-    })
+    });
 
     // Copy arrays from globalData to data
-    const gameTime = globalData.gameTime
-    this.setData({ gameTime })
-
-    let gameTimeIndices = globalData.gameTimeIndices
-    this.setData({ gameTimeIndices })
-
-    let numberOfRounds = globalData.numberOfRounds
-    this.setData({ numberOfRounds })
+    const { gameTime, gameTimeIndices, numberOfRounds } = globalData;
+    this.setData({ gameTime, gameTimeIndices, numberOfRounds });
   },
   // styling for top bar ends
 

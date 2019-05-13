@@ -4,7 +4,7 @@
       
 
       <!-- Main text -->
-        <view class='text'>
+        <view class='text' bindtap='goToIndex'>
             You have talked to {{number}} strangers!
         </view>
       <!-- Main text -->

@@ -1,3 +1,4 @@
 secret.js
 .DS_store
 pages/.DS_Store
+/node_modules
