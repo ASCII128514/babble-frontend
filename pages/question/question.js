@@ -159,8 +159,6 @@ Page({
         timerCountdown: countdown,
       });
     }, 1000);
-
-    // gameTimer(objectOfSeconds, 'question_timer', '/pages/find_partner/find_partner', this);
   },
 
   // for timer bar
