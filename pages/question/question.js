@@ -133,7 +133,7 @@ Page({
         // if (this == page)
         // if (getApp().globalData.currentGameRound < getApp().globalData.numberOfRounds) {
         wx.request({
-          url: `https://babble.wogengapp.cn/api/v1/game/${getApp().globalData.qrCodeData}/pair?round=${getApp().globalData.currentGameRound + 1}&token=${wx.getStorageSync('token')}`,
+          url: `http://localhost:3000/api/v1/game/${getApp().globalData.qrCodeData}/pair?round=${getApp().globalData.currentGameRound + 1}&token=${wx.getStorageSync('token')}`,
         });
         // } else {
         //   wx.reLaunch({

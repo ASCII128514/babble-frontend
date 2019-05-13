@@ -37,7 +37,7 @@ const switching = (query, page) => {
     wx.setStorageSync('room', scene);
     console.log('set storage');
     wx.request({
-      url: `https://babble.wogengapp.cn/api/v1/game/${scene}`,
+      url: `http://localhost:3000/api/v1/game/${scene}`,
       method: 'get',
       success: (res) => {
         console.log('res data:', res.data);
@@ -68,7 +68,7 @@ const switching = (query, page) => {
 
           const response = res;
           wx.connectSocket({
-            url: 'wss://babble.wogengapp.cn/cable',
+            url: 'ws://localhost:3000/cable',
             header: {
               'content-type': 'application/json',
             },

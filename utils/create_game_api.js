@@ -9,7 +9,7 @@ const createGame = (objectOfSeconds) => {
       title: 'creating',
     });
     wx.request({
-      url: 'https://babble.wogengapp.cn/api/v1/game',
+      url: 'http://localhost:3000/api/v1/game',
       method: 'POST',
       data: {
         tokens: {
@@ -88,7 +88,7 @@ const sendPictureToBackend = (url) => {
   const value = wx.getStorageSync('token');
   if (value) {
     wx.request({
-      url: 'https://babble.wogengapp.cn/api/v1/user/profile',
+      url: 'http://localhost:3000/api/v1/user/profile',
       method: 'PUT',
       data: {
         token: value,
@@ -103,7 +103,7 @@ const sendNameToBackend = (userInput) => {
   const value = wx.getStorageSync('token');
   if (value) {
     wx.request({
-      url: 'https://babble.wogengapp.cn/api/v1/user/name',
+      url: 'http://localhost:3000/api/v1/user/name',
       method: 'PUT',
       data: {
         token: value,
