@@ -32,12 +32,12 @@ Page({
 
   getPair() {
     wx.request({
-      url: `http://localhost:3000/api/v1/game/${getApp().globalData.qrCodeData}/pair?round=${getApp().globalData.currentGameRound + 1}&token=${wx.getStorageSync('token')}`,
+      url: `https://babble.wogengapp.cn/api/v1/game/${getApp().globalData.qrCodeData}/pair?round=${getApp().globalData.currentGameRound + 1}&token=${wx.getStorageSync('token')}`,
     });
   },
   onReady() {
     wx.request({
-      url: `http://localhost:3000/api/v1/game/${getApp().globalData.qrCodeData}/display`,
+      url: `https://babble.wogengapp.cn/api/v1/game/${getApp().globalData.qrCodeData}/display`,
     });
   },
 });

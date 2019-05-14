@@ -8,7 +8,7 @@ Page({
       wx.setStorageSync('room', scene);
       console.log('set storage');
       wx.request({
-        url: `http://localhost:3000/api/v1/game/${scene}`,
+        url: `https://babble.wogengapp.cn/api/v1/game/${scene}`,
         method: 'get',
         success: (res) => {
           console.log('res data:', res.data);
@@ -38,7 +38,7 @@ Page({
 
             const response = res;
             wx.connectSocket({
-              url: 'ws://localhost:3000/cable',
+              url: 'wss://babble.wogengapp.cn/cable',
               header: {
                 'content-type': 'application/json',
               },

@@ -26,6 +26,29 @@ const listenSocket = (page) => {
         wx.reLaunch({
           url: '/pages/finished_game/finished_game',
         });
+      } else if (value.message.type === 'start') {
+        // make api call to another route to get the teammate
+        console.log('recieve the start command');
+        getApp().globalData.currentGameRound = value.message.round;
+        console.log('in 33', value.message.round);
+        wx.request({
+          url: `https://babble.wogengapp.cn/api/v1/game/${wx.getStorageSync('room')}/findpair`,
+          data: {
+            token: wx.getStorageSync('token'),
+            round: getApp().globalData.currentGameRound,
+          },
+          header: { 'content-type': 'application/json' },
+          method: 'GET',
+          dataType: 'json',
+          responseType: 'text',
+          success: (result) => {
+            console.log(result);
+            getApp().globalData.pair = result.data.pair;
+            wx.redirectTo({
+              url: '/pages/find_partner/find_partner',
+            });
+          },
+        });
       }
     }
   });
